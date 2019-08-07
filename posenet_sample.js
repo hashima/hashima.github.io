@@ -1,23 +1,23 @@
 /** 
 * @license
 * Copyright Copyright 2018 Google Inc. All Rights Reserved.
-* Apache License Version 2.0iu–{ƒ‰ƒCƒZƒ“ƒXvj‚ÉŠî‚Ã‚¢‚Äƒ‰ƒCƒZƒ“ƒX‚³‚ê‚Ü‚·B
-* ‚ ‚È‚½‚ª‚±‚Ìƒtƒ@ƒCƒ‹‚ðŽg—p‚·‚é‚½‚ß‚É‚ÍA–{ƒ‰ƒCƒZƒ“ƒX‚É]‚í‚È‚¯‚ê‚Î‚È‚è‚Ü‚¹‚ñB
-* –{ƒ‰ƒCƒZƒ“ƒX‚ÌƒRƒs[‚Í‰º‹L‚ÌêŠ‚©‚ç“üŽè‚Å‚«‚Ü‚·B
+* Apache License Version 2.0ï¼ˆã€Œæœ¬ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã€ï¼‰ã«åŸºã¥ã„ã¦ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã•ã‚Œã¾ã™ã€‚
+* ã‚ãªãŸãŒã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½¿ç”¨ã™ã‚‹ãŸã‚ã«ã¯ã€æœ¬ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã«å¾“ã‚ãªã‘ã‚Œã°ãªã‚Šã¾ã›ã‚“ã€‚
+* æœ¬ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã®ã‚³ãƒ”ãƒ¼ã¯ä¸‹è¨˜ã®å ´æ‰€ã‹ã‚‰å…¥æ‰‹ã§ãã¾ã™ã€‚
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
-* “K—p‚³‚ê‚é–@—¥‚Ü‚½‚Í‘–Ê‚Å‚Ì“¯ˆÓ‚É‚æ‚Á‚Ä–½‚¶‚ç‚ê‚È‚¢ŒÀ‚èA
-* –{ƒ‰ƒCƒZƒ“ƒX‚ÉŠî‚Ã‚¢‚Ä”Ð•z‚³‚ê‚éƒ\ƒtƒgƒEƒFƒA‚ÍA–¾Ž¦–ÙŽ¦‚ð–â‚í‚¸A
-* ‚¢‚©‚È‚é•ÛØ‚àðŒ‚à‚È‚µ‚ÉuŒ»ó‚Ì‚Ü‚Üv”Ð•z‚³‚ê‚Ü‚·B
-* –{ƒ‰ƒCƒZƒ“ƒX‚Å‚ÌŒ —˜‚Æ§ŒÀ‚ð‹K’è‚µ‚½•¶Œ¾‚É‚Â‚¢‚Ä‚ÍA–{ƒ‰ƒCƒZƒ“ƒX‚ðŽQÆ‚µ‚Ä‚­‚¾‚³‚¢B
+* é©ç”¨ã•ã‚Œã‚‹æ³•å¾‹ã¾ãŸã¯æ›¸é¢ã§ã®åŒæ„ã«ã‚ˆã£ã¦å‘½ã˜ã‚‰ã‚Œãªã„é™ã‚Šã€
+* æœ¬ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã«åŸºã¥ã„ã¦é ’å¸ƒã•ã‚Œã‚‹ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã¯ã€æ˜Žç¤ºé»™ç¤ºã‚’å•ã‚ãšã€
+* ã„ã‹ãªã‚‹ä¿è¨¼ã‚‚æ¡ä»¶ã‚‚ãªã—ã«ã€Œç¾çŠ¶ã®ã¾ã¾ã€é ’å¸ƒã•ã‚Œã¾ã™ã€‚
+* æœ¬ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã§ã®æ¨©åˆ©ã¨åˆ¶é™ã‚’è¦å®šã—ãŸæ–‡è¨€ã«ã¤ã„ã¦ã¯ã€æœ¬ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’å‚ç…§ã—ã¦ãã ã•ã„ã€‚
 */
 /*
-* ‚±‚ÌƒvƒƒOƒ‰ƒ€‚Í
+* ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯
 * https://github.com/tensorflow/tfjs-models/tree/master/posenet/demos
-* ‚¨‚æ‚Ñ
+* ãŠã‚ˆã³
 * https://github.com/tensorflow/tfjs-models/blob/master/posenet/demos/camera.js
-* ‚ð‚à‚Æ‚Éì¬‚µ‚Ü‚µ‚½B
+* ã‚’ã‚‚ã¨ã«ä½œæˆã—ã¾ã—ãŸã€‚
 */
 
 
@@ -64,7 +64,10 @@ async function setupCamera() {
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
         const stream = await navigator.mediaDevices.getUserMedia({
             'audio': false,
-            'video': true});
+            'video': {
+â€‚â€‚â€‚â€‚            'facingMode': 'environment'
+â€‚â€‚          }
+	});
         video.srcObject = stream;
 
         return new Promise(resolve => {
@@ -94,7 +97,7 @@ function detectPoseInRealTime(video, net) {
 
         ctx.save();
         ctx.scale(-1, 1);
-        ctx.translate(-contentWidth, 0);
+        //ctx.translate(-contentWidth, 0);
         ctx.drawImage(video, 0, 0, contentWidth, contentHeight);
         ctx.restore();
 
@@ -142,8 +145,8 @@ function detectPoseInRealTime(video, net) {
 
 function drawWristPoint(wrist,ctx){
     ctx.beginPath();
-    ctx.arc(800 - wrist.position.x , wrist.position.y, 10, 0, 2 * Math.PI);
-    ctx.fillStyle = "pink";
+    ctx.arc(wrist.position.x , wrist.position.y, 10, 0, 2 * Math.PI);
+    ctx.fillStyle = "blue";
     ctx.fill();
 }
 
