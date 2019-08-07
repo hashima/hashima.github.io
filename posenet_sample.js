@@ -113,10 +113,13 @@ function detectPoseInRealTime(video, net) {
 	    ctx.fill();
 	} else {
             poses.forEach(({ s, keypoints }) => {
-		drawNaviko(keypoints[0],keypoints[1],ctx);
-		drawWristPoint(keypoints[9],ctx);
-		drawWristPoint(keypoints[10],ctx);
-		ballsDecision(ctx,[keypoints[9],keypoints[10]]);
+		//drawNaviko(keypoints[0],keypoints[1],ctx);
+    		for(i=0;i<17;i++){
+			if(0.1 < keypoints[i].score){
+				drawWristPoint(keypoints[i],ctx);
+			}
+		}
+		//ballsDecision(ctx,[keypoints[9],keypoints[10]]);
 		console.log(keypoints)
             });
 	}
