@@ -1,23 +1,23 @@
 /** 
 * @license
 * Copyright Copyright 2018 Google Inc. All Rights Reserved.
-* Apache License Version 2.0�i�u�{���C�Z���X�v�j�Ɋ�Â��ă��C�Z���X����܂��B
-* ���Ȃ������̃t�@�C�����g�p���邽�߂ɂ́A�{���C�Z���X�ɏ]��Ȃ���΂Ȃ�܂���B
-* �{���C�Z���X�̃R�s�[�͉��L�̏ꏊ�������ł��܂��B
+* Apache License Version 2.0（「本ライセンス」）に基づいてライセンスされます。
+* あなたがこのファイルを使用するためには、本ライセンスに従わなければなりません。
+* 本ライセンスのコピーは下記の場所から入手できます。
 *
 * http://www.apache.org/licenses/LICENSE-2.0
 *
-* �K�p�����@���܂��͏��ʂł̓��ӂɂ���Ė������Ȃ�����A
-* �{���C�Z���X�Ɋ�Â��ĔЕz�����\�t�g�E�F�A�́A�����َ����킸�A
-* �����Ȃ�ۏ؂��������Ȃ��Ɂu����̂܂܁v�Еz����܂��B
-* �{���C�Z���X�ł̌����Ɛ������K�肵�������ɂ��ẮA�{���C�Z���X���Q�Ƃ��Ă��������B
+* 適用される法律または書面での同意によって命じられない限り、
+* 本ライセンスに基づいて頒布されるソフトウェアは、明示黙示を問わず、
+* いかなる保証も条件もなしに「現状のまま」頒布されます。
+* 本ライセンスでの権利と制限を規定した文言については、本ライセンスを参照してください。
 */
 /*
-* ���̃v���O������
+* このプログラムは
 * https://github.com/tensorflow/tfjs-models/tree/master/posenet/demos
-* �����
+* および
 * https://github.com/tensorflow/tfjs-models/blob/master/posenet/demos/camera.js
-* �����Ƃɍ쐬���܂����B
+* をもとに作成しました。
 */
 
 
@@ -33,7 +33,7 @@ const fontLayout = "bold 50px Arial";
 
 let balls = [];
 let score = 0;
-let timeLimit = 200;
+let timeLimit = 20000;
 let printLimit = timeLimit / 10;
 let naviko = new Image();
 let navScale = 1
@@ -143,7 +143,7 @@ function detectPoseInRealTime(video, net) {
 function drawWristPoint(wrist,ctx){
     ctx.beginPath();
     ctx.arc(800 - wrist.position.x , wrist.position.y, 10, 0, 2 * Math.PI);
-    ctx.fillStyle = "pink";
+    ctx.fillStyle = "blue";
     ctx.fill();
 }
 
