@@ -33,7 +33,7 @@ const fontLayout = "bold 50px Arial";
 
 let balls = [];
 let score = 0;
-let timeLimit = 200;
+let timeLimit = 200000;
 let printLimit = timeLimit / 10;
 let naviko = new Image();
 let navScale = 1
@@ -107,10 +107,10 @@ function detectPoseInRealTime(video, net) {
 	ctx.fill();
 
 	if (timeLimit == 0) {
-	    ctx.font = fontLayout;
-	    ctx.fillStyle = "red";
-	    ctx.fillText("TIME UP", 300, 300);
-	    ctx.fill();
+	    //ctx.font = fontLayout;
+	    //ctx.fillStyle = "red";
+	    //ctx.fillText("TIME UP", 300, 300);
+	    //ctx.fill();
 	} else {
             poses.forEach(({ s, keypoints }) => {
 		//drawNaviko(keypoints[0],keypoints[1],ctx);
