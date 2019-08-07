@@ -117,6 +117,7 @@ function detectPoseInRealTime(video, net) {
 		drawWristPoint(keypoints[9],ctx);
 		drawWristPoint(keypoints[10],ctx);
 		ballsDecision(ctx,[keypoints[9],keypoints[10]]);
+		console.log(keypoints)
             });
 	}
 
