@@ -24,7 +24,7 @@
 const imageScaleFactor = 0.2;
 const outputStride = 16;
 const flipHorizontal = false;
-const stats = new Stats();
+//const stats = new Stats();
 const contentWidth = 800;
 const contentHeight = 600;
 const ballNum = 2;
@@ -85,7 +85,7 @@ function detectPoseInRealTime(video, net) {
     const flipHorizontal = true; // since images are being fed from a webcam
 
     async function poseDetectionFrame() {
-        stats.begin();
+        //stats.begin();
         let poses = [];
         const pose = await net.estimateSinglePose(video, imageScaleFactor, flipHorizontal, outputStride);
         poses.push(pose);
@@ -129,7 +129,7 @@ function detectPoseInRealTime(video, net) {
 	    timeLimit = 0;
 	}
 
-        stats.end();
+        //stats.end();
 
         requestAnimationFrame(poseDetectionFrame);
     }
