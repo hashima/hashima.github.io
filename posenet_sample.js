@@ -124,10 +124,10 @@ function detectPoseInRealTime(video, net) {
             });
 	}
 
-	ctx.font = fontLayout;
-	ctx.fillStyle = "red";
-	ctx.fillText(score, 70, 70);
-	ctx.fill();
+	//ctx.font = fontLayout;
+	//ctx.fillStyle = "red";
+	//ctx.fillText(score, 70, 70);
+	//ctx.fill();
 	timeLimit -= 1;
 	if(timeLimit <= 0){
 	    timeLimit = 0;
