@@ -97,7 +97,7 @@ function detectPoseInRealTime(video, net) {
 
         ctx.save();
         ctx.scale(-1, 1);
-        ctx.translate(-contentWidth, 0);
+        //ctx.translate(-contentWidth, 0);
         ctx.drawImage(video, 0, 0, contentWidth, contentHeight);
         ctx.restore();
 
@@ -145,7 +145,7 @@ function detectPoseInRealTime(video, net) {
 
 function drawWristPoint(wrist,ctx){
     ctx.beginPath();
-    ctx.arc(800 - wrist.position.x , wrist.position.y, 10, 0, 2 * Math.PI);
+    ctx.arc(wrist.position.x , wrist.position.y, 10, 0, 2 * Math.PI);
     ctx.fillStyle = "blue";
     ctx.fill();
 }
