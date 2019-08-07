@@ -142,7 +142,7 @@ function detectPoseInRealTime(video, net) {
 
 function drawWristPoint(wrist,ctx){
     ctx.beginPath();
-    ctx.arc(wrist.position.x , wrist.position.y, 3, 0, 2 * Math.PI);
+    ctx.arc(800 - wrist.position.x , wrist.position.y, 10, 0, 2 * Math.PI);
     ctx.fillStyle = "pink";
     ctx.fill();
 }
