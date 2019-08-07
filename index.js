@@ -14,7 +14,7 @@ function errorCallback(err) {
   alert(err);
 };
 
-videoElement.addEventListener("click", function () {
+#('video').addEventListener("click", function () {
   promise.then(successCallback).then(errorCallback);
 });
 
