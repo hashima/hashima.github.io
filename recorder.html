@@ -161,24 +161,24 @@
 
     // Blob
     //var videoBlob = new Blob(chunks, { type: "video/webm" });
-    blobUrl =  fetch('https://hashima.github.io/recorded.webm').then(response => {
+    var videoBlob =  fetch('https://hashima.github.io/recorded.webm').then(response => {
       return response.blob()
     })
-    .then(blob => {
-        return new Promise(resolve => {
-        const fr =  new FileReader()
-        fr.onload = e => resolve(e.target.result)
-        fr.readAsArrayBuffer(blob)
-      })
-    })
-    .then(arrayBuffer => {
-      return Promise.resolve(new Blob([arrayBuffer], { type: 'video/webm' }))
-    })
-    .then(blob => {
-      return Promise.resolve(URL.createObjectURL(blob))
-    })
+    // .then(blob => {
+    //     return new Promise(resolve => {
+    //     const fr =  new FileReader()
+    //     fr.onload = e => resolve(e.target.result)
+    //     fr.readAsArrayBuffer(blob)
+    //   })
+    // })
+    // .then(arrayBuffer => {
+    //   return Promise.resolve(new Blob([arrayBuffer], { type: 'video/webm' }))
+    // })
+    // .then(blob => {
+    //   return Promise.resolve(URL.createObjectURL(blob))
+    // })
     // 再生できるようにURLを生成
-    //blobUrl = window.URL.createObjectURL(videoBlob);
+    blobUrl = window.URL.createObjectURL(videoBlob);
     
     // ==== (3) ダウンロード ====
     // ダウンロードの準備
