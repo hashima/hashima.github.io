@@ -161,8 +161,10 @@
   function play() {
 
     // Blob
-    var videoBlob = new Blob(chunks, { type: "video/webm" });
-    
+    //var videoBlob = new Blob(chunks, { type: "video/webm" });
+    var videoBlob =  fetch('https://hashima.github.io/recorded.webm').then(response => {
+      return response.blob()
+    })
     // 再生できるようにURLを生成
     blobUrl = window.URL.createObjectURL(videoBlob);
     
