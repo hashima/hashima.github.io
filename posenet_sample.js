@@ -120,7 +120,26 @@ function detectPoseInRealTime(video, net) {
     		for(i=0;i<17;i++){
 			//if(0.1 < keypoints[i].score){
 				drawWristPoint(keypoints[i],ctx);
-			//}
+            //}
+            
+            // 肩の間
+            drawLine(keypoints[5], keypoints[6], ctx);
+            // 左腕
+            drawLine(keypoints[5], keypoints[7], ctx);
+            drawLine(keypoints[7], keypoints[9], ctx);
+            // 右腕
+            drawLine(keypoints[6], keypoints[8], ctx);
+            drawLine(keypoints[8], keypoints[10], ctx);
+            // 肩と腰
+            drawLine(keypoints[5], keypoints[11], ctx);
+            drawLine(keypoints[6], keypoints[12], ctx);
+            drawLine(keypoints[11], keypoints[12], ctx);
+            // 腰と膝
+            drawLine(keypoints[11], keypoints[13], ctx);
+            drawLine(keypoints[12], keypoints[14], ctx);
+            // 膝と足首
+            drawLine(keypoints[13], keypoints[15], ctx);
+            drawLine(keypoints[14], keypoints[16], ctx);
 		}
 		//ballsDecision(ctx,[keypoints[9],keypoints[10]]);
 		console.log(keypoints)
@@ -147,6 +166,15 @@ function drawWristPoint(wrist,ctx){
     ctx.beginPath();
     ctx.arc(wrist.position.x , wrist.position.y, 10, 0, 2 * Math.PI);
     ctx.fillStyle = "blue";
+    ctx.fill();
+}
+
+function drawLine(p1, p2, ctx){
+    ctx.beginPath();
+    ctx.moveTo(p1.x, p1.y);
+    ctx.lineTo(p2.x, p2.y);
+    ctx.fillStyle = "blue";
+    ctx.strokeStyle = "blue";
     ctx.fill();
 }
 
