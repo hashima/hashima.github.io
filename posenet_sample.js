@@ -120,7 +120,8 @@ function detectPoseInRealTime(video, net) {
     		for(i=0;i<17;i++){
 			//if(0.1 < keypoints[i].score){
 				drawWristPoint(keypoints[i],ctx);
-            //}
+			//}
+            }
             
             // 肩の間
             drawLine(keypoints[5], keypoints[6], ctx);
@@ -140,7 +141,7 @@ function detectPoseInRealTime(video, net) {
             // 膝と足首
             drawLine(keypoints[13], keypoints[15], ctx);
             drawLine(keypoints[14], keypoints[16], ctx);
-		}
+		
 		//ballsDecision(ctx,[keypoints[9],keypoints[10]]);
 		console.log(keypoints)
             });
