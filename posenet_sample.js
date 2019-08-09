@@ -116,34 +116,34 @@ function detectPoseInRealTime(video, net) {
 	    //ctx.fill();
 	} else {
             poses.forEach(({ s, keypoints }) => {
-		//drawNaviko(keypoints[0],keypoints[1],ctx);
-    		for(i=0;i<17;i++){
-			//if(0.1 < keypoints[i].score){
-				drawWristPoint(keypoints[i],ctx);
-			//}
-            }
+                //drawNaviko(keypoints[0],keypoints[1],ctx);
+                for(i=0;i<17;i++){
+                //if(0.1 < keypoints[i].score){
+                    drawWristPoint(keypoints[i],ctx);
+                //}
+                }
+                
+                // 肩の間
+                drawLine(keypoints[5], keypoints[6], ctx);
+                // 左腕
+                drawLine(keypoints[5], keypoints[7], ctx);
+                drawLine(keypoints[7], keypoints[9], ctx);
+                // 右腕
+                drawLine(keypoints[6], keypoints[8], ctx);
+                drawLine(keypoints[8], keypoints[10], ctx);
+                // 肩と腰
+                drawLine(keypoints[5], keypoints[11], ctx);
+                drawLine(keypoints[6], keypoints[12], ctx);
+                drawLine(keypoints[11], keypoints[12], ctx);
+                // 腰と膝
+                drawLine(keypoints[11], keypoints[13], ctx);
+                drawLine(keypoints[12], keypoints[14], ctx);
+                // 膝と足首
+                drawLine(keypoints[13], keypoints[15], ctx);
+                drawLine(keypoints[14], keypoints[16], ctx);
             
-            // 肩の間
-            drawLine(keypoints[5], keypoints[6], ctx);
-            // 左腕
-            drawLine(keypoints[5], keypoints[7], ctx);
-            drawLine(keypoints[7], keypoints[9], ctx);
-            // 右腕
-            drawLine(keypoints[6], keypoints[8], ctx);
-            drawLine(keypoints[8], keypoints[10], ctx);
-            // 肩と腰
-            drawLine(keypoints[5], keypoints[11], ctx);
-            drawLine(keypoints[6], keypoints[12], ctx);
-            drawLine(keypoints[11], keypoints[12], ctx);
-            // 腰と膝
-            drawLine(keypoints[11], keypoints[13], ctx);
-            drawLine(keypoints[12], keypoints[14], ctx);
-            // 膝と足首
-            drawLine(keypoints[13], keypoints[15], ctx);
-            drawLine(keypoints[14], keypoints[16], ctx);
-		
-		//ballsDecision(ctx,[keypoints[9],keypoints[10]]);
-		console.log(keypoints)
+                //ballsDecision(ctx,[keypoints[9],keypoints[10]]);
+		        //console.log(keypoints)
             });
 	}
 
@@ -172,8 +172,8 @@ function drawWristPoint(wrist,ctx){
 
 function drawLine(p1, p2, ctx){
     ctx.beginPath();
-    ctx.moveTo(p1.x, p1.y);
-    ctx.lineTo(p2.x, p2.y);
+    ctx.moveTo(p1.position.x, p1.position.y);
+    ctx.lineTo(p2.position.x, p2.position.y);
     ctx.fillStyle = "blue";
     ctx.strokeStyle = "blue";
     ctx.fill();
