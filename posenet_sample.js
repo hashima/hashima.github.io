@@ -174,9 +174,9 @@ function drawLine(p1, p2, ctx){
     ctx.beginPath();
     ctx.moveTo(p1.position.x, p1.position.y);
     ctx.lineTo(p2.position.x, p2.position.y);
-    ctx.fillStyle = "blue";
     ctx.strokeStyle = "blue";
-    ctx.fill();
+    ctx.closePath();
+    ctx.stroke();
 }
 
 function drawNaviko(nose, leye, ctx){
