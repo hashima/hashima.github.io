@@ -119,30 +119,41 @@ function detectPoseInRealTime(video, net) {
             poses.forEach(({ s, keypoints }) => {
                 //drawNaviko(keypoints[0],keypoints[1],ctx);
                 for(i=0;i<17;i++){
-                //if(threshold < keypoints[i].score){
-                    drawWristPoint(keypoints[i],ctx);
-                //}
+                   if(threshold < keypoints[i].score){
+                      drawWristPoint(keypoints[i],ctx);
+                   }
                 }
                 
                 // 肩の間
                 if(threshold < keypoints[5].score and threshold < keyopoints[6].score)
                    drawLine(keypoints[5], keypoints[6], ctx);
                 // 左腕
-                drawLine(keypoints[5], keypoints[7], ctx);
-                drawLine(keypoints[7], keypoints[9], ctx);
+                if(threshold < keypoints[5].score and threshold < keyopoints[7].score)
+                   drawLine(keypoints[5], keypoints[7], ctx);
+                if(threshold < keypoints[7].score and threshold < keyopoints[9].score)
+                   drawLine(keypoints[7], keypoints[9], ctx);
                 // 右腕
-                drawLine(keypoints[6], keypoints[8], ctx);
-                drawLine(keypoints[8], keypoints[10], ctx);
+                if(threshold < keypoints[6].score and threshold < keyopoints[8].score)
+                   drawLine(keypoints[6], keypoints[8], ctx);
+                if(threshold < keypoints[8].score and threshold < keyopoints[10].score)
+                   drawLine(keypoints[8], keypoints[10], ctx);
                 // 肩と腰
-                drawLine(keypoints[5], keypoints[11], ctx);
-                drawLine(keypoints[6], keypoints[12], ctx);
-                drawLine(keypoints[11], keypoints[12], ctx);
+                if(threshold < keypoints[5].score and threshold < keyopoints[11].score)
+                   drawLine(keypoints[5], keypoints[11], ctx);
+                if(threshold < keypoints[6].score and threshold < keyopoints[12].score)
+                   drawLine(keypoints[6], keypoints[12], ctx);
+                if(threshold < keypoints[11].score and threshold < keyopoints[12].score)
+                   drawLine(keypoints[11], keypoints[12], ctx);
                 // 腰と膝
-                drawLine(keypoints[11], keypoints[13], ctx);
-                drawLine(keypoints[12], keypoints[14], ctx);
+                if(threshold < keypoints[11].score and threshold < keyopoints[13].score)
+                   drawLine(keypoints[11], keypoints[13], ctx);
+                if(threshold < keypoints[12].score and threshold < keyopoints[14].score)
+                   drawLine(keypoints[12], keypoints[14], ctx);
                 // 膝と足首
-                drawLine(keypoints[13], keypoints[15], ctx);
-                drawLine(keypoints[14], keypoints[16], ctx);
+                if(threshold < keypoints[13].score and threshold < keyopoints[15].score)
+                   drawLine(keypoints[13], keypoints[15], ctx);
+                if(threshold < keypoints[14].score and threshold < keyopoints[16].score)
+                   drawLine(keypoints[14], keypoints[16], ctx);
             
                 //ballsDecision(ctx,[keypoints[9],keypoints[10]]);
 		        //console.log(keypoints)
