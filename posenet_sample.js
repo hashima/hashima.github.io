@@ -37,7 +37,7 @@ let timeLimit = 200000;
 let printLimit = timeLimit / 10;
 let naviko = new Image();
 let navScale = 1
-let threshold = 0.1
+//let threshold = 0.1
 naviko.src = "naviko.png"
 balls = initBalls(ballNum);
 bindPage();
