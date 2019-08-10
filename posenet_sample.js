@@ -86,7 +86,7 @@ function detectPoseInRealTime(video, net) {
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
     const flipHorizontal = true; // since images are being fed from a webcam
-    threshold = 0.1
+    //threshold = 0.1
 
     async function poseDetectionFrame() {
         //stats.begin();
