@@ -37,6 +37,7 @@ let timeLimit = 200000;
 let printLimit = timeLimit / 10;
 let naviko = new Image();
 let navScale = 1
+let threshold = 0.1
 naviko.src = "naviko.png"
 balls = initBalls(ballNum);
 bindPage();
@@ -85,8 +86,7 @@ async function setupCamera() {
 function detectPoseInRealTime(video, net) {
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
-    const flipHorizontal = true; // since images are being fed from a webcam
-    //threshold = 0.1
+    const flipHorizontal = true; // since images are being fed from a webc
 
     async function poseDetectionFrame() {
         //stats.begin();
@@ -119,9 +119,9 @@ function detectPoseInRealTime(video, net) {
             poses.forEach(({ s, keypoints }) => {
                 //drawNaviko(keypoints[0],keypoints[1],ctx);
                 for(i=0;i<17;i++){
-                   //if(threshold < keypoints[i].score){
+                   if(threshold < keypoints[i].score){
                       drawWristPoint(keypoints[i],ctx);
-                   //}
+                   }
                 }
                 
                 // 肩の間
