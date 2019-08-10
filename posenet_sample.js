@@ -86,6 +86,7 @@ function detectPoseInRealTime(video, net) {
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
     const flipHorizontal = true; // since images are being fed from a webcam
+    threshold = 0.1
 
     async function poseDetectionFrame() {
         //stats.begin();
@@ -118,13 +119,14 @@ function detectPoseInRealTime(video, net) {
             poses.forEach(({ s, keypoints }) => {
                 //drawNaviko(keypoints[0],keypoints[1],ctx);
                 for(i=0;i<17;i++){
-                //if(0.1 < keypoints[i].score){
+                //if(threshold < keypoints[i].score){
                     drawWristPoint(keypoints[i],ctx);
                 //}
                 }
                 
                 // 肩の間
-                drawLine(keypoints[5], keypoints[6], ctx);
+                if(threshold < keypoints[5].score and threshold < keyopoints[6].score)
+                   drawLine(keypoints[5], keypoints[6], ctx);
                 // 左腕
                 drawLine(keypoints[5], keypoints[7], ctx);
                 drawLine(keypoints[7], keypoints[9], ctx);
