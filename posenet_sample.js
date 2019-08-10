@@ -142,17 +142,17 @@ function detectPoseInRealTime(video, net) {
                    drawLine(keypoints[5], keypoints[11], ctx);
                 if(threshold < keypoints[6].score && threshold < keyopoints[12].score)
                    drawLine(keypoints[6], keypoints[12], ctx);
-                //if(threshold < keypoints[11].score && threshold < keyopoints[12].score)
+                if(threshold < keypoints[11].score && threshold < keyopoints[12].score)
                    drawLine(keypoints[11], keypoints[12], ctx);
                 // 腰と膝
-                //if(threshold < keypoints[11].score && threshold < keyopoints[13].score)
+                if(threshold < keypoints[11].score && threshold < keyopoints[13].score)
                    drawLine(keypoints[11], keypoints[13], ctx);
-                //if(threshold < keypoints[12].score && threshold < keyopoints[14].score)
+                if(threshold < keypoints[12].score && threshold < keyopoints[14].score)
                    drawLine(keypoints[12], keypoints[14], ctx);
                 // 膝と足首
-                //if(threshold < keypoints[13].score && threshold < keyopoints[15].score)
+                if(threshold < keypoints[13].score && threshold < keyopoints[15].score)
                    drawLine(keypoints[13], keypoints[15], ctx);
-                //if(threshold < keypoints[14].score && threshold < keyopoints[16].score)
+                if(threshold < keypoints[14].score && threshold < keyopoints[16].score)
                    drawLine(keypoints[14], keypoints[16], ctx);
             
                 //ballsDecision(ctx,[keypoints[9],keypoints[10]]);
