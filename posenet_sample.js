@@ -128,12 +128,12 @@ function detectPoseInRealTime(video, net) {
                 if(threshold < keypoints[5].score && threshold < keyopoints[6].score)
                    drawLine(keypoints[5], keypoints[6], ctx);
                 // 左腕
-                //if(threshold < keypoints[5].score && threshold < keyopoints[7].score)
+                if(threshold < keypoints[5].score && threshold < keyopoints[7].score)
                    drawLine(keypoints[5], keypoints[7], ctx);
-                //if(threshold < keypoints[7].score && threshold < keyopoints[9].score)
+                if(threshold < keypoints[7].score && threshold < keyopoints[9].score)
                    drawLine(keypoints[7], keypoints[9], ctx);
                 // 右腕
-                //if(threshold < keypoints[6].score && threshold < keyopoints[8].score)
+                if(threshold < keypoints[6].score && threshold < keyopoints[8].score)
                    drawLine(keypoints[6], keypoints[8], ctx);
                 //if(threshold < keypoints[8].score && threshold < keyopoints[10].score)
                    drawLine(keypoints[8], keypoints[10], ctx);
