@@ -105,10 +105,10 @@ function detectPoseInRealTime(video, net) {
 	if (timeLimit % 10 == 0) {
 	    printLimit = timeLimit / 10;
 	}
-	ctx.font = fontLayout;
-	ctx.fillStyle = "blue";
-	ctx.fillText(printLimit, 670, 70);
-	ctx.fill();
+	//ctx.font = fontLayout;
+	//ctx.fillStyle = "blue";
+	//ctx.fillText(printLimit, 670, 70);
+	//ctx.fill();
 
 	if (timeLimit == 0) {
 	    //ctx.font = fontLayout;
