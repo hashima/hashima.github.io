@@ -119,15 +119,15 @@ function detectPoseInRealTime(video, net) {
             poses.forEach(({ s, keypoints }) => {
                 //drawNaviko(keypoints[0],keypoints[1],ctx);
                 for(i=0;i<17;i++){
-                   if(threshold < keypoints[i].score){
+                   //if(threshold < keypoints[i].score){
                       drawWristPoint(keypoints[i],ctx);
-                   }
+                   //}
                 }
                 
                 // 肩の間
-                if(threshold < keypoints[5].score && threshold < keyopoints[6].score){
+                //if(threshold < keypoints[5].score && threshold < keyopoints[6].score){
                    drawLine(keypoints[5], keypoints[6], ctx);
-		}
+		//}
                 // 左腕
                 //if(threshold < keypoints[5].score && threshold < keyopoints[7].score)
                    drawLine(keypoints[5], keypoints[7], ctx);
