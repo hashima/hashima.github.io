@@ -27,19 +27,10 @@ const flipHorizontal = false;
 //const stats = new Stats();
 const contentWidth = 800;
 const contentHeight = 600;
-const ballNum = 2;
 const colors = ["red","blue","green"];
 const fontLayout = "bold 50px Arial";
 
-let balls = [];
-let score = 0;
-let timeLimit = 200000;
-let printLimit = timeLimit / 10;
-let naviko = new Image();
-let navScale = 1
 let threshold = 0.1
-naviko.src = "naviko.png"
-balls = initBalls(ballNum);
 bindPage();
 
 async function bindPage() {
@@ -102,75 +93,49 @@ function detectPoseInRealTime(video, net) {
         ctx.drawImage(video, 0, 0, contentWidth, contentHeight);
         ctx.restore();
 
-	if (timeLimit % 10 == 0) {
-	    printLimit = timeLimit / 10;
-	}
-	ctx.font = fontLayout;
-	ctx.fillStyle = "blue";
-	ctx.fillText(printLimit, 670, 70);
-	ctx.fill();
-
-	if (timeLimit == 0) {
-	    //ctx.font = fontLayout;
-	    //ctx.fillStyle = "red";
-	    //ctx.fillText("TIME UP", 300, 300);
-	    //ctx.fill();
-	} else {
-            poses.forEach(({ s, keypoints }) => {
-                //drawNaviko(keypoints[0],keypoints[1],ctx);
-                for(i=0;i<17;i++){
-                   if(threshold < keypoints[i].score){
-                      drawWristPoint(keypoints[i],ctx);
-                   }
-                }
-                
-                // 肩の間
-                if(threshold < keypoints[5].score && threshold < keypoints[6].score){
-                   drawLine(keypoints[5], keypoints[6], ctx);
-		        }
-                // 左腕
-                if(threshold < keypoints[5].score && threshold < keypoints[7].score)
-                   drawLine(keypoints[5], keypoints[7], ctx);
-                if(threshold < keypoints[7].score && threshold < keypoints[9].score)
-                   drawLine(keypoints[7], keypoints[9], ctx);
-                // 右腕
-                if(threshold < keypoints[6].score && threshold < keypoints[8].score)
-                   drawLine(keypoints[6], keypoints[8], ctx);
-                if(threshold < keypoints[8].score && threshold < keypoints[10].score)
-                   drawLine(keypoints[8], keypoints[10], ctx);
-                // 肩と腰
-                if(threshold < keypoints[5].score && threshold < keypoints[11].score)
-                   drawLine(keypoints[5], keypoints[11], ctx);
-                if(threshold < keypoints[6].score && threshold < keypoints[12].score)
-                   drawLine(keypoints[6], keypoints[12], ctx);
-                if(threshold < keypoints[11].score && threshold < keypoints[12].score)
-                   drawLine(keypoints[11], keypoints[12], ctx);
-                // 腰と膝
-                if(threshold < keypoints[11].score && threshold < keypoints[13].score)
-                   drawLine(keypoints[11], keypoints[13], ctx);
-                if(threshold < keypoints[12].score && threshold < keypoints[14].score)
-                   drawLine(keypoints[12], keypoints[14], ctx);
-                // 膝と足首
-                if(threshold < keypoints[13].score && threshold < keypoints[15].score)
-                   drawLine(keypoints[13], keypoints[15], ctx);
-                if(threshold < keypoints[14].score && threshold < keypoints[16].score)
-                   drawLine(keypoints[14], keypoints[16], ctx);
-                
-                //ballsDecision(ctx,[keypoints[9],keypoints[10]]);
-		        //console.log(keypoints)
-            });
-	}
-
-	//ctx.font = fontLayout;
-	//ctx.fillStyle = "red";
-	//ctx.fillText(score, 70, 70);
-	//ctx.fill();
-	timeLimit -= 1;
-	if(timeLimit <= 0){
-	    timeLimit = 0;
-	}
-
-        //stats.end();
+        poses.forEach(({ s, keypoints }) => {
+            //drawNaviko(keypoints[0],keypoints[1],ctx);
+            for(i=0;i<17;i++){
+               if(threshold < keypoints[i].score){
+                  drawWristPoint(keypoints[i],ctx);
+               }
+            }
+            
+            // 肩の間
+            if(threshold < keypoints[5].score && threshold < keypoints[6].score){
+               drawLine(keypoints[5], keypoints[6], ctx);
+		    }
+            // 左腕
+            if(threshold < keypoints[5].score && threshold < keypoints[7].score)
+               drawLine(keypoints[5], keypoints[7], ctx);
+            if(threshold < keypoints[7].score && threshold < keypoints[9].score)
+               drawLine(keypoints[7], keypoints[9], ctx);
+            // 右腕
+            if(threshold < keypoints[6].score && threshold < keypoints[8].score)
+               drawLine(keypoints[6], keypoints[8], ctx);
+            if(threshold < keypoints[8].score && threshold < keypoints[10].score)
+               drawLine(keypoints[8], keypoints[10], ctx);
+            // 肩と腰
+            if(threshold < keypoints[5].score && threshold < keypoints[11].score)
+               drawLine(keypoints[5], keypoints[11], ctx);
+            if(threshold < keypoints[6].score && threshold < keypoints[12].score)
+               drawLine(keypoints[6], keypoints[12], ctx);
+            if(threshold < keypoints[11].score && threshold < keypoints[12].score)
+               drawLine(keypoints[11], keypoints[12], ctx);
+            // 腰と膝
+            if(threshold < keypoints[11].score && threshold < keypoints[13].score)
+               drawLine(keypoints[11], keypoints[13], ctx);
+            if(threshold < keypoints[12].score && threshold < keypoints[14].score)
+               drawLine(keypoints[12], keypoints[14], ctx);
+            // 膝と足首
+            if(threshold < keypoints[13].score && threshold < keypoints[15].score)
+               drawLine(keypoints[13], keypoints[15], ctx);
+            if(threshold < keypoints[14].score && threshold < keypoints[16].score)
+               drawLine(keypoints[14], keypoints[16], ctx);
+            
+            //ballsDecision(ctx,[keypoints[9],keypoints[10]]);
+		    //console.log(keypoints)
+        });
 
         requestAnimationFrame(poseDetectionFrame);
     }
@@ -193,47 +158,3 @@ function drawLine(p1, p2, ctx){
     ctx.stroke();
 }
 
-function drawNaviko(nose, leye, ctx){
-    navScale = (leye.position.x - nose.position.x - 50) / 20;
-    if (navScale < 1) navScale = 1;
-    let nw = naviko.width * navScale;
-    let nh = naviko.height * navScale;
-    ctx.drawImage(naviko,nose.position.x - nh / 2 , nose.position.y - nh / 1.5, nw, nh);
-}
-
-function ballsDecision(ctx,wrists){
-    for(i=0;i<ballNum;i++){
-        balls[i].y += 30;
-        if (balls[i].y > contentHeight) {
-            balls[i] = resetBall();
-            return;
-        }  else {
-	    wrists.forEach((wrist) => {
-		if((balls[i].x - 50)  <= wrist.position.x && wrist.position.x <= (balls[i].x + 50) &&
-		   (balls[i].y - 50) <= wrist.position.y && wrist.position.y <= (balls[i].y + 50)){
-		    score += 10;
-		    balls[i] = resetBall();
-		}
-	    });
-	    ctx.beginPath();
-            ctx.arc(balls[i].x , balls[i].y, 25, 0, 2 * Math.PI);
-            ctx.fillStyle = balls[i].color
-            ctx.fill();
-        }
-    }
-}
-
-function resetBall(){
-    color = Math.floor(Math.random()*3);
-    return {color:colors[color], x:Math.floor(Math.random()*(contentWidth  - 50) + 50), y:0}
-}
-
-function initBalls(n=2){
-    let x,y
-    let initBalls = []
-    for(i=0;i<n;i++){
-        let ball = resetBall();
-        initBalls.push(ball);
-    }
-    return initBalls;
-}
