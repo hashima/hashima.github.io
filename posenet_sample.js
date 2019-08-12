@@ -25,8 +25,8 @@ const imageScaleFactor = 0.2;
 const outputStride = 16;
 const flipHorizontal = false;
 //const stats = new Stats();
-const contentWidth = 600;
-const contentHeight = 800;
+const contentWidth = 1200;
+const contentHeight = 1600;
 const colors = ["red","blue","green"];
 const fontLayout = "bold 50px Arial";
 
