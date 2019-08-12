@@ -159,6 +159,6 @@ function drawLine(p1, p2, ctx){
 }
 
 document.getElementById("rec").onclick = function() {
-  
+     $("rec").css("font-color","red");
 	
 };
