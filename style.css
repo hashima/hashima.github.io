@@ -4,7 +4,7 @@ body {
 }
 
 #video {
-  width: 600px;
+  width: 1200px;
 }
 
 #navi {
@@ -20,8 +20,8 @@ body {
 
 #recbotton {
   position: absolute;
-  top:400px;
-  left:550px;
+  top:800px;
+  left:1100px;
 }
 
 #rec {
