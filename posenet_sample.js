@@ -158,3 +158,7 @@ function drawLine(p1, p2, ctx){
     ctx.stroke();
 }
 
+document.getElementById("rec").onclick = function() {
+  
+	
+};
