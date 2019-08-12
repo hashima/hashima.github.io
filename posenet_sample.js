@@ -66,8 +66,8 @@ async function setupCamera() {
         const stream = await navigator.mediaDevices.getUserMedia({
             'audio': false,
             'video': {
-                'facingMode': 'environment'
-            }
+????            'facingMode': 'environment'
+??          }
 	});
         video.srcObject = stream;
 
@@ -119,9 +119,9 @@ function detectPoseInRealTime(video, net) {
             poses.forEach(({ s, keypoints }) => {
                 //drawNaviko(keypoints[0],keypoints[1],ctx);
                 for(i=0;i<17;i++){
-                   //if(threshold < keypoints[i].score){
+                   if(threshold < keypoints[i].score){
                       drawWristPoint(keypoints[i],ctx);
-                   //}
+                   }
                 }
                 
                 // 肩の間
