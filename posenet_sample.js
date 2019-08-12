@@ -125,9 +125,9 @@ function detectPoseInRealTime(video, net) {
                 }
                 
                 // 肩の間
-                //if(threshold < keypoints[5].score && threshold < keyopoints[6].score){
+                if(threshold < keypoints[5].score && threshold < keyopoints[6].score){
                    drawLine(keypoints[5], keypoints[6], ctx);
-		//}
+		        }
                 // 左腕
                 //if(threshold < keypoints[5].score && threshold < keyopoints[7].score)
                    drawLine(keypoints[5], keypoints[7], ctx);
