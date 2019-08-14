@@ -137,6 +137,8 @@ function drawLine(p1, p2, ctx){
 }
 
 document.getElementById("recb").onclick = function() {
-     $("rec").css("font-color","red");
+   $('#rec').removeClass('far');
+   $('#rec').toggleClass('fas');
+   $("#rec").css("color","red");
 	
 };
