@@ -24,7 +24,7 @@ recorder.onstop = function(evt) {
 };
 
 // 再生用のvideo要素
-const playbackVideo = document.getElementById('canvas');
+const playbackVideo = document.getElementById('video');
 let blobUrl = null;
 
 function playRecorded() {
