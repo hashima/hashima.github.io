@@ -18,6 +18,28 @@ recorder.ondataavailable = function(evt) {
   chunks.push(evt.data);
 };
 
+// 録画停止時に呼ばれる
+recorder.onstop = function(evt) {
+  recorder = null;
+  playRecorded();
+};
+
+// 再生用のvideo要素
+const playbackVideo = document.getElementById('canvas');
+let blobUrl = null;
+
+function playRecorded() {
+  const videoBlob = new Blob(chunks, { type: "video/webm" });
+  blobUrl = window.URL.createObjectURL(videoBlob);
+
+  if (playbackVideo.src) {
+    window.URL.revokeObjectURL(playbackVideo.src); // 解放
+    playbackVideo.src = null;
+  }
+  playbackVideo.src = blobUrl;
+  playbackVideo.play();
+}
+
 let threshold = 0.1
 bindPage();
 
