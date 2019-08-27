@@ -7,6 +7,7 @@ const contentWidth = 600;
 const contentHeight = 800;
 const colors = ["red","blue","green"];
 const fontLayout = "bold 50px Arial";
+const canvasStream = document.querySelector('canvas').captureStream();
 
 let threshold = 0.1
 bindPage();
