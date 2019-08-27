@@ -10,6 +10,13 @@ const fontLayout = "bold 50px Arial";
 const canvasStream = document.querySelector('canvas').captureStream();
 const recorder = new MediaRecorder(canvasStream);
 
+let chunks = []; // 録画データを保持する
+
+// 一定間隔で録画が区切られて、データが渡される
+recorder.ondataavailable = function(evt) {
+  chunks.push(evt.data);
+};
+
 let threshold = 0.1
 bindPage();
 
@@ -143,4 +150,6 @@ document.getElementById("recb").onclick = function() {
    $('#rec').toggleClass('fas');
    $("#rec").css("color","red");
 	
+   // 録画開始
+   recorder.start(1000); // 1000ms 毎に録画データを区切る
 };
