@@ -10,6 +10,7 @@ const fontLayout = "bold 50px Arial";
 const canvasStream = document.querySelector('canvas').captureStream();
 const recorder = new MediaRecorder(canvasStream);
 
+let isRecording = false;
 let chunks = []; // 録画データを保持する
 
 // 一定間隔で録画が区切られて、データが渡される
@@ -150,6 +151,14 @@ document.getElementById("recb").onclick = function() {
    $('#rec').toggleClass('fas');
    $("#rec").css("color","red");
 	
-   // 録画開始
-   recorder.start(1000); // 1000ms 毎に録画データを区切る
+   if(!isRecording){
+      isRecording = true;
+      // 録画開始
+      recorder.start(1000); // 1000ms 毎に録画データを区切る
+   }
+   else{
+      isRecording = false;
+      // 録画停止（の要求）
+      recorder.stop();
+   }
 };
