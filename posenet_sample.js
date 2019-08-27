@@ -20,7 +20,6 @@ recorder.ondataavailable = function(evt) {
 
 // 録画停止時に呼ばれる
 recorder.onstop = function(evt) {
-  recorder = null;
   playRecorded();
 };
 
