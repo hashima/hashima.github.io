@@ -8,6 +8,7 @@ const contentHeight = 800;
 const colors = ["red","blue","green"];
 const fontLayout = "bold 50px Arial";
 const canvasStream = document.querySelector('canvas').captureStream();
+const recorder = new MediaRecorder(canvasStream);
 
 let threshold = 0.1
 bindPage();
