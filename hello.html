@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/onsenui/js/onsenui.js"></script>
+  <script src="https://unpkg.com/vue-onsenui"></script>
+</head>
+
+<body>
+  <template id="main-page">
+    <v-ons-page>
+      <v-ons-toolbar>
+        <div class="center">Title</div>
+      </v-ons-toolbar>
+
+      <p style="text-align: center">
+        <v-ons-button @click="$ons.notification.alert('Hello World!')">
+          Click me!
+        </v-ons-button>
+      </p>
+    </v-ons-page>
+  </template>
+
+  <div id="app"></div>
+
+  <script>
+    var vm = new Vue({
+      el: '#app',
+      template: '#main-page'
+    });
+  </script>
+</body>
+</html>
