@@ -52,7 +52,7 @@ body {
 }
 
 .inning{
-  width:100%;
+  width:auto;
   border: 2px solid #FFF;
   height:20px;
   overflow: hidden;
