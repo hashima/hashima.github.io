@@ -54,13 +54,14 @@ body {
 .inning{
   width:100%;
   border: 2px solid #FFF;
-  height:26px;
+  height:22px;
   overflow: hidden;
   color:#FFF;
   font-size:16px;
   background-color: #FFF;
   color:#003300;
   margin-bottom:3px;
+  padding-left:4px;
   font-weight:bold;
 }
 
