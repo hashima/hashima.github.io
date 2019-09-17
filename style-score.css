@@ -24,7 +24,7 @@ body {
   border: 2px solid #FFF;
   text-align: center;
   font-size:16px;
-  height:26px;
+  height:22px;
   padding:2px;
 }
 
@@ -54,7 +54,7 @@ body {
 .inning{
   width:100%;
   border: 2px solid #FFF;
-  height:22px;
+  height:20px;
   overflow: hidden;
   color:#FFF;
   font-size:16px;
