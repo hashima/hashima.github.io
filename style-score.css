@@ -81,8 +81,12 @@ body {
   color:#FFF;
 }
 
-.list-item--score-list-item__center{
+.list-item--score-list-item__center {
   padding:2px;
+}
+
+.list-item--score-list-item__right {
+  padding-right:2px;
 }
 
 .inning{
