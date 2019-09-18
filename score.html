@@ -61,6 +61,13 @@
                     </option>
                   </v-ons-select>
                 </div>
+                <div class="position">
+                  <v-ons-select modifier="select" v-model="selectedItemBatterrun">
+                    <option v-for="item in itemsBatterrun" :value="item.value">
+                      {{ item.text }}
+                    </option>
+                  </v-ons-select>
+                </div>
               </div>
             </div>
             <div class="ok">
@@ -154,6 +161,13 @@
                     { text: '本塁へ', value: '本塁へ' },
             ],
             selectedItemBase: '--',
+            itemsBatterrun: [
+                    { text: '--', value: '--' },
+                    { text: '2塁へ', value: '2塁へ' },
+                    { text: '3塁へ', value: '3塁へ' },
+                    { text: '本塁へ', value: '本塁へ' },
+            ],
+            selectedItemBatterrun: '--',
           };
         }
       });
