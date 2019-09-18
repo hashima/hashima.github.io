@@ -69,6 +69,19 @@ body {
   padding:2px 2px 2px 6px;
 }
 
+.inning{
+  width:auto;
+  border: 2px solid #FFF;
+  height:20px;
+  overflow: hidden;
+  font-size:16px;
+  background-color: #FFF;
+  color:#003300;
+  margin-bottom:3px;
+  padding-left:4px;
+  font-weight:bold;
+}
+
 .list-item--score-list-item{
   width:auto;
   background-color: #003300;
@@ -89,17 +102,15 @@ body {
   padding-right:2px;
 }
 
-.inning{
-  width:auto;
-  border: 2px solid #FFF;
-  height:20px;
-  overflow: hidden;
-  font-size:16px;
+.order{
+  float: left;
+  font-size:32px;
+  padding:18px 4px 0 4px;
+  text-align: center;
+  height:42px;
+  width:26px;
   background-color: #FFF;
   color:#003300;
-  margin-bottom:3px;
-  padding-left:4px;
-  font-weight:bold;
 }
 
 .batter-score{
@@ -143,17 +154,6 @@ body {
 .player-label {
   font-size:14px;
   color: #fff;
-}
-
-.order{
-  float: left;
-  font-size:32px;
-  padding:18px 4px 0 4px;
-  text-align: center;
-  height:46px;
-  width:26px;
-  background-color: #FFF;
-  color:#003300;
 }
 
 .score{
