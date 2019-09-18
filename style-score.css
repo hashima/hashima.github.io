@@ -68,6 +68,15 @@ body {
   font-weight:bold;
 }
 
+.list-item--score-list-item{
+  width:auto;
+  border: 2px solid #FFF;
+  height:52px;
+  overflow: hidden;
+  padding:2px;
+  margin-bottom:3px;
+}
+
 .inning{
   width:auto;
   border: 2px solid #FFF;
