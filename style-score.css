@@ -183,6 +183,7 @@ body {
 }
 
 .button--ok-button{
+  float: right;
   font-size:12px;
   padding:8px 0px 0 0px;
   text-align: center;
