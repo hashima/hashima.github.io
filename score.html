@@ -12,6 +12,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   </head>
   <body>
+    <template id="main">
     <ons-page>
       <div class="background" style="background-color: #003300;"></div>
     <ons-toolbar>
@@ -134,5 +135,13 @@
 
     </div>
     </ons-page>
+    </template>
+    <div id="app"></div>
+      <script>
+    var vm = new Vue({
+      el: '#app',
+      template: '#main-page'
+    });
+  </script>
   </body>
 </html>
