@@ -71,6 +71,7 @@ body {
 
 .list-item--score-list-item{
   width:auto;
+  background-color: #003300;
   border: 2px solid #FFF;
   height:52px;
   overflow: hidden;
