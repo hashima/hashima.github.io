@@ -77,6 +77,14 @@ body {
   margin:1px 0 0 1px;
 }
 
+.select-input{
+  font-size:20px;
+  border :1px solid #fff;
+  background-color: #003300;
+  color:#FFF;
+  margin:1px 0 0 1px;
+}
+
 .selectbox{
   font-size:20px;
   border :1px solid #fff;
