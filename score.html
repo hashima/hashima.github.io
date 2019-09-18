@@ -52,39 +52,14 @@
                     <option v-for="item in itemsbatter" :value="item.value">
                       {{ item.text }}
                     </option>
-<!--
-                      <option value="rolls">結果</option>
-                      <option value="rolls">ゴロ</option>
-                      <option value="Fly">フライ</option>
-                      <option value="k">三振</option>
-                      <option value="H">ヒット</option>
-                      <option value="bunt">犠打</option>
-                      <option value="bunt">犠飛</option>
-                      <option value="bunt">四球</option>
-                      <option value="bunt">死球</option>
-                      <option value="2H">2塁打</option>
-                      <option value="3H">3塁打</option>
-                      <option value="HR">本塁打</option>
-                      <option value="HR">エラー</option>-->
                   </v-ons-select>
                 </div>
                 <div class="position">
-                  <ons-select modifier="select">
-                    <select class="selectbox selectbox-position">
-                      <option value="rolls">方向</option>
-                      <option value="rolls">P</option>
-                      <option value="Fly">C</option>
-                      <option value="k">1B</option>
-                      <option value="H">2B</option>
-                      <option value="bunt">3B</option>
-                      <option value="bunt">SS</option>
-                      <option value="bunt">LF</option>
-                      <option value="bunt">CF</option>
-                      <option value="2H">RF</option>
-                      <option value="bunt">LF-CF</option>
-                      <option value="bunt">CF-RF</option>
-                    </select>
-                  </ons-select>
+                  <v-ons-select modifier="select" v-model="selectedItemDirection">
+                    <option v-for="item in itemsDirection" :value="item.value">
+                      {{ item.text }}
+                    </option>
+                  </v-ons-select>
                 </div>
               </div>
             </div>
@@ -155,8 +130,22 @@
                     { text: '3塁打', value: '3塁打' },
                     { text: '本塁打', value: '本塁打' },
                     { text: 'エラー', value: 'エラー' },
-          ],
-            selectedItemBatter: '結果'
+            ],
+            itemsDirection: [
+                    { text: 'P', value: 'P' },
+                    { text: 'C', value: 'C' },
+                    { text: '1B', value: '1B' },
+                    { text: '2B', value: '2B' },
+                    { text: '3B', value: '3B' },
+                    { text: 'SS', value: 'SS' },
+                    { text: 'LF', value: 'LF' },
+                    { text: 'CF', value: 'CF' },
+                    { text: 'RF', value: 'RF' },
+                    { text: 'LF-CF', value: 'LF-CF' },
+                    { text: 'CF-RF', value: 'CF-RF' },
+            ],
+            selectedItemBatter: '結果',
+            selectedItemDirection: '方向',
           };
         }
       });
