@@ -112,14 +112,32 @@
         <v-ons-list modifier="score-list">
           <v-ons-list-header modifier="score-list-header">3回表</v-ons-list-header>
           <v-ons-list-item modifier="score-list-item">
-            <div class="left">
-              <span>2</span>
+            <div class="order">
+              <span>1</span>
             </div>
-            <div class="center">
-              Icon and switch
+            <div class="player-item">
+              <div class="player-label">
+                <span>C とら #2 ヒット-盗塁</span>
+              </div>
+              <div class="score-item">
+                <div class="score">
+                  <v-ons-select modifier="select" v-model="selectedItemRunner">
+                    <option v-for="item in itemsRunner" :value="item.value">
+                      {{ item.text }}
+                    </option>
+                  </v-ons-select>
+                </div>
+                <div class="position">
+                  <v-ons-select modifier="select" v-model="selectedItemBase">
+                    <option v-for="item in itemsBase" :value="item.value">
+                      {{ item.text }}
+                    </option>
+                  </v-ons-select>
+                </div>
+              </div>
             </div>
-            <div class="right">
-              <v-ons-switch></v-ons-switch>
+            <div class="ok">
+              <ons-button modifier="ok-button">決定</ons-button>
             </div>
           </v-ons-list-item>
         </v-ons-list>
