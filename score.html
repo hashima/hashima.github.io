@@ -77,26 +77,18 @@
               </div>
               <div class="score-item">
                 <div class="score">
-                  <ons-select class="select">
-                    <select class="selectbox selectbox-result">
-                      <option value="rolls">結果</option>
-                      <option value="rolls">盗塁</option>
-                      <option value="Fly">PB</option>
-                      <option value="k">WP</option>
-                      <option value="H">進塁</option>
-                    </select>
-                  </ons-select>
+                  <v-ons-select modifier="select" v-model="selectedItemRunner">
+                    <option v-for="item in itemsRunner" :value="item.value">
+                      {{ item.text }}
+                    </option>
+                  </v-ons-select>
                 </div>
                 <div class="position">
-                  <ons-select class="select">
-                    <select class="selectbox selectbox-result">
-                      <option value="rolls">ー</option>
-                      <option value="rolls">2塁へ</option>
-                      <option value="Fly">3塁へ</option>
-                      <option value="k">本塁へ</option>
-                      <option value="k">アウト</option>
-                    </select>
-                  </ons-select>
+                  <v-ons-select modifier="select" v-model="selectedItemBase">
+                    <option v-for="item in itemsBase" :value="item.value">
+                      {{ item.text }}
+                    </option>
+                  </v-ons-select>
                 </div>
               </div>
             </div>
@@ -131,6 +123,7 @@
                     { text: '本塁打', value: '本塁打' },
                     { text: 'エラー', value: 'エラー' },
             ],
+            selectedItemBatter: '結果',
             itemsDirection: [
                     { text: '方向', value: '方向' },
                     { text: 'P', value: 'P' },
@@ -145,8 +138,22 @@
                     { text: 'LF-CF', value: 'LF-CF' },
                     { text: 'CF-RF', value: 'CF-RF' },
             ],
-            selectedItemBatter: '結果',
             selectedItemDirection: '方向',
+            itemsRunner: [
+                    { text: '結果', value: '結果' },
+                    { text: '盗塁', value: '盗塁' },
+                    { text: 'WP', value: 'WP' },
+                    { text: 'PB', value: 'PB' },
+                    { text: '進塁', value: '進塁' },
+            ],
+            selectedItemRunner: '結果',
+            itemsBase: [
+                    { text: '--', value: '--' },
+                    { text: '2塁へ', value: '2塁へ' },
+                    { text: '3塁へ', value: '3塁へ' },
+                    { text: '本塁へ', value: '本塁へ' },
+            ],
+            selectedItemBase: '--',
           };
         }
       });
