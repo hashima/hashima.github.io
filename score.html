@@ -49,6 +49,10 @@
               <div class="score-item">
                 <div class="score">
                   <v-ons-select modifier="select" v-model="selectedItem">
+                    <option v-for="item in items" :value="item.value">
+                      {{ item.text }}
+                    </option>
+<!--
                       <option value="rolls">結果</option>
                       <option value="rolls">ゴロ</option>
                       <option value="Fly">フライ</option>
@@ -61,7 +65,7 @@
                       <option value="2H">2塁打</option>
                       <option value="3H">3塁打</option>
                       <option value="HR">本塁打</option>
-                      <option value="HR">エラー</option>
+                      <option value="HR">エラー</option>-->
                   </v-ons-select>
                 </div>
                 <div class="position">
@@ -138,9 +142,9 @@
           return {
             title: 'Scorebook mobi',
             items: [
-                    { text: 'Vue', value: '結果' },
-                    { text: 'React', value: 'React' },
-                    { text: 'Angular', value: '結果' }
+                    { text: '結果', value: '結果' },
+                    { text: 'ゴロ', value: 'ゴロ' },
+                    { text: 'フライ', value: 'フライ' }
             ],
             selectedItem: '結果'
           };
