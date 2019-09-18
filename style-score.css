@@ -57,6 +57,10 @@ body {
   margin:4px 4px 0 4px;
 }
 
+.v-ons-list--score-list {
+  margin:4px 4px 0 4px;
+}
+
 .inning{
   width:auto;
   border: 2px solid #FFF;
