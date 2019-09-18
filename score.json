@@ -1,6 +1,4 @@
-﻿{
-    "topname": "杉の実",
-    "topscore": "3",
-    "bottomname": "杉の実",
-    "bottomscore": "5",
+﻿{{
+    "score": 3,
+    "name": "hogehoge"
 }
