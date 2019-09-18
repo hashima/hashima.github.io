@@ -136,7 +136,13 @@
         template: '#main',
         data() {
           return {
-            title: 'Scorebook mobi'
+            title: 'Scorebook mobi',
+            items: [
+                    { text: 'Vue', value: 'Vue' },
+                    { text: 'React', value: 'React' },
+                    { text: 'Angular', value: '結果' }
+            ],
+            selectedItem: 'Vue'
           };
         }
       });
