@@ -13,135 +13,136 @@
   </head>
   <body>
     <template id="main">
-    <ons-page>
-      <div class="background" style="background-color: #003300;"></div>
-    <ons-toolbar>
-      <div class="left"></div>
-      <div class="center">
-        Scorebook mobi
-      </div>
-      <div class="right"></div>
-    </ons-toolbar>
-    <div id="container">
-      <div id="game">
-          <div class="team-name">
-            <span>杉の実</span>
+      <ons-page>
+        <div class="background" style="background-color: #003300;"></div>
+        <v-ons-toolbar>
+          <div class="left"></div>
+          <div class="center">{{ title }}</div>
+          <div class="right"></div>
+        </v-ons-toolbar>
+        <div id="container">
+          <div id="game">
+              <div class="team-name">
+                <span>杉の実</span>
+              </div>
+              <div class="team-score">
+                <span style="margin-right:10px">3</span>
+              </div>
+              <div class="team-name">
+                <span>杉の実</span>
+              </div>
+              <div class="team-score">
+                <span>5</span>
+              </div>
           </div>
-          <div class="team-score">
-            <span style="margin-right:10px">3</span>
+          <div id="batter-list">
+            <div class="inning">
+              <span>1回表</span>
+            </div>
+            <div class="batter-score">
+              <div class="order">
+                <span>2</span>
+              </div>
+              <div class="player-item">
+                <div class="player-label">
+                  <span>P のあ #1</span>
+                </div>
+                <div class="score-item">
+                  <div class="score">
+                    <ons-select modifier="select">
+                      <select class="selectbox selectbox-result">
+                        <option value="rolls">結果</option>
+                        <option value="rolls">ゴロ</option>
+                        <option value="Fly">フライ</option>
+                        <option value="k">三振</option>
+                        <option value="H">ヒット</option>
+                        <option value="bunt">犠打</option>
+                        <option value="bunt">犠飛</option>
+                        <option value="bunt">四球</option>
+                        <option value="bunt">死球</option>
+                        <option value="2H">2塁打</option>
+                        <option value="3H">3塁打</option>
+                        <option value="HR">本塁打</option>
+                        <option value="HR">エラー</option>
+                      </select>
+                    </ons-select>
+                  </div>
+                  <div class="position">
+                    <ons-select modifier="select">
+                      <select class="selectbox selectbox-position">
+                        <option value="rolls">方向</option>
+                        <option value="rolls">P</option>
+                        <option value="Fly">C</option>
+                        <option value="k">1B</option>
+                        <option value="H">2B</option>
+                        <option value="bunt">3B</option>
+                        <option value="bunt">SS</option>
+                        <option value="bunt">LF</option>
+                        <option value="bunt">CF</option>
+                        <option value="2H">RF</option>
+                        <option value="bunt">LF-CF</option>
+                        <option value="bunt">CF-RF</option>
+                      </select>
+                    </ons-select>
+                  </div>
+                </div>
+              </div>
+              <div class="ok">
+                <ons-button modifier="ok-button">決定</ons-button>
+              </div>
+            </div>
+            <div class="batter-score">
+              <div class="order">
+                <span>1</span>
+              </div>
+              <div class="player-item">
+                <div class="player-label">
+                  <span>C とら #2 ヒット-盗塁</span>
+                </div>
+                <div class="score-item">
+                  <div class="score">
+                    <ons-select class="select">
+                      <select class="selectbox selectbox-result">
+                        <option value="rolls">結果</option>
+                        <option value="rolls">盗塁</option>
+                        <option value="Fly">PB</option>
+                        <option value="k">WP</option>
+                        <option value="H">進塁</option>
+                      </select>
+                    </ons-select>
+                  </div>
+                  <div class="position">
+                    <ons-select class="select">
+                      <select class="selectbox selectbox-result">
+                        <option value="rolls">ー</option>
+                        <option value="rolls">2塁へ</option>
+                        <option value="Fly">3塁へ</option>
+                        <option value="k">本塁へ</option>
+                        <option value="k">アウト</option>
+                      </select>
+                    </ons-select>
+                  </div>
+                </div>
+              </div>
+              <div class="ok">
+                <ons-button modifier="ok-button">決定</ons-button>
+              </div>
+            </div>
           </div>
-          <div class="team-name">
-            <span>杉の実</span>
-          </div>
-          <div class="team-score">
-            <span>5</span>
-          </div>
-      </div>
-      <div id="batter-list">
-        <div class="inning">
-          <span>1回表</span>
         </div>
-
-        <div class="batter-score">
-          <div class="order">
-            <span>2</span>
-          </div>
-          <div class="player-item">
-            <div class="player-label">
-              <span>P のあ #1</span>
-            </div>
-            <div class="score-item">
-              <div class="score">
-                <ons-select modifier="select">
-                  <select class="selectbox selectbox-result">
-                    <option value="rolls">結果</option>
-                    <option value="rolls">ゴロ</option>
-                    <option value="Fly">フライ</option>
-                    <option value="k">三振</option>
-                    <option value="H">ヒット</option>
-                    <option value="bunt">犠打</option>
-                    <option value="bunt">犠飛</option>
-                    <option value="bunt">四球</option>
-                    <option value="bunt">死球</option>
-                    <option value="2H">2塁打</option>
-                    <option value="3H">3塁打</option>
-                    <option value="HR">本塁打</option>
-                    <option value="HR">エラー</option>
-                  </select>
-                </ons-select>
-              </div>
-              <div class="position">
-                <ons-select modifier="select">
-                  <select class="selectbox selectbox-position">
-                    <option value="rolls">方向</option>
-                    <option value="rolls">P</option>
-                    <option value="Fly">C</option>
-                    <option value="k">1B</option>
-                    <option value="H">2B</option>
-                    <option value="bunt">3B</option>
-                    <option value="bunt">SS</option>
-                    <option value="bunt">LF</option>
-                    <option value="bunt">CF</option>
-                    <option value="2H">RF</option>
-                    <option value="bunt">LF-CF</option>
-                    <option value="bunt">CF-RF</option>
-                  </select>
-                </ons-select>
-              </div>
-            </div>
-          </div>
-          <div class="ok">
-            <ons-button modifier="ok-button">決定</ons-button>
-          </div>
-        </div>
-        <div class="batter-score">
-          <div class="order">
-            <span>1</span>
-          </div>
-          <div class="player-item">
-            <div class="player-label">
-              <span>C とら #2 ヒット-盗塁</span>
-            </div>
-            <div class="score-item">
-              <div class="score">
-                <ons-select class="select">
-                  <select class="selectbox selectbox-result">
-                    <option value="rolls">結果</option>
-                    <option value="rolls">盗塁</option>
-                    <option value="Fly">PB</option>
-                    <option value="k">WP</option>
-                    <option value="H">進塁</option>
-                  </select>
-                </ons-select>
-              </div>
-              <div class="position">
-                <ons-select class="select">
-                  <select class="selectbox selectbox-result">
-                    <option value="rolls">ー</option>
-                    <option value="rolls">2塁へ</option>
-                    <option value="Fly">3塁へ</option>
-                    <option value="k">本塁へ</option>
-                    <option value="k">アウト</option>
-                  </select>
-                </ons-select>
-              </div>
-            </div>
-          </div>
-          <div class="ok">
-            <ons-button modifier="ok-button">決定</ons-button>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    </ons-page>
+      </ons-page>
     </template>
     <div id="app"></div>
     
     <script>
       var vm = new Vue({
         el: '#app',
-        template: '#main'
+        template: '#main',
+        data() {
+          return {
+            title: 'Scorebook mobi'
+          };
+        }
       });
     </script>
   </body>
