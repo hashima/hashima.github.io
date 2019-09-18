@@ -48,8 +48,8 @@
               </div>
               <div class="score-item">
                 <div class="score">
-                  <v-ons-select modifier="select" v-model="selectedItem">
-                    <option v-for="item in items" :value="item.value">
+                  <v-ons-select modifier="select" v-model="selectedItemBatter">
+                    <option v-for="item in itemsbatter" :value="item.value">
                       {{ item.text }}
                     </option>
 <!--
@@ -141,7 +141,7 @@
         data() {
           return {
             title: 'Scorebook mobi',
-            items: [
+            itemsbatter: [
                     { text: '結果', value: '結果' },
                     { text: 'ゴロ', value: 'ゴロ' },
                     { text: 'フライ', value: 'フライ' },
@@ -156,7 +156,7 @@
                     { text: '本塁打', value: '本塁打' },
                     { text: 'エラー', value: 'エラー' },
           ],
-            selectedItem: '結果'
+            selectedItemBatter: '結果'
           };
         }
       });
