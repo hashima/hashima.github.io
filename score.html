@@ -23,16 +23,16 @@
         </v-ons-toolbar>
         <div id="game">
             <div class="team-name">
-              <span>杉の実</span>
+              <span>{{ score.game.top-name }}</span>
             </div>
             <div class="team-score">
-              <span style="margin-right:10px">{{ score.score }}</span>
+              <span style="margin-right:10px">{{ score.game.top-score }}</span>
             </div>
             <div class="team-name">
-              <span>杉の実</span>
+              <span>{{ score.game.bottom-name }}</span>
             </div>
             <div class="team-score">
-              <span>5</span>
+              <span>{{ score.game.bottom-score }}</span>
             </div>
         </div>
         <div id="batter-list">
