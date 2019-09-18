@@ -1,8 +1,8 @@
 ﻿{
     "game": {
-              "top_name": "杉の実"
-              "top_score": "3"
-              "bottom_name": "杉の実"
-              "bottom_score": "5"
+              "topname": "杉の実"
+              "topscore": "3"
+              "bottomname": "杉の実"
+              "bottomscore": "5"
     },
 }
