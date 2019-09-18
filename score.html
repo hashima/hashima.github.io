@@ -121,7 +121,7 @@
               </div>
               <div class="score-item">
                 <div class="score">
-                  <v-ons-select modifier="select" v-model="selectedItemBatter">
+                  <v-ons-select modifier="select" v-model="selectedItemBatter" v-on:change="fetchBatter">
                     <option v-for="item in itemsbatter" :value="item.value">
                       {{ item.text }}
                     </option>
@@ -247,7 +247,12 @@
         },
         mounted: function () {
           axios.get("./score.json").then(response => (this.score = response.data))
-        }
+        },
+        methods: {
+          fetchBatter: function() {
+            alert(this.selectedItemBatter);
+          }
+        },
       });
     </script>
   </body>
