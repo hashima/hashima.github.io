@@ -26,7 +26,7 @@
               <span>杉の実</span>
             </div>
             <div class="team-score">
-              <span style="margin-right:10px">{{ score }}</span>
+              <span style="margin-right:10px">{{ score.score }}</span>
             </div>
             <div class="team-name">
               <span>杉の実</span>
@@ -173,7 +173,7 @@
           };
         },
         mounted: function () {
-          axios.get("./score.json").then(response => (this.score = response))
+          axios.get("./score.json").then(response => (this.score = response.data))
         }
       });
     </script>
