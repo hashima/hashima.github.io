@@ -64,6 +64,8 @@ body {
 .list-header--score-list-header {
   background-color: #FFF;
   color:#003300;
+  font-size:16px;
+  font-weight:bold;
 }
 
 .inning{
