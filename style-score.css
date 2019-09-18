@@ -81,16 +81,8 @@ body {
   color:#FFF;
 }
 
-.list-item--score-list-item__left{
-  float: left;
-  font-size:32px;
-  padding:6px 4px 0 4px;
-  text-align: center;
-  height:46px;
-  width:26px;
-  background-color: #FFF;
-  color:#003300;
-  overflow: hidden;
+.list-item--score-list-item__center{
+  padding:2px;
 }
 
 .inning{
