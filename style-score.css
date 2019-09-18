@@ -23,6 +23,17 @@ body {
   height:22px;
   padding:2px;
 }
+.game-inning{
+  float: left;
+  margin:0 12px 0 12px;
+  padding:0 10px 0 10px;
+  text-align: center;
+  height:24px;
+  background-color: #003300;
+  color:#FFF;
+}
+
+
 
 .team-name{
   float: left;
