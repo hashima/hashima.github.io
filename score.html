@@ -9,7 +9,6 @@
     <script src="https://unpkg.com/vue-onsenui"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel='stylesheet' href='style-score.css?ver=5.0.0' type='text/css' media='all' />
-    <script src="./app.js"></script>
     <meta http-equiv=”Pragma” content=”no-cache”>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   </head>
@@ -168,7 +167,7 @@
       </ons-page>
     </template>
 
-    <div id="app"></div>
+    <div id="app"><script src="{{ mix('./app.js') }}"></script></div>
     <!--
     <script>
       var vm = new Vue({
