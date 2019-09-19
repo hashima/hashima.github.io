@@ -33,7 +33,7 @@
           <p style="text-align: center">
             Welcome home.<br><br>{{ score.topscore }}
           </p>
-            <v-ons-select modifier="select" v-on:change="$emit('fetch')">
+            <v-ons-select modifier="select" v-on:change="$emit('fetchBatter')">
                 <option v-for="item in itemsbatter" :value="item.value">
                   {{ item.text }}
                 </option>
