@@ -52,6 +52,51 @@
         </v-ons-page>
       </template>
 
-    <div id="app"><script src="./app-tab.js"></script></div>
+    <div id="app"></div>
+    <script>
+    var vm = new Vue({
+  el: '#app',
+  template: '#main',
+  data() {
+    return {
+      activeIndex: 0,
+      tabs: [
+        {
+          icon: this.md() ? null : 'ion-home',
+          label: 'Home',
+          page: homePage,
+          props: {
+            myProp: 'This is a page prop!'
+          },
+          key: "homePage"
+        },
+        {
+          icon: this.md() ? null : 'ion-ios-bell',
+          label: 'News',
+          page: newsPage,
+          badge: 7,
+          key: "newsPage"
+        },
+        {
+          icon: this.md() ? null : 'ion-ios-settings',
+          label: 'Settings',
+          page: settingsPage,
+          key: "settingsPage"
+        }
+      ]
+    };
+  },
+  methods: {
+    md() {
+      return this.$ons.platform.isAndroid();
+    }
+  },
+  computed: {
+    title() {
+      return this.tabs[this.activeIndex].label;
+    }
+  }
+});
+</script>
   </body>
 </html>
