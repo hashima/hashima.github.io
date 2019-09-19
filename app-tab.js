@@ -3,7 +3,7 @@ const homePage = {
   props: ['score','itemsbatter','selectedItemBatter'],
   methods: {
     fetchBatter(e) {
-      vm.fetchBatter(e);
+      vm.fetch(e);
     },
     // onChangeEvent(e){
     //   alert(this.tabs[0].props.score);
@@ -68,7 +68,7 @@ var vm = new Vue({
     md() {
       return this.$ons.platform.isAndroid();
     },
-    fetchBatter: function(e) {
+    fetch: function(e) {
       alert( e.target.value);
     },
   },
