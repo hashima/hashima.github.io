@@ -22,9 +22,9 @@ var vm = new Vue({
           icon: this.md() ? null : 'ion-home',
           label: 'Home',
           page: homePage,
-          // props: {
-          //   myProp: 'This is a page prop!'
-          // },
+          props: {
+            myProp: 'This is a page prop!'
+          },
           key: "homePage"
         },
         {
@@ -44,7 +44,7 @@ var vm = new Vue({
     };
   },
   mounted: function () {
-    axios.get("./score.json").then(response => (homePage.props.myProp = response.data))
+    axios.get("./score.json").then(response => (this.tabs[0].props.myProp = response.data))
   },
   methods: {
     md() {
