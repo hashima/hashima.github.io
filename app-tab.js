@@ -25,7 +25,6 @@ var vm = new Vue({
   data() {
     return {
       activeIndex: 0,
-      selecData = this.tabs[0].props.selectedItemBatter,
       tabs: [
         {
           icon: this.md() ? null : 'ion-home',
