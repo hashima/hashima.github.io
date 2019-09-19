@@ -2,9 +2,9 @@ const homePage = {
   template: '#home',
   props: ['score','itemsbatter','selectedItemBatter'],
   methods: {
-    // fetchBatter() {
-    //   vm.fetchBatter();
-    // },
+    fetchBatter() {
+      vm.fetchBatter();
+    },
     // onChangeEvent(e){
     //   alert(this.tabs[0].props.score);
     // },
@@ -40,12 +40,12 @@ var vm = new Vue({
             ],
             selectedItemBatter: 'item2',
           },
-          methods: {
-            fetchBatter: function() {
-              alert(this.tabs[0].props.selectedItemBatter);
-            },
-          },
-                  key: "homePage"
+          // methods: {
+          //   fetchBatter: function() {
+          //     alert(this.tabs[0].props.selectedItemBatter);
+          //   },
+          // },
+          key: "homePage"
         },
         {
           icon: this.md() ? null : 'ion-ios-bell',
