@@ -40,7 +40,12 @@ var vm = new Vue({
             ],
             selectedItemBatter: 'item2',
           },
-          key: "homePage"
+          methods: {
+            fetchBatter: function() {
+              alert(this.tabs[0].props.selectedItemBatter);
+            },
+          },
+                  key: "homePage"
         },
         {
           icon: this.md() ? null : 'ion-ios-bell',
