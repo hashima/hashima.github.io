@@ -2,9 +2,9 @@ const homePage = {
   template: '#home',
   props: ['score','itemsbatter','selectedItemBatter'],
   methods: {
-    // fetchBatter(event) {
-    //   vm.fetchBatter(event);
-    // },
+    fetchBatter(e) {
+      vm.fetchBatter(e);
+    },
     // onChangeEvent(e){
     //   alert(this.tabs[0].props.score);
     // },
