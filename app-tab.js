@@ -23,7 +23,24 @@ var vm = new Vue({
           label: 'Home',
           page: homePage,
           props: {
-            score: []
+            score: [],
+            itemsbatter: [
+              { text: '結果', value: '結果' },
+              { text: 'ゴロ', value: 'ゴロ' },
+              { text: 'フライ', value: 'フライ' },
+              { text: '三振', value: '三振' },
+              { text: 'ヒット', value: 'ヒット' },
+              { text: '犠打', value: '犠打' },
+              { text: '犠飛', value: '犠飛' },
+              { text: '四球', value: '四球' },
+              { text: '死球', value: '死球' },
+              { text: '2塁打', value: '2塁打' },
+              { text: '3塁打', value: '3塁打' },
+              { text: '本塁打', value: '本塁打' },
+              { text: 'エラー', value: 'エラー' },
+            ],
+            selectedItemBatter: '結果',
+
           },
           key: "homePage"
         },
@@ -31,7 +48,6 @@ var vm = new Vue({
           icon: this.md() ? null : 'ion-ios-bell',
           label: 'News',
           page: newsPage,
-          badge: 7,
           key: "newsPage"
         },
         {
@@ -49,7 +65,10 @@ var vm = new Vue({
   methods: {
     md() {
       return this.$ons.platform.isAndroid();
-    }
+    },
+    fetchBatter: function() {
+      alert(this.selectedItemBatter);
+    },
   },
   computed: {
     title() {
