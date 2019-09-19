@@ -33,7 +33,6 @@ var vm = new Vue({
           props: {
             score: [],
             itemsbatter: [
-              { text: '結果', value: '結果' },
               { text: 'item1', value: 'item1' },
               { text: 'item2', value: 'item2' },
               { text: 'item3', value: 'item3' },
