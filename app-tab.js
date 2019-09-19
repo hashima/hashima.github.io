@@ -1,6 +1,6 @@
 const homePage = {
   template: '#home',
-  props: ['score','itemsbatter','selectedItemBatter'],
+  props: ['score','itemsbatter'],
   methods: {
     fetchBatter() {
       vm.fetchBatter();
@@ -35,7 +35,6 @@ var vm = new Vue({
               { text: 'フライ', value: 'フライ' },
               { text: '三振', value: '三振' },
             ],
-            selectedItemBatter: 'フライ',
           },
           key: "homePage"
         },
@@ -51,7 +50,8 @@ var vm = new Vue({
           page: settingsPage,
           key: "settingsPage"
         }
-      ]
+      ],
+      selectedItemBatter: 'フライ',
     };
   },
   mounted: function () {
