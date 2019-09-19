@@ -69,8 +69,8 @@ var vm = new Vue({
     md() {
       return this.$ons.platform.isAndroid();
     },
-    fetchBatter: function() {
-      alert(this.tabs[0].props.selectedItemBatter);
+    fetchBatter: function(e) {
+      alert( e.target.value);
     },
   },
   computed: {
