@@ -3,7 +3,7 @@ const homePage = {
   props: ['score','itemsbatter','selectedItemBatter'],
   methods: {
     fetchBatter() {
-      alert(vm.selectedItemBatter);
+      vm.fetchBatter();
     }
   }
 };
