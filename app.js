@@ -11,6 +11,16 @@ const settingsPage = {
 };
 
 var vm = new Vue({
+  el: '#app',
+  template: '#home',
+  score:null,
+  mounted: function () {
+    axios.get("./score.json").then(response => (this.score = response.data))
+  },
+
+});
+
+var vm = new Vue({
         el: '#app',
         template: '#main',
         data() {
@@ -41,7 +51,7 @@ var vm = new Vue({
                 key: "settingsPage"
               }
             ],
-            score:null,
+            // score:null,
             itemsbatter: [
                     { text: '結果', value: '結果' },
                     { text: 'ゴロ', value: 'ゴロ' },
@@ -97,9 +107,9 @@ var vm = new Vue({
             selectedItemBatterrun: '--',
           };
         },
-        mounted: function () {
-          axios.get("./score.json").then(response => (this.score = response.data))
-        },
+        // mounted: function () {
+        //   axios.get("./score.json").then(response => (this.score = response.data))
+        // },
         methods: {
           fetchBatter: function() {
             alert(this.selectedItemBatter);
