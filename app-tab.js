@@ -35,7 +35,7 @@ var vm = new Vue({
               { text: 'フライ', value: 'フライ' },
               { text: '三振', value: '三振' },
             ],
-            selectedItemBatter: '結果',
+            selectedItemBatter: 'フライ',
           },
           key: "homePage"
         },
