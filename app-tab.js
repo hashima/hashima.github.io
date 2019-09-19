@@ -4,7 +4,10 @@ const homePage = {
   methods: {
     fetchBatter() {
       vm.fetchBatter();
-    }
+    },
+    onChangeEvent(e){
+      alert(this.tabs[0].props.selectedItemBatter);
+    },
   }
 };
 
