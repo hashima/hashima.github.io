@@ -2,12 +2,12 @@ const homePage = {
   template: '#home',
   props: ['score','itemsbatter','selectedItemBatter'],
   methods: {
-    fetchBatter() {
-      vm.fetchBatter();
-    },
-    onChangeEvent(e){
-      alert(this.tabs[0].props.score);
-    },
+    // fetchBatter() {
+    //   vm.fetchBatter();
+    // },
+    // onChangeEvent(e){
+    //   alert(this.tabs[0].props.score);
+    // },
   }
 };
 
@@ -35,11 +35,11 @@ var vm = new Vue({
             score: [],
             itemsbatter: [
               { text: '結果', value: '結果' },
-              { text: 'ゴロ', value: 'ゴロ' },
-              { text: 'フライ', value: 'フライ' },
-              { text: '三振', value: '三振' },
+              { text: 'item1', value: 'item1' },
+              { text: 'item2', value: 'item2' },
+              { text: 'item3', value: 'item3' },
             ],
-            selectedItemBatter: 'フライ',
+            selectedItemBatter: 'item2',
           },
           key: "homePage"
         },
