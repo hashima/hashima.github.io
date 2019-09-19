@@ -1,6 +1,11 @@
 const homePage = {
   template: '#home',
-  props: ['score','itemsbatter','selectedItemBatter','fetchBatter']
+  props: ['score','itemsbatter','selectedItemBatter'],
+  methods: {
+    fetchBatter() {
+      alert("alert!");
+    }
+  }
 };
 
 const newsPage = {
@@ -31,9 +36,6 @@ var vm = new Vue({
               { text: '三振', value: '三振' },
             ],
             selectedItemBatter: '結果',
-          },
-          methods: {
-            fetchBatter: fetchBatter(),
           },
           key: "homePage"
         },
