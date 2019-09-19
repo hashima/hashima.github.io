@@ -10,16 +10,6 @@ const settingsPage = {
   template: '#settings'
 };
 
-var vmHome = new Vue({
-  el: '#app',
-  template: '#home',
-  score:null,
-  mounted: function () {
-    axios.get("./score.json").then(response => (this.score = response.data))
-  },
-
-});
-
 var vm = new Vue({
         el: '#app',
         template: '#main',
@@ -35,7 +25,11 @@ var vm = new Vue({
                 props: {
                   myProp: 'This is a page prop!'
                 },
-                key: "homePage"
+                key: "homePage",
+                score:null,
+                mounted: function () {
+                  axios.get("./score.json").then(response => (this.score = response.data))
+                },
               },
               {
                 icon: this.md() ? null : 'ion-ios-bell',
