@@ -31,7 +31,7 @@ var vm = new Vue({
               { text: '三振', value: '三振' },
             ],
             selectedItemBatter: '結果',
-
+            fetchBatter: fetchBatter(),
           },
           key: "homePage"
         },
