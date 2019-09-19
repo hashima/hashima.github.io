@@ -1,6 +1,6 @@
 const homePage = {
   template: '#home',
-  props: ['score','itemsbatter']
+  props: ['score','itemsbatter',"selectedItemBatter"]
 };
 
 const newsPage = {
