@@ -2,9 +2,9 @@ const homePage = {
   template: '#home',
   props: ['score','itemsbatter','selectedItemBatter'],
   methods: {
-    fetchBatter(event) {
-      vm.fetchBatter(event);
-    },
+    // fetchBatter(event) {
+    //   vm.fetchBatter(event);
+    // },
     // onChangeEvent(e){
     //   alert(this.tabs[0].props.score);
     // },
@@ -69,7 +69,7 @@ var vm = new Vue({
     md() {
       return this.$ons.platform.isAndroid();
     },
-    fetchBatter: function(event) {
+    fetchBatter: function() {
       alert(this.tabs[0].props.selectedItemBatter);
     },
   },
