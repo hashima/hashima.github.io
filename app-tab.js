@@ -23,7 +23,7 @@ var vm = new Vue({
           label: 'Home',
           page: homePage,
           props: {
-            score: null
+            score: []
           },
           key: "homePage"
         },
