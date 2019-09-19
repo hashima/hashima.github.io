@@ -6,7 +6,7 @@ const homePage = {
       vm.fetchBatter();
     },
     onChangeEvent(e){
-      alert(this.selecData);
+      alert(this.tabs[0].props.score);
     },
   }
 };
