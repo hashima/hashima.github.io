@@ -1,51 +1,9 @@
-const homePage = {
-  template: '#home',
-};
-
-const newsPage = {
-  template: '#news'
-  props: ['score']
-};
-
-const settingsPage = {
-  template: '#settings'
-};
-
 var vm = new Vue({
         el: '#app',
         template: '#main',
         data() {
           return {
-            //title: 'Scorebook mobi',
-            activeIndex: 0,
-            tabs: [
-              {
-                icon: this.md() ? null : 'ion-home',
-                label: 'Home',
-                page: homePage,
-                props: {
-                  myProp: 'This is a page prop!'
-                },
-                key: "homePage",
-                // score:null,
-                // mounted: function () {
-                //   axios.get("./score.json").then(response => (this.score = response.data))
-                // },
-              },
-              {
-                icon: this.md() ? null : 'ion-ios-bell',
-                label: 'News',
-                page: newsPage,
-                badge: 7,
-                key: "newsPage"
-              },
-              {
-                icon: this.md() ? null : 'ion-ios-settings',
-                label: 'Settings',
-                page: settingsPage,
-                key: "settingsPage"
-              }
-            ],
+            title: 'Scorebook mobi',
             score:null,
             itemsbatter: [
                     { text: '結果', value: '結果' },
@@ -109,13 +67,5 @@ var vm = new Vue({
           fetchBatter: function() {
             alert(this.selectedItemBatter);
           },
-          md() {
-            return this.$ons.platform.isAndroid();
-          },
         },
-        computed: {
-          title() {
-            return this.tabs[this.activeIndex].label;
-          }
-        }
       });
