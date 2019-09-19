@@ -25,6 +25,7 @@ var vm = new Vue({
   data() {
     return {
       activeIndex: 0,
+      selecData = this.tabs[0].props.selectedItemBatter,
       tabs: [
         {
           icon: this.md() ? null : 'ion-home',
@@ -39,9 +40,6 @@ var vm = new Vue({
               { text: '三振', value: '三振' },
             ],
             selectedItemBatter: 'フライ',
-          },
-          data: {
-            selecData = this.selectedItemBatter
           },
           key: "homePage"
         },
