@@ -1,4 +1,17 @@
-      var vm = new Vue({
+const homePage = {
+  template: '#home',
+  props: ['myProp']
+};
+
+const newsPage = {
+  template: '#news'
+};
+
+const settingsPage = {
+  template: '#settings'
+};
+
+var vm = new Vue({
         el: '#app',
         template: '#main',
         data() {
