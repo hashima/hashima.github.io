@@ -22,9 +22,9 @@ var vm = new Vue({
           icon: this.md() ? null : 'ion-home',
           label: 'Home',
           page: homePage,
-          props: {
-            myProp: 'This is a page prop!'
-          },
+          // props: {
+          //   myProp: 'This is a page prop!'
+          // },
           key: "homePage"
         },
         {
