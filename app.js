@@ -15,7 +15,7 @@ var vm = new Vue({
         template: '#main',
         data() {
           return {
-            title: 'Scorebook mobi',
+            //title: 'Scorebook mobi',
             activeIndex: 0,
             tabs: [
               {
