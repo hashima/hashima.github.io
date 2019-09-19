@@ -43,6 +43,9 @@ var vm = new Vue({
       ]
     };
   },
+  mounted: function () {
+    axios.get("./score.json").then(response => (homePage.myProp = response.data))
+  },
   methods: {
     md() {
       return this.$ons.platform.isAndroid();
