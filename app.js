@@ -104,6 +104,14 @@ var vm = new Vue({
         methods: {
           fetchBatter: function() {
             alert(this.selectedItemBatter);
-          }
+          },
+          md() {
+            return this.$ons.platform.isAndroid();
+          },
         },
+        computed: {
+          title() {
+            return this.tabs[this.activeIndex].label;
+          }
+        }
       });
