@@ -6,7 +6,7 @@ const homePage = {
       vm.fetchBatter();
     },
     onChangeEvent(e){
-      alert(this.selectedItemBatter);
+      alert(this.selecData);
     },
   }
 };
@@ -39,6 +39,9 @@ var vm = new Vue({
               { text: '三振', value: '三振' },
             ],
             selectedItemBatter: 'フライ',
+          },
+          data: {
+            selecData = this.selectedItemBatter
           },
           key: "homePage"
         },
