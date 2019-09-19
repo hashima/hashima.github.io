@@ -26,10 +26,10 @@ var vm = new Vue({
                   myProp: 'This is a page prop!'
                 },
                 key: "homePage",
-                score:null,
-                mounted: function () {
-                  axios.get("./score.json").then(response => (this.score = response.data))
-                },
+                // score:null,
+                // mounted: function () {
+                //   axios.get("./score.json").then(response => (this.score = response.data))
+                // },
               },
               {
                 icon: this.md() ? null : 'ion-ios-bell',
@@ -45,7 +45,7 @@ var vm = new Vue({
                 key: "settingsPage"
               }
             ],
-            // score:null,
+            score:null,
             itemsbatter: [
                     { text: '結果', value: '結果' },
                     { text: 'ゴロ', value: 'ゴロ' },
@@ -101,9 +101,9 @@ var vm = new Vue({
             selectedItemBatterrun: '--',
           };
         },
-        // mounted: function () {
-        //   axios.get("./score.json").then(response => (this.score = response.data))
-        // },
+        mounted: function () {
+          axios.get("./score.json").then(response => (this.score = response.data))
+        },
         methods: {
           fetchBatter: function() {
             alert(this.selectedItemBatter);
