@@ -1,6 +1,6 @@
 const homePage = {
   template: '#home',
-  props: ['myProp']
+  props: ['score']
 };
 
 const newsPage = {
@@ -23,7 +23,7 @@ var vm = new Vue({
           label: 'Home',
           page: homePage,
           props: {
-            myProp: 'This is a page prop!'
+            score: null
           },
           key: "homePage"
         },
@@ -44,7 +44,7 @@ var vm = new Vue({
     };
   },
   mounted: function () {
-    axios.get("./score.json").then(response => (this.tabs[0].props.myProp = response.data))
+    axios.get("./score.json").then(response => (this.tabs[0].props.score = response.data))
   },
   methods: {
     md() {

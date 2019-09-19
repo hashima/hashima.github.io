@@ -4,6 +4,7 @@ const homePage = {
 
 const newsPage = {
   template: '#news'
+  props: ['score']
 };
 
 const settingsPage = {
