@@ -10,7 +10,7 @@ const settingsPage = {
   template: '#settings'
 };
 
-new Vue({
+var vm = new Vue({
   el: '#app',
   template: '#main',
   data() {
