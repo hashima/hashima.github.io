@@ -17,6 +17,31 @@ var vm = new Vue({
         data() {
           return {
             title: 'Scorebook mobi',
+            activeIndex: 0,
+            tabs: [
+              {
+                icon: this.md() ? null : 'ion-home',
+                label: 'Home',
+                page: homePage,
+                props: {
+                  myProp: 'This is a page prop!'
+                },
+                key: "homePage"
+              },
+              {
+                icon: this.md() ? null : 'ion-ios-bell',
+                label: 'News',
+                page: newsPage,
+                badge: 7,
+                key: "newsPage"
+              },
+              {
+                icon: this.md() ? null : 'ion-ios-settings',
+                label: 'Settings',
+                page: settingsPage,
+                key: "settingsPage"
+              }
+            ],
             score:null,
             itemsbatter: [
                     { text: '結果', value: '結果' },
