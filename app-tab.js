@@ -1,5 +1,6 @@
 const homePage = {
   template: '#home',
+  props: ['myProp']
 };
 
 const newsPage = {
