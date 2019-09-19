@@ -44,7 +44,7 @@ var vm = new Vue({
     };
   },
   mounted: function () {
-    axios.get("./score.json").then(response => (homePage.myProp = response.data))
+    axios.get("./score.json").then(response => (homePage.props.myProp = response.data))
   },
   methods: {
     md() {
