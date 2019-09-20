@@ -57,8 +57,8 @@ var vm = new Vue({
               { text: 'item6', value: 'item6' },
             ],
             selectOnChange: this.fetch,
-            selectedItem: this.selectedBatter,
-            selectedItem2: this.selectedDirection,
+            selectedItem: store.selectedBatter,
+            selectedItem2: store.selectedDirection,
             initselect: '----',
             show: true
           },
@@ -92,7 +92,7 @@ var vm = new Vue({
     },
     fetch: function(e) {
       alert( e.target.value );
-      store.setSelectedBatter(e.target.value);
+      // store.setSelectedBatter(e.target.value);
       if(e.target.value == "item3")
       {
         this.tabs[0].props.itemsDirection = [
