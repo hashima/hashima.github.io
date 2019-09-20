@@ -85,6 +85,7 @@ var vm = new Vue({
     axios.get("./score.json").then(response => (this.tabs[0].props.score = response.data));
     this.tabs[0].props.selectedItem = this.selectedBatter;
     this.tabs[0].props.selectedItem2 = this.selectedDirection;
+    console.log("mounted");
   },
   methods: {
     md() {
@@ -100,7 +101,8 @@ var vm = new Vue({
           { text: 'item7', value: 'item7' },
           { text: 'item8', value: 'item8' },
           { text: 'item9', value: 'item9' },
-        ]
+        ];
+        this.tabs[0].props.selectedItem2 = this.selectedDirection;
       }
       this.tabs[0].props.show = false;
     },
