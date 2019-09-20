@@ -1,14 +1,9 @@
 const homePage = {
   template: '#home',
-  props: ['score','itemsbatter','selectedItemBatter'],
-  methods: {
-    fetchBatter(e) {
-      vm.fetch(e);
-    },
+  props: ['score','itemsbatter','selectChange'],
     // onChangeEvent(e){
     //   alert(this.tabs[0].props.score);
     // },
-  }
 };
 
 const newsPage = {
