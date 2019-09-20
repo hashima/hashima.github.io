@@ -71,7 +71,15 @@ var vm = new Vue({
       return this.$ons.platform.isAndroid();
     },
     fetch: function(e) {
-      alert( e.target.value );
+      // alert( e.target.value );
+      if(e.target.value == "item3")
+      {
+        this.tabs[0].props.itemsDirection = [
+          { text: 'item7', value: 'item7' },
+          { text: 'item8', value: 'item8' },
+          { text: 'item9', value: 'item9' },
+        ]
+      }
       this.tabs[0].props.show = true;
     },
   },
