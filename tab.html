@@ -37,7 +37,7 @@
                 {{ item.text }}
               </option>
           </v-ons-select>
-          <v-ons-select modifier="select" v-show="show" v-model="selectedItem2" v-on:change="selectOnChange">
+          <v-ons-select modifier="select" v-if="show" v-model="selectedItem2" v-on:change="selectOnChange">
               <option v-for="item in itemsDirection" :value="item.value">
                 {{ item.text }}
               </option>
