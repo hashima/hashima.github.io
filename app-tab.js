@@ -80,7 +80,7 @@ var vm = new Vue({
       //     { text: 'item9', value: 'item9' },
       //   ]
       // }
-      this.tabs[0].props.show = true;
+      this.tabs[0].props.show = false;
     },
   },
   computed: {
