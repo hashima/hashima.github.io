@@ -40,7 +40,7 @@ var vm = new Vue({
             selectOnChange: this.fetch,
             selectedItem: this.selectedBatter,
             selectedItem2: this.selectedDirection,
-            show: this.show
+            show: false
           },
           key: "homePage"
         },
@@ -59,7 +59,6 @@ var vm = new Vue({
       ],
       selectedBatter : 'item2',
       selectedDirection: 'item4',
-      show: true
     };
   },
   mounted: function () {
@@ -72,7 +71,8 @@ var vm = new Vue({
       return this.$ons.platform.isAndroid();
     },
     fetch: function(e) {
-      alert( e.target.value);
+      alert( e.target.value );
+      this.tabs[0].props.show = true;
     },
   },
   computed: {
