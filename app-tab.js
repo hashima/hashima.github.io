@@ -1,6 +1,6 @@
 const homePage = {
   template: '#home',
-  props: ['score','itemsbatter','itemsDirection','selectOnChange','selectedItem','selectedItem2','show'],
+  props: ['score','itemsbatter','itemsDirection','selectOnChange','selectedItem','selectedItem2','initselect','show'],
     // onChangeEvent(e){
     //   alert(this.tabs[0].props.score);
     // },
@@ -41,6 +41,7 @@ var vm = new Vue({
             selectOnChange: this.fetch,
             selectedItem: this.selectedBatter,
             selectedItem2: this.selectedDirection,
+            initselect: '----',
             show: true
           },
           key: "homePage"
