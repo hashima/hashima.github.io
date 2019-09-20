@@ -60,7 +60,7 @@ var vm = new Vue({
             selectedItem: this.selectedBatter,
             selectedItem2: this.selectedDirection,
             initselect: '----',
-            show: this.shown
+            show: this.showSelect
           },
           key: "homePage"
         },
@@ -79,7 +79,7 @@ var vm = new Vue({
       ],
       selectedBatter : '----',
       selectedDirection: '----',
-      shown: this.showSelect,
+      shown: true,
     };
   },
   mounted: function () {
