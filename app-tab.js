@@ -95,16 +95,15 @@ var vm = new Vue({
     fetch: function(e) {
       // alert( store.selectedBatter );
       // store.setSelectedBatter(e.target.value);
-      if(e.target.value == "item3")
-      {
-        this.tabs[0].props.itemsDirection = [
-          { text: '----', value: '----' },
-          { text: 'item7', value: 'item7' },
-          { text: 'item8', value: 'item8' },
-          { text: 'item9', value: 'item9' },
-        ];
-        //this.tabs[0].props.selectedItem2 = this.selectedDirection;
-      }
+      // if(e.target.value == "item3")
+      // {
+      //   this.tabs[0].props.itemsDirection = [
+      //     { text: '----', value: '----' },
+      //     { text: 'item7', value: 'item7' },
+      //     { text: 'item8', value: 'item8' },
+      //     { text: 'item9', value: 'item9' },
+      //   ];
+      // }
       // this.shown = false;
       this.tabs[0].props.show = false;
     },
