@@ -60,7 +60,7 @@ var vm = new Vue({
           key: "settingsPage"
         }
       ],
-      selectedBatter : 'item2',
+      selectedBatter : '----',
       selectedDirection: '----',
     };
   },
