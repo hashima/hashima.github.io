@@ -104,7 +104,7 @@ var vm = new Vue({
       //   ];
       //   //this.tabs[0].props.selectedItem2 = this.selectedDirection;
       // }
-      this.tabs[0].props.show = false;
+      // this.tabs[0].props.show = false;
     },
   },
   computed: {
