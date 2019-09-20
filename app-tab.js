@@ -66,8 +66,8 @@ var vm = new Vue({
   },
   mounted: function () {
     axios.get("./score.json").then(response => (this.tabs[0].props.score = response.data));
-    this.tabs[0].props.selectedItem = '----';
-    this.tabs[0].props.selectedItem2 = '----';
+    this.tabs[0].props.selectedItem = this.selectedBatter;
+    this.tabs[0].props.selectedItem2 = this.selectedDirection;
   },
   methods: {
     md() {
