@@ -37,6 +37,7 @@ var vm = new Vue({
               { text: 'item2', value: 'item2' },
               { text: 'item3', value: 'item3' },
             ],
+            selectChange: this.fetch,
             selectedItemBatter: 'item2',
           },
           // methods: {
