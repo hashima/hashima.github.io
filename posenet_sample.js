@@ -7,6 +7,37 @@ const contentWidth = 600;
 const contentHeight = 800;
 const colors = ["red","blue","green"];
 const fontLayout = "bold 50px Arial";
+const canvasStream = document.querySelector('canvas').captureStream();
+const recorder = new MediaRecorder(canvasStream);
+
+let isRecording = false;
+let chunks = []; // 録画データを保持する
+
+// 一定間隔で録画が区切られて、データが渡される
+recorder.ondataavailable = function(evt) {
+  chunks.push(evt.data);
+};
+
+// 録画停止時に呼ばれる
+recorder.onstop = function(evt) {
+  playRecorded();
+};
+
+// 再生用のvideo要素
+const playbackVideo = document.getElementById('video');
+let blobUrl = null;
+
+function playRecorded() {
+  const videoBlob = new Blob(chunks, { type: "video/webm" });
+  blobUrl = window.URL.createObjectURL(videoBlob);
+
+  if (playbackVideo.src) {
+    window.URL.revokeObjectURL(playbackVideo.src); // 解放
+    playbackVideo.src = null;
+  }
+  playbackVideo.src = blobUrl;
+  playbackVideo.play();
+}
 
 let onRec = false;
 let threshold = 0.1
@@ -138,19 +169,18 @@ function drawLine(p1, p2, ctx){
 }
 
 document.getElementById("recb").onclick = function() {
-   
-   if(onRec)
-   {
-      $('#rec').removeClass('fas');
-      $('#rec').addClass('far');
-      $("#rec").css("color","white");
-      onRec = false;
+   $('#rec').removeClass('far');
+   $('#rec').toggleClass('fas');
+   $("#rec").css("color","red");
+	
+   if(!isRecording){
+      isRecording = true;
+      // 録画開始
+      recorder.start(1000); // 1000ms 毎に録画データを区切る
    }
-   else
-   {
-      $('#rec').removeClass('far');
-      $('#rec').addClass('fas');
-      $("#rec").css("color","red");
-      onRec = true; 
+   else{
+      isRecording = false;
+      // 録画停止（の要求）
+      recorder.stop();
    }
 };

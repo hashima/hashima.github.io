@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/onsenui/js/onsenui.js"></script>
+    <script src="https://unpkg.com/vue-onsenui"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!--<link rel='stylesheet' href='style-score.css?ver=5.0.0' type='text/css' media='all' />-->
+    <meta http-equiv=”Pragma” content=”no-cache”>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <template id="main">
+      <v-ons-page>
+        <v-ons-toolbar>
+          <div class="center">{{ title }}</div>
+        </v-ons-toolbar>
+        
+        <v-ons-tabbar swipeable position="auto"
+              :tabs="tabs"
+              :visible="true"
+              :index.sync="activeIndex"
+            >
+        </v-ons-tabbar>
+      </v-ons-page>
+    </template>
+
+    <template id="home">
+        <v-ons-page>
+          <p style="text-align: center" v-show="show">
+            Welcome home.<br><br>{{ score.topscore }}
+          </p>
+          <v-ons-select modifier="select" v-model="selectedItem" v-on:change="selectOnChange">
+              <option v-for="item in itemsbatter" :value="item.value">
+                {{ item.text }}
+              </option>
+          </v-ons-select>
+          <v-ons-select modifier="select" v-bind:disabled="show" v-model="selectedItem2" v-on:change="selectOnChange2">
+              <option v-for="item in itemsDirection" :value="item.value">
+                {{ item.text }}
+              </option>
+          </v-ons-select>
+        </v-ons-page>
+      </template>
+      
+      <template id="news">
+        <v-ons-page>
+          <p style="text-align: center">
+            Some news here.
+          </p>
+        </v-ons-page>
+      </template>
+      
+      <template id="settings">
+        <v-ons-page>
+          <p style="text-align: center">
+            Change the settings.
+          </p>
+        </v-ons-page>
+      </template>
+
+    <div id="app"><script src="./app-tab.js?v=3"></script></div>
+  </body>
+</html>
