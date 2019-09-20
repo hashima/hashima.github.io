@@ -78,8 +78,6 @@ var vm = new Vue({
       return this.$ons.platform.isAndroid();
     },
     fetch: function(e) {
-      // alert( store.selectedBatter );
-      // store.setSelectedBatter(e.target.value);
       if(e.target.value == "item3")
       {
         this.tabs[0].props.itemsDirection = [

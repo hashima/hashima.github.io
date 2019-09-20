@@ -22,6 +22,9 @@ const offensePage = {
           'selected1stRunner',
           'selected2ndRunner',
           'selected3rdRunner',
+          'selected1stBase',
+          'selected2ndBase',
+          'selected3rdBase',
         ],
  };
 
@@ -92,7 +95,7 @@ var vm = new Vue({
             selectedOnChangeBatterResult: this.fetch,
             selectedOnChangeBatterDirection: this.fetch,
             selectedOnChangeBatterRun: this.fetch,
-            selectedBatterResult: this.selectedBatter,
+            selectedBatterResult: this.selectedBatterResult,
             selectedBatterDirection: this.selectedDirection,
             selectedBatterRun: this.selectedDirection,
             showSelectedBatterDirection: this.shown,
@@ -126,16 +129,16 @@ var vm = new Vue({
           key: "bottomPage"
         }
       ],
-      selectedBatter : '----',
+      selectedBatterResult : '----',
       selectedDirection: '----',
       shown: true,
     };
   },
   mounted: function () {
     axios.get("./score.json").then(response => (this.tabs[0].props.score = response.data));
-    this.tabs[0].props.selectedItem = this.selectedBatter;
-    this.tabs[0].props.selectedItem2 = this.selectedDirection;
-    this.tabs[0].props.show = true;
+    this.tabs[1].props.selectedBatterResult = this.selectedBatterResult;
+    this.tabs[1].props.selectedBatterDirection = this.selectedDirection;
+    this.tabs[1].props.show = true;
     console.log("mounted");
   },
   methods: {
