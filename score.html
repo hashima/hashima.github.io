@@ -13,7 +13,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   </head>
   <body>
-      <template id="main">
+    <template id="main">
           <v-ons-page>
             <v-ons-toolbar>
               <div class="center">{{ title }}</div>
@@ -26,8 +26,17 @@
                 >
             </v-ons-tabbar>
           </v-ons-page>
-        </template>
+    </template>
     
+  
+    <template id="game">
+      <v-ons-page>
+              <p style="text-align: center">
+                Change the settings.
+              </p>
+      </v-ons-page>
+    </template>
+
     <template id="home">
       <ons-page>
         <div class="background" style="background-color:#003300;"></div>
@@ -60,22 +69,22 @@
               </div>
               <div class="score-item">
                 <div class="score">
-                  <v-ons-select modifier="select" v-model="selectedItemBatter" v-on:change="selectedOnChangeBatter">
-                    <option v-for="item in itemsbatter" :value="item.value">
+                  <v-ons-select modifier="select" v-model="selectedBatterResult" v-on:change="selectedOnChangeBatterResult">
+                    <option v-for="item in itemsBatter" :value="item.value">
                       {{ item.text }}
                     </option>
                   </v-ons-select>
                 </div>
                 <div class="position">
-                  <v-ons-select modifier="select" v-model="selectedItemDirection">
+                  <v-ons-select modifier="select" v-bind:disabled="showSelectedBatterDirection" v-model="selectedBatterDirection" v-on:change="selectedOnChangeBatterDirection">
                     <option v-for="item in itemsDirection" :value="item.value">
                       {{ item.text }}
                     </option>
                   </v-ons-select>
                 </div>
                 <div class="position">
-                  <v-ons-select modifier="select" v-model="selectedItemBatterrun">
-                    <option v-for="item in itemsBatterrun" :value="item.value">
+                  <v-ons-select modifier="select" v-bind:disabled="showSelectedBatterRun" v-model="selectedBatterRun" v-on:change="selectedOnChangeBatterRun">
+                    <option v-for="item in itemsBatterRun" :value="item.value">
                       {{ item.text }}
                     </option>
                   </v-ons-select>
@@ -96,7 +105,7 @@
               </div>
               <div class="score-item">
                 <div class="score">
-                  <v-ons-select modifier="select" v-model="selectedItemRunner">
+                  <v-ons-select modifier="select" v-model="selected1stRunner">
                     <option v-for="item in itemsRunner" :value="item.value">
                       {{ item.text }}
                     </option>
@@ -125,7 +134,7 @@
               </div>
               <div class="score-item">
                 <div class="score">
-                  <v-ons-select modifier="select" v-model="selectedItemRunner">
+                  <v-ons-select modifier="select" v-model="selected2ndRunner">
                     <option v-for="item in itemsRunner" :value="item.value">
                       {{ item.text }}
                     </option>
@@ -154,7 +163,7 @@
               </div>
               <div class="score-item">
                 <div class="score">
-                  <v-ons-select modifier="select" v-model="selectedItemRunner">
+                  <v-ons-select modifier="select" v-model="selected3rdRunner">
                     <option v-for="item in itemsRunner" :value="item.value">
                       {{ item.text }}
                     </option>
@@ -193,6 +202,6 @@
       </template>
 
  
-    <div id="app"><script src="./app.js"></script></div>
+    <div id="app"><script src="./app.js?v=1"></script></div>
   </body>
 </html>
