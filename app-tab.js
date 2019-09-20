@@ -60,7 +60,7 @@ var vm = new Vue({
             selectedItem: this.selectedBatter,
             selectedItem2: this.selectedDirection,
             initselect: '----',
-            show: this.showSelect
+            show: this.shown
           },
           key: "homePage"
         },
@@ -104,7 +104,7 @@ var vm = new Vue({
           { text: 'item9', value: 'item9' },
         ];
       }
-      // this.shown = false;
+      this.shown = false;
       // this.tabs[0].props.show = false;
     },
     showSelect: function(e) {
