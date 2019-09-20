@@ -105,7 +105,7 @@ var vm = new Vue({
       //   ];
       // }
       // this.shown = false;
-      this.tabs[0].props.show = false;
+      // this.tabs[0].props.show = false;
     },
     showSelect: function(e) {
       return this.shown;
