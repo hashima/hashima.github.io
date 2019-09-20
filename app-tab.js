@@ -77,14 +77,14 @@ var vm = new Vue({
           key: "settingsPage"
         }
       ],
-      selectedBatter : store.selectedBatter,
-      selectedDirection: store.selectedDirection,
+      selectedBatter : '----',
+      selectedDirection: '----',
     };
   },
   mounted: function () {
     axios.get("./score.json").then(response => (this.tabs[0].props.score = response.data));
-    this.tabs[0].props.selectedItem = store.selectedBatter;
-    this.tabs[0].props.selectedItem2 = store.selectedDirection;
+    this.tabs[0].props.selectedItem = this.selectedBatter;
+    this.tabs[0].props.selectedItem2 = this.selectedDirection;
   },
   methods: {
     md() {
