@@ -1,6 +1,6 @@
 const homePage = {
   template: '#home',
-  props: ['score','itemsbatter','selectOnChange','selectedItem','selectedItem2'],
+  props: ['score','itemsbatter','selectOnChange','selectedItem','selectedItem2','show'],
     // onChangeEvent(e){
     //   alert(this.tabs[0].props.score);
     // },
