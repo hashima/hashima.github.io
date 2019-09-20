@@ -14,23 +14,6 @@ const settingsPage = {
   template: '#settings'
 };
 
-var store = {
-  debug: true,
-  selectedBatter : '----',
-  selectedDirection:'----',
-  state: {
-    message: 'Hello!'
-  },
-  setSelectedBatter(newValue) {
-    if (this.debug) console.log('setMessageAction triggered with', newValue)
-    this.selectedBatter = newValue
-  },
-  setSelectedDirection(newValue) {
-    if (this.debug) console.log('clearMessageAction triggered')
-    this.selectedDirection = newValue
-  }
-}
-
 var vm = new Vue({
   el: '#app',
   template: '#main',
@@ -107,7 +90,7 @@ var vm = new Vue({
         ];
       }
       // this.shown = false;
-      this.tabs[0].props.show = false;
+      // this.tabs[0].props.show = false;
     },
     showSelect: function(e) {
       return this.shown;
