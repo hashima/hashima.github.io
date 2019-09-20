@@ -14,6 +14,23 @@ const settingsPage = {
   template: '#settings'
 };
 
+var store = {
+  debug: true,
+  selectedBatter : '----',
+  selectedDirection:'----',
+  state: {
+    message: 'Hello!'
+  },
+  setSelectedBatter(newValue) {
+    if (this.debug) console.log('setMessageAction triggered with', newValue)
+    this.selectedBatter = newValue
+  },
+  setSelectedDirection(newValue) {
+    if (this.debug) console.log('clearMessageAction triggered')
+    this.selectedDirection = newValue
+  }
+}
+
 var vm = new Vue({
   el: '#app',
   template: '#main',
@@ -60,14 +77,14 @@ var vm = new Vue({
           key: "settingsPage"
         }
       ],
-      selectedBatter : '----',
-      selectedDirection: '----',
+      selectedBatter : store.selectedBatter,
+      selectedDirection: store.selectedDirection,
     };
   },
   mounted: function () {
     axios.get("./score.json").then(response => (this.tabs[0].props.score = response.data));
-    this.tabs[0].props.selectedItem = this.selectedBatter;
-    this.tabs[0].props.selectedItem2 = this.selectedDirection;
+    this.tabs[0].props.selectedItem = store.selectedBatter;
+    this.tabs[0].props.selectedItem2 = store.selectedDirection;
   },
   methods: {
     md() {
@@ -75,6 +92,7 @@ var vm = new Vue({
     },
     fetch: function(e) {
       alert( e.target.value );
+      store.setSelectedBatter(e.target.value);
       if(e.target.value == "item3")
       {
         this.tabs[0].props.itemsDirection = [
