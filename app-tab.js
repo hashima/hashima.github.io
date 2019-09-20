@@ -58,7 +58,7 @@ var vm = new Vue({
       ],
       selectedBatter : 'item2',
       selectedDirection: 'item4',
-      show: True
+      show: true
     };
   },
   mounted: function () {
