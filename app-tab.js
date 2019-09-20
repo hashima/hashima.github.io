@@ -39,7 +39,7 @@ var vm = new Vue({
             ],
             selectOnChange: this.fetch,
             selectedItem: this.selectedBatter,
-            selectedItem2: this.selectedBatter,
+            selectedItem2: this.selectedDirection,
           },
           key: "homePage"
         },
