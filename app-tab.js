@@ -1,6 +1,6 @@
 const homePage = {
   template: '#home',
-  props: ['score','itemsbatter','selectChange','selectedItem'],
+  props: ['score','itemsbatter','selectOnChange','selectedItem'],
     // onChangeEvent(e){
     //   alert(this.tabs[0].props.score);
     // },
@@ -32,8 +32,14 @@ var vm = new Vue({
               { text: 'item2', value: 'item2' },
               { text: 'item3', value: 'item3' },
             ],
-            selectChange: this.fetch,
+            itemsDirection: [
+              { text: 'item4', value: 'item4' },
+              { text: 'item5', value: 'item5' },
+              { text: 'item6', value: 'item6' },
+            ],
+            selectOnChange: this.fetch,
             selectedItem: this.selectedBatter,
+            selectedItem2: this.selectedBatter,
           },
           key: "homePage"
         },
@@ -50,12 +56,15 @@ var vm = new Vue({
           key: "settingsPage"
         }
       ],
-      selectedBatter : 'item2'
+      selectedBatter : 'item2',
+      selectedDirection: 'item4',
+      show: True
     };
   },
   mounted: function () {
     axios.get("./score.json").then(response => (this.tabs[0].props.score = response.data));
     this.tabs[0].props.selectedItem = 'item2';
+    this.tabs[0].props.selectedItem2 = 'item4';
   },
   methods: {
     md() {
