@@ -71,7 +71,7 @@ var vm = new Vue({
       return this.$ons.platform.isAndroid();
     },
     fetch: function(e) {
-      // alert( e.target.value );
+      alert( e.target.value );
       // if(e.target.value == "item3")
       // {
       //   this.tabs[0].props.itemsDirection = [
