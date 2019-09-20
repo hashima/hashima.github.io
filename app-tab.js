@@ -1,6 +1,6 @@
 const homePage = {
   template: '#home',
-  props: ['score','itemsbatter','itemsDirection','selectOnChange','selectedItem','selectedItem2','initselect','show'],
+  props: ['score','itemsbatter','itemsDirection','selectOnChange','selectOnChange2','selectedItem','selectedItem2','initselect','show'],
     // onChangeEvent(e){
     //   alert(this.tabs[0].props.score);
     // },
@@ -57,6 +57,7 @@ var vm = new Vue({
               { text: 'item6', value: 'item6' },
             ],
             selectOnChange: this.fetch,
+            selectOnChange2: this.fetch2,
             selectedItem: this.selectedBatter,
             selectedItem2: this.selectedDirection,
             initselect: '----',
@@ -110,6 +111,8 @@ var vm = new Vue({
     },
     showSelect: function(e) {
       return this.shown;
+    },
+    fetch2: function(e) {
     }
   },
   computed: {
