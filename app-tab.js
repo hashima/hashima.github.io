@@ -40,7 +40,7 @@ var vm = new Vue({
             selectOnChange: this.fetch,
             selectedItem: this.selectedBatter,
             selectedItem2: this.selectedDirection,
-            show: false
+            show: true
           },
           key: "homePage"
         },
@@ -72,7 +72,7 @@ var vm = new Vue({
     },
     fetch: function(e) {
       alert( e.target.value );
-      this.tabs[0].props.show = false;
+      this.tabs[0].props.show = true;
     },
   },
   computed: {
