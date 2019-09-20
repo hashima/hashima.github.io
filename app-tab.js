@@ -33,6 +33,7 @@ var vm = new Vue({
               { text: 'item3', value: 'item3' },
             ],
             itemsDirection: [
+              { text: '----', value: '----' },
               { text: 'item4', value: 'item4' },
               { text: 'item5', value: 'item5' },
               { text: 'item6', value: 'item6' },
@@ -75,6 +76,7 @@ var vm = new Vue({
       if(e.target.value == "item3")
       {
         this.tabs[0].props.itemsDirection = [
+          { text: '----', value: '----' },
           { text: 'item7', value: 'item7' },
           { text: 'item8', value: 'item8' },
           { text: 'item9', value: 'item9' },
