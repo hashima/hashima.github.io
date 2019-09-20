@@ -105,8 +105,8 @@ var vm = new Vue({
           { text: 'item9', value: 'item9' },
         ];
       }
-      this.shown = false;
-      // this.tabs[0].props.show = false;
+      // this.shown = false;
+      this.tabs[0].props.show = false;
     },
     showSelect: function(e) {
       return this.shown;
