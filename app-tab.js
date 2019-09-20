@@ -60,7 +60,7 @@ var vm = new Vue({
             selectedItem: this.selectedBatter,
             selectedItem2: this.selectedDirection,
             initselect: '----',
-            show: true
+            show: this.showSelect
           },
           key: "homePage"
         },
@@ -79,6 +79,7 @@ var vm = new Vue({
       ],
       selectedBatter : '----',
       selectedDirection: '----',
+      shown: true,
     };
   },
   mounted: function () {
@@ -104,12 +105,15 @@ var vm = new Vue({
       //   ];
       //   //this.tabs[0].props.selectedItem2 = this.selectedDirection;
       // }
-      // this.tabs[0].props.show = false;
+      this.shown = false;
     },
   },
   computed: {
     title() {
       return this.tabs[this.activeIndex].label;
+    },
+    showSelect() {
+      return this.shown;
     }
   }
 });
