@@ -1,6 +1,6 @@
 const homePage = {
   template: '#home',
-  props: ['score','itemsbatter','selectChange'],
+  props: ['score','itemsbatter','selectChange','selectedItem'],
     // onChangeEvent(e){
     //   alert(this.tabs[0].props.score);
     // },
@@ -33,7 +33,7 @@ var vm = new Vue({
               { text: 'item3', value: 'item3' },
             ],
             selectChange: this.fetch,
-            selectedItemBatter: 'item2',
+            selectedItem: this.selectedBatter,
           },
           // methods: {
           //   fetchBatter: function() {
@@ -54,7 +54,8 @@ var vm = new Vue({
           page: settingsPage,
           key: "settingsPage"
         }
-      ]
+      ],
+      selectedBatter : 'item2'
     };
   },
   mounted: function () {
