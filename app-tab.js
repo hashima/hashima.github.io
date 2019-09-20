@@ -102,7 +102,7 @@ var vm = new Vue({
           { text: 'item8', value: 'item8' },
           { text: 'item9', value: 'item9' },
         ];
-        this.tabs[0].props.selectedItem2 = this.selectedDirection;
+        //this.tabs[0].props.selectedItem2 = this.selectedDirection;
       }
       this.tabs[0].props.show = false;
     },
