@@ -57,8 +57,8 @@ var vm = new Vue({
               { text: 'item6', value: 'item6' },
             ],
             selectOnChange: this.fetch,
-            selectedItem: store.selectedBatter,
-            selectedItem2: store.selectedDirection,
+            selectedItem: this.selectedBatter,
+            selectedItem2: this.selectedDirection,
             initselect: '----',
             show: true
           },
@@ -91,7 +91,7 @@ var vm = new Vue({
       return this.$ons.platform.isAndroid();
     },
     fetch: function(e) {
-      alert( e.target.value );
+      alert( store.selectedBatter );
       // store.setSelectedBatter(e.target.value);
       if(e.target.value == "item3")
       {
