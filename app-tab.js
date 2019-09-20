@@ -105,7 +105,7 @@ var vm = new Vue({
       //   ];
       //   //this.tabs[0].props.selectedItem2 = this.selectedDirection;
       // }
-      this.shown = false;
+      // this.shown = false;
       this.tabs[0].props.show = false;
     },
     showSelect: function(e) {
