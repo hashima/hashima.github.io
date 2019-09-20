@@ -8,6 +8,7 @@ const contentHeight = 800;
 const colors = ["red","blue","green"];
 const fontLayout = "bold 50px Arial";
 
+let onRec = false;
 let threshold = 0.1
 bindPage();
 
@@ -137,8 +138,19 @@ function drawLine(p1, p2, ctx){
 }
 
 document.getElementById("recb").onclick = function() {
-   $('#rec').removeClass('far');
-   $('#rec').toggleClass('fas');
-   $("#rec").css("color","red");
-	
+   
+   if(onRec)
+   {
+      $('#rec').removeClass('fas');
+      $('#rec').addClass('far');
+      $("#rec").css("color","white");
+      onRec = false;
+   }
+   else
+   {
+      $('#rec').removeClass('far');
+      $('#rec').addClass('fas');
+      $("#rec").css("color","red");
+      onRec = true; 
+   }
 };
