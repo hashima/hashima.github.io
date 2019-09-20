@@ -2,8 +2,8 @@ const gamePage = {
   template: '#game'
 };
 
-const homePage = {
-  template: '#home',
+const offensePage = {
+  template: '#offense',
   props: ['score',
           'itemsBatter',
           'itemsDirection',
@@ -25,12 +25,12 @@ const homePage = {
         ],
  };
 
-const newsPage = {
-  template: '#news'
+const topPage = {
+  template: '#top'
 };
 
-const settingsPage = {
-  template: '#settings'
+const bottomPage = {
+  template: '#bottom'
 };
 
 var vm = new Vue({
@@ -50,7 +50,7 @@ var vm = new Vue({
         {
           // icon: this.md() ? null : 'ion-home',
           label: '攻',
-          page: homePage,
+          page: offensePage,
           props: {
             score: [],
             itemsBatter: [
@@ -111,19 +111,19 @@ var vm = new Vue({
               { text: '本塁へ', value: '本塁へ' },
             ],
           },
-          key: "homePage"
+          key: "offensePage"
         },
         {
           // icon: this.md() ? null : 'ion-ios-bell',
           label: '先',
-          page: newsPage,
-          key: "newsPage"
+          page: topPage,
+          key: "topPage"
         },
         {
           // icon: this.md() ? null : 'ion-ios-settings',
           label: '後',
-          page: settingsPage,
-          key: "settingsPage"
+          page: bottomPage,
+          key: "bottomPage"
         }
       ],
       selectedBatter : '----',
