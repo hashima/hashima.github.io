@@ -61,7 +61,7 @@ var vm = new Vue({
           page: gamePage,
           key: "gamePage",
           props: {
-            official: this.official,
+            official: this.setOfficial,
             officialLabel: "公式戦",
 
           },
@@ -184,6 +184,9 @@ var vm = new Vue({
       return this.shown;
     },
     fetch2: function(e) {
+    },
+    setOfficial: function(e) {
+      this.official = e.target.value;
     }
   },
   computed: {
