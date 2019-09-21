@@ -227,12 +227,42 @@
         </v-ons-list>
       </v-ons-page>
     </template>
+    
     <template id="top">
         <v-ons-page>
-            <div class="background" style="background-color:#003300;"></div>
-            <p style="text-align: center">
-            Some news here.
-          </p>
+           <v-ons-list modifier="order-list">
+          <v-ons-list-header modifier="order-list-header">先攻</v-ons-list-header>
+          <v-ons-list-item modifier="score-list-item">
+            <div class="order-list-order">
+              <span>1</span>
+            </div>
+            <div class="player-item">
+              <div class="score-item">
+                <div class="score">
+                  <v-ons-select modifier="select" v-model="selectedBatterResult" v-on:change="selectedOnChangeBatterResult">
+                    <option v-for="item in itemsBatter" :value="item.value">
+                      {{ item.text }}
+                    </option>
+                  </v-ons-select>
+                </div>
+                <div class="position">
+                  <v-ons-select modifier="select" v-bind:disabled="showSelectedBatterDirection" v-model="selectedBatterDirection" v-on:change="selectedOnChangeBatterDirection">
+                    <option v-for="item in itemsDirection" :value="item.value">
+                      {{ item.text }}
+                    </option>
+                  </v-ons-select>
+                </div>
+                <div class="position">
+                  <v-ons-select modifier="select" v-bind:disabled="showSelectedBatterRun" v-model="selectedBatterRun" v-on:change="selectedOnChangeBatterRun">
+                    <option v-for="item in itemsBatterRun" :value="item.value">
+                      {{ item.text }}
+                    </option>
+                  </v-ons-select>
+                </div>
+              </div>
+            </div>
+          </v-ons-list-item>
+        </v-ons-list>
         </v-ons-page>
       </template>
       
