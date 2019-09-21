@@ -61,7 +61,7 @@ var vm = new Vue({
           page: gamePage,
           key: "gamePage",
           props: {
-            official: false,
+            official: this.official,
             officialLabel: "公式戦",
 
           },
@@ -151,6 +151,7 @@ var vm = new Vue({
       selectedBatterResult : '----',
       selectedDirection: '----',
       shown: true,
+      official: false,
     };
   },
   mounted: function () {
