@@ -43,7 +43,7 @@ const bottomPage = {
   template: '#bottom'
 };
 
-ELEMENT.locale(ELEMENT.lang.ja);
+// ELEMENT.locale(ELEMENT.lang.ja);
 
 var vm = new Vue({
   el: '#app',
