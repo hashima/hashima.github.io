@@ -51,7 +51,7 @@ var vm = new Vue({
   data() {
     return {
       activeIndex: 1,
-      title: "ScoreBook.mobi",
+      title: "ScoreBook.mobi 開発版",
       tabs: [
         {
           // icon: this.md() ? null : 'ion-ios-bell',
