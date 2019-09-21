@@ -237,7 +237,7 @@
           <v-ons-list-header modifier="order-list-header">先攻</v-ons-list-header>
           <v-ons-list-item modifier="score-list-item" v-for="data in toporder">
             <div class="order-list-order">
-              <span>1</span>
+              <span>{{data.order}}</span>
             </div>
             <div class="player-item">
               <v-ons-select modifier="select" v-model="selectedBatterResult" v-on:change="selectedOnChangeBatterResult">
