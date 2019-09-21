@@ -217,5 +217,13 @@ body {
 }
 
 .order-item {
+  float: left;
   margin: 0;
+}
+
+.order-input{
+  font-size:20px;
+  background-color: #003300;
+  color:#FFF;
+  width:84px;
 }
