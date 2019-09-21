@@ -1,15 +1,57 @@
 [
   {
     "order":1,
-    "name":"tora",
+    "name":"とら",
     "number":2,
     "position":"C"
   },
   {
     "order":2,
-    "name":"noa",
+    "name":"のあ",
     "number":1,
     "position":"P"
+  },
+  {
+    "order":3,
+    "name":"ボビー",
+    "number":10,
+    "position":"SS"
+  },
+  {
+    "order":4,
+    "name":"かいせい",
+    "number":5,
+    "position":"CF"
+  },
+  {
+    "order":5,
+    "name":"ゆずき",
+    "number":7,
+    "position":"LF"
+  },
+  {
+    "order":6,
+    "name":"たいき",
+    "number":3,
+    "position":"1B"
+  },
+  {
+    "order":7,
+    "name":"しえ",
+    "number":4,
+    "position":"2B"
+  },
+  {
+    "order":8,
+    "name":"はる",
+    "number":11,
+    "position":"3B"
+  },
+  {
+    "order":9,
+    "name":"ケビン",
+    "number":9,
+    "position":"RF"
   }
 ]
 
