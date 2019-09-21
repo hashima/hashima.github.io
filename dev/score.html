@@ -230,6 +230,11 @@
     
     <template id="top">
         <v-ons-page>
+           <ul>
+        <li v-for="data in toporder">
+             名前：{{data.name}}　年齢：{{data.number}}</p>
+        </li>
+    </ul>
            <v-ons-list modifier="order-list">
           <v-ons-list-header modifier="order-list-header">先攻</v-ons-list-header>
           <v-ons-list-item modifier="score-list-item">
