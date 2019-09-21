@@ -1,5 +1,4 @@
-{
-  [
+[
   {
     "order":1,
     "name":"tora",
@@ -11,6 +10,6 @@
     "name":"noa",
     "number":1,
     "position":"P"
-  },
+  }
 ]
-}
+

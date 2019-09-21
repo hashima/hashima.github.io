@@ -158,7 +158,7 @@ var vm = new Vue({
     this.tabs[1].props.selectedBatterResult = this.selectedBatterResult;
     this.tabs[1].props.selectedBatterDirection = this.selectedDirection;
     this.tabs[1].props.show = true;
-    console.log("mounted");
+    console.log(this.tabs[1].props.score);
   },
   methods: {
     md() {
