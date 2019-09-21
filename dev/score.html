@@ -240,29 +240,11 @@
               <span>1</span>
             </div>
             <div class="player-item">
-              <div class="score-item">
-                <div class="score">
-                  <v-ons-select modifier="select" v-model="selectedBatterResult" v-on:change="selectedOnChangeBatterResult">
-                    <option v-for="item in itemsBatter" :value="item.value">
-                      {{ item.text }}
-                    </option>
-                  </v-ons-select>
-                </div>
-                <div class="position">
-                  <v-ons-select modifier="select" v-bind:disabled="showSelectedBatterDirection" v-model="selectedBatterDirection" v-on:change="selectedOnChangeBatterDirection">
-                    <option v-for="item in itemsDirection" :value="item.value">
-                      {{ item.text }}
-                    </option>
-                  </v-ons-select>
-                </div>
-                <div class="position">
-                  <v-ons-select modifier="select" v-bind:disabled="showSelectedBatterRun" v-model="selectedBatterRun" v-on:change="selectedOnChangeBatterRun">
-                    <option v-for="item in itemsBatterRun" :value="item.value">
-                      {{ item.text }}
-                    </option>
-                  </v-ons-select>
-                </div>
-              </div>
+              <v-ons-select modifier="select" v-model="selectedBatterResult" v-on:change="selectedOnChangeBatterResult">
+                <option v-for="item in itemsBatter" :value="item.value">
+                  {{ item.text }}
+                </option>
+              </v-ons-select>
             </div>
           </v-ons-list-item>
         </v-ons-list>
