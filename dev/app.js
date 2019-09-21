@@ -36,7 +36,9 @@ const offensePage = {
  };
 
 const topPage = {
-  template: '#top'
+  template: '#top',
+  props: ['toporder',
+        ],
 };
 
 const bottomPage = {
