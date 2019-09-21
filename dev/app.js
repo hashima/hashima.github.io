@@ -61,6 +61,7 @@ var vm = new Vue({
           page: gamePage,
           key: "gamePage",
           props: {
+            official: false,
             officialLabel: "公式戦",
 
           },

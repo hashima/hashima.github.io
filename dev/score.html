@@ -48,7 +48,7 @@
                 公式戦
               </label>
             </v-ons-list-item>
-            <v-ons-list-item>
+            <v-ons-list-item v-bind:show="official">
                 <div class="center">        
                   <v-ons-input placeholder="大会名を入力してください"
                     v-model="gameName"
