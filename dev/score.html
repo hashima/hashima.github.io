@@ -37,16 +37,15 @@
               試合情報
             </v-ons-list-header>
             <v-ons-list-item>
-              <label class="left">
-                <v-ons-checkbox
-                  :input-id="official"
-                  :value="officialLabel"
+              <label class="center" for="switch1">
+                Switch ({{ official ? 'on' : 'off' }})
+              </label>
+              <div class="right">
+                <v-ons-switch input-id="switch1"
+                  v-model="official"
                 >
-                </v-ons-checkbox>
-              </label>
-              <label class="center">
-                公式戦
-              </label>
+                </v-ons-switch>
+              </div>
             </v-ons-list-item>
             <v-ons-list-item v-bind:show="official">
                 <div class="center">        
