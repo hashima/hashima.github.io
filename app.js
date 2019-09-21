@@ -1,6 +1,13 @@
 const gamePage = {
-  template: '#game'
-};
+  template: '#game',
+  props: ['official',
+          'officialLabel',
+          'gameName',
+          'opponentName',
+          'fieldName',
+          'gamedate',
+   ],
+    };
 
 const offensePage = {
   template: '#offense',
@@ -36,6 +43,8 @@ const bottomPage = {
   template: '#bottom'
 };
 
+ELEMENT.locale(ELEMENT.lang.ja);
+
 var vm = new Vue({
   el: '#app',
   template: '#main',
@@ -48,7 +57,11 @@ var vm = new Vue({
           // icon: this.md() ? null : 'ion-ios-bell',
           label: '試',
           page: gamePage,
-          key: "gamePage"
+          key: "gamePage",
+          props: {
+            officialLabel: "公式戦",
+
+          },
         },
         {
           // icon: this.md() ? null : 'ion-home',

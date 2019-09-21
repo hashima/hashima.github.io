@@ -8,6 +8,9 @@
     <script src="https://unpkg.com/onsenui/js/onsenui.js"></script>
     <script src="https://unpkg.com/vue-onsenui"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
+    <script src="http://unpkg.com/element-ui/lib/index.js"></script>
+    <script src="http://unpkg.com/element-ui/lib/umd/locale/ja.js"></script>
     <link rel='stylesheet' href='style-score.css?ver=5.0.0' type='text/css' media='all' />
     <meta http-equiv=”Pragma” content=”no-cache”>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -32,22 +35,55 @@
     <template id="game">
       <v-ons-page>
           <div class="background" style="background-color:#003300;"></div>
-          <div>
-            <v-ons-checkbox
-                :input-id="official"
-                :value="公式戦"
-            >
-            </v-ons-checkbox>
-          </div>
-          <div>
-            <v-ons-input
-                placeholder="試合名"
-            >
-            </v-ons-input>
-          </div>
-          <p style="text-align: center">
-                Change the settings.
-              </p>
+          <v-ons-list>
+            <v-ons-list-header>
+              試合情報
+            </v-ons-list-header>
+            <v-ons-list-item>
+              <label class="left">
+                <v-ons-checkbox
+                  :input-id="official"
+                  :value="officialLabel"
+                >
+                </v-ons-checkbox>
+              </label>
+              <label class="center">
+                公式戦
+              </label>
+            </v-ons-list-item>
+            <v-ons-list-item>
+                <div class="center">        
+                  <v-ons-input placeholder="大会名を入力してください"
+                    v-model="gameName"
+                  >
+                  </v-ons-input>          
+                </div>
+              </v-ons-list-item>
+              <v-ons-list-item>
+                  <div class="center">        
+                    <v-ons-input placeholder="対戦相手を入力してください"
+                      v-model="opponentName"
+                    >
+                    </v-ons-input>          
+                  </div>
+              </v-ons-list-item>
+              <v-ons-list-item>
+                  <div class="center">        
+                    <v-ons-input placeholder="球場名を入力してください"
+                      v-model="fieldName"
+                    >
+                    </v-ons-input>          
+                  </div>
+              </v-ons-list-item>
+            </v-ons-list>
+            <el-date-picker
+        name="name_birthdate" 
+        id="id_birthdate"
+        v-model="gamedate"
+        type="datetime"
+        placeholder="日付を選択してください">
+      </el-date-picker>
+
       </v-ons-page>
     </template>
 
