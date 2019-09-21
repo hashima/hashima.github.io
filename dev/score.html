@@ -230,9 +230,10 @@
     
     <template id="top">
         <v-ons-page>
+          <p>{{toporder}}</p>
            <ul>
         <li v-for="data in toporder">
-             名前：{{data.name}}　年齢：{{data.number}}</p>
+             名前：{{data}}　年齢：{{data.number}}</p>
         </li>
     </ul>
            <v-ons-list modifier="order-list">
