@@ -226,17 +226,16 @@
     </template>
     
     <template id="top">
-        <v-ons-page>
-          <p>{{toporder}}</p>
-           <ul>
-        <li v-for="data in toporder">
-             名前：{{data}}　年齢：{{data.number}}</p>
-        </li>
-    </ul>
-    <!--
-           <v-ons-list modifier="order-list">
+      <v-ons-page>
+        <div class="background" style="background-color:#003300;"></div>
+          <ul>
+            <li v-for="data in toporder">
+              名前：{{data.name}}　年齢：{{data.number}}</p>
+            </li>
+          </ul>
+        <v-ons-list modifier="order-list">
           <v-ons-list-header modifier="order-list-header">先攻</v-ons-list-header>
-          <v-ons-list-item modifier="score-list-item">
+          <v-ons-list-item modifier="score-list-item" v-for="data in toporder">
             <div class="order-list-order">
               <span>1</span>
             </div>
@@ -267,18 +266,17 @@
             </div>
           </v-ons-list-item>
         </v-ons-list>
-      -->
-        </v-ons-page>
-      </template>
+      </v-ons-page>
+    </template>
       
-      <template id="bottom">
-        <v-ons-page>
-            <div class="background" style="background-color:#003300;"></div>
-            <p style="text-align: center">
+    <template id="bottom">
+      <v-ons-page>
+        <div class="background" style="background-color:#003300;"></div>
+        <p style="text-align: center">
             Change the settings.
-          </p>
-        </v-ons-page>
-      </template>
+        </p>
+      </v-ons-page>
+    </template>
 
  
     <div id="app"><script src="./app.js?v=1"></script></div>
