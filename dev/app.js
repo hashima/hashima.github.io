@@ -156,6 +156,7 @@ var vm = new Vue({
   mounted: function () {
     axios.get("./score.json").then(response => (this.tabs[1].props.score = response.data));
     axios.get("./toporder.json").then(response => (this.tabs[2].props.toporder = response.data));
+    this.tabs[0].props.official = false;
     this.tabs[1].props.selectedBatterResult = this.selectedBatterResult;
     this.tabs[1].props.selectedBatterDirection = this.selectedDirection;
     this.tabs[1].props.show = true;
