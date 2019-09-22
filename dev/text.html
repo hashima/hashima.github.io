@@ -24,6 +24,7 @@
                 <li v-for="inningData in textData" style="color:white;">
                 {{ inningData.inning }}
                 <ul>
+                        {{ inningData.text }}
                     <li v-for="data in inningData.text" style="color:white;">
                         {{ data }}
                     </li>
