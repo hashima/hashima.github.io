@@ -22,10 +22,10 @@
             
             <ul>
                 <li v-for="inningData in textData" style="color:white;">
-                {{ inningData }}
+                {{ inningData.inning }}
                 <ul>
                         {{ inningData.text }}
-                    <li v-for="data in inningData.text" style="color:white;">
+                    <li v-for="data in inningData.texts" style="color:white;">
                         {{ data }}
                     </li>
                 </ul>
