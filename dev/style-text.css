@@ -17,6 +17,7 @@ ul.inning {
 
 ul.lines {
     list-style: none outside none;
+    padding-left: 4px;
     background-color: #fff;
 }
 
