@@ -4,7 +4,6 @@ ul.inning {
     margin-top: 0;
 }
 .inning li {
-    border-bottom: 1px solid gray; /* 太さ、線種、色 */
-    height: 1.3em;
+    border-bottom: 1px solid gray;
     padding-top: 0.3em;
 }
