@@ -6,8 +6,6 @@ var vm = new Vue({
     return {
       activeIndex: 1,
       title: "ScoreBook.mobi 開発版",
-      selectedBatterResult : '----',
-      selectedDirection: '----',
       textData: [],
     };
   },
