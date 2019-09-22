@@ -20,10 +20,10 @@
               <div class="center">{{ title }}</div>
             </v-ons-toolbar>
             
-            <div>
+            <div  v-for="inningData in textData">
                 <ul>
-                    <li v-for="item in textData">
-                        {{ item }}
+                    <li v-for="data in inningData" style="color:white;">
+                        {{ data }}
                     </li>
                 </ul>
             </div>
