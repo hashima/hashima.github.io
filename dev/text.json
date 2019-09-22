@@ -1,6 +1,6 @@
 [
   {
-    "inning":1,
+    "inning":"1",
     "topbottom":true,
     "texts":
       [
@@ -11,7 +11,7 @@
       ]
   },
   {
-    "inning":1,
+    "inning":"1",
     "topbottom":false,
     "texts":
       [
