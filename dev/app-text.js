@@ -10,7 +10,7 @@ var vm = new Vue({
     };
   },
   mounted: function () {
-    axios.get("./text.json").then(response => (this.textData = response.data));
+    axios.get("./toporder.json").then(response => (this.textData = response.data));
     // console.log(this.tabs[1].props.score);
   },
   methods: {
