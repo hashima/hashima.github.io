@@ -23,8 +23,8 @@
             <ul class="inning">
                 <li class="inning-header" v-for="inningData in textData" style="color:white;">
                   {{ inningData.inning }}回<span v-if="inningData.topbottom">表</span><span v-else>裏</span>
-                <ul>
-                    <li v-for="data in inningData.texts" style="color:white;">
+                <ul class="lines">
+                    <li class"text-line" v-for="data in inningData.texts" style="color:white;">
                         {{ data }}
                     </li>
                 </ul>
