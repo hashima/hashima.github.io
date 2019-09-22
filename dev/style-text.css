@@ -4,6 +4,12 @@ ul.inning {
     margin-top: 0;
     margin-left: 5px;
 }
+
+.inning-header {
+    background-color: #fff;
+    color: #000;
+}
+
 .inning li {
     border-bottom: 1px solid gray;
     padding-top: 0.3em;
