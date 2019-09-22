@@ -11,6 +11,8 @@ ul.inning {
 
 ul.lines {
     list-style: none outside none;
+    background-color: #fff;
+    color:#000;
 }
 
 .text-line li {
