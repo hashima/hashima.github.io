@@ -22,7 +22,7 @@
             
             <ul>
                 <li v-for="inningData in textData" style="color:white;">
-                {{ inningData.inning }}
+                  {{ inningData.inning }}<span v-if="topbottom">表</span><span v-else>裏</span>
                 <ul>
                         {{ inningData.text }}
                     <li v-for="data in inningData.texts" style="color:white;">
