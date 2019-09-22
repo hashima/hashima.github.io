@@ -6,7 +6,7 @@ var vm = new Vue({
     return {
       activeIndex: 1,
       title: "ScoreBook.mobi 開発版",
-      textData: [],
+      textData: null,
     };
   },
   mounted: function () {
