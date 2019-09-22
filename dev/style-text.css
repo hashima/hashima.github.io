@@ -1,9 +1,9 @@
-ul.ruled {
+ul.inning {
     list-style: none outside none;
     padding-left: 0;
     margin-top: 0;
 }
-.ruled li {
+.inning li {
     border-bottom: 1px solid gray; /* 太さ、線種、色 */
     height: 1.3em;
     padding-top: 0.3em;
