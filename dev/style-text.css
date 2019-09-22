@@ -1,6 +1,7 @@
 ul.inning {
     list-style: none outside none;
     padding-left: 0;
+    padding-bottom:4px;
     margin-top: 0;
     margin-left: 5px;
 }
