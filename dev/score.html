@@ -8,9 +8,6 @@
     <script src="https://unpkg.com/onsenui/js/onsenui.js"></script>
     <script src="https://unpkg.com/vue-onsenui"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
-    <script src="http://unpkg.com/element-ui/lib/index.js"></script>
-    <script src="http://unpkg.com/element-ui/lib/umd/locale/ja.js"></script>
     <link rel='stylesheet' href='style.css?ver=5.0.0' type='text/css' media='all' />
     <meta http-equiv=”Pragma” content=”no-cache”>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -40,18 +37,17 @@
               試合情報
             </v-ons-list-header>
             <v-ons-list-item>
-              <label class="left">
-                <v-ons-checkbox
-                  :input-id="official"
-                  :value="officialLabel"
-                >
-                </v-ons-checkbox>
-              </label>
-              <label class="center">
+              <label class="center" for="switch1">
                 公式戦
               </label>
+              <div class="right">
+                <v-ons-switch input-id="switch1"
+                  v-model="official"
+                >
+                </v-ons-switch>
+              </div>
             </v-ons-list-item>
-            <v-ons-list-item>
+            <v-ons-list-item v-bind:show="official">
                 <div class="center">        
                   <v-ons-input placeholder="大会名を入力してください"
                     v-model="gameName"
@@ -227,23 +223,44 @@
         </v-ons-list>
       </v-ons-page>
     </template>
+    
     <template id="top">
-        <v-ons-page>
-            <div class="background" style="background-color:#003300;"></div>
-            <p style="text-align: center">
-            Some news here.
-          </p>
-        </v-ons-page>
-      </template>
+      <v-ons-page>
+        <div class="background" style="background-color:#003300;"></div>
+          <!-- <ul>
+            <li v-for="data in toporder">
+              名前：{{data.name}}　年齢：{{data.number}}</p>
+            </li>
+          </ul> -->
+        <v-ons-list modifier="order-list">
+          <v-ons-list-header modifier="order-list-header">先攻</v-ons-list-header>
+          <v-ons-list-item modifier="order-list-item" v-for="data in toporder">
+            <div class="order-list-order">
+              <span>{{data.order}}</span>
+            </div>
+            <div class="order-item">
+              <v-ons-select modifier="order" v-model="selectedBatterResult" v-on:change="selectedOnChangeBatterResult">
+                <option v-for="item in itemsBatter" :value="item.value">
+                  {{ item.text }}
+                </option>
+              </v-ons-select>
+            </div>
+          </v-ons-list-item>
+        </v-ons-list>
+        <section style="margin: 16px">
+          <v-ons-button modifier="large" style="margin: 6px 0">決　定</v-ons-button>
+        </section>
+      </v-ons-page>
+    </template>
       
-      <template id="bottom">
-        <v-ons-page>
-            <div class="background" style="background-color:#003300;"></div>
-            <p style="text-align: center">
+    <template id="bottom">
+      <v-ons-page>
+        <div class="background" style="background-color:#003300;"></div>
+        <p style="text-align: center">
             Change the settings.
-          </p>
-        </v-ons-page>
-      </template>
+        </p>
+      </v-ons-page>
+    </template>
 
  
     <div id="app"><script src="./app.js?v=1"></script></div>

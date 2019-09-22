@@ -25,6 +25,9 @@ var vm = new Vue({
           icon: this.md() ? null : 'ion-home',
           label: 'Home',
           page: homePage,
+          data(): {
+            showData: this.show,
+          }
           props: {
             score: [],
             itemsbatter: [

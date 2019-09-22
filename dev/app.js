@@ -36,7 +36,9 @@ const offensePage = {
  };
 
 const topPage = {
-  template: '#top'
+  template: '#top',
+  props: ['toporder',
+        ],
 };
 
 const bottomPage = {
@@ -59,6 +61,7 @@ var vm = new Vue({
           page: gamePage,
           key: "gamePage",
           props: {
+            official: this.setOfficial,
             officialLabel: "公式戦",
 
           },
@@ -133,7 +136,10 @@ var vm = new Vue({
           // icon: this.md() ? null : 'ion-ios-bell',
           label: '先',
           page: topPage,
-          key: "topPage"
+          key: "topPage",
+          props: {
+            toporder: [],
+          }
         },
         {
           // icon: this.md() ? null : 'ion-ios-settings',
@@ -145,14 +151,17 @@ var vm = new Vue({
       selectedBatterResult : '----',
       selectedDirection: '----',
       shown: true,
+      official: false,
     };
   },
   mounted: function () {
     axios.get("./score.json").then(response => (this.tabs[1].props.score = response.data));
+    axios.get("./toporder.json").then(response => (this.tabs[2].props.toporder = response.data));
+    this.tabs[0].props.official = false;
     this.tabs[1].props.selectedBatterResult = this.selectedBatterResult;
     this.tabs[1].props.selectedBatterDirection = this.selectedDirection;
     this.tabs[1].props.show = true;
-    console.log("mounted");
+    console.log(this.tabs[1].props.score);
   },
   methods: {
     md() {
@@ -175,6 +184,9 @@ var vm = new Vue({
       return this.shown;
     },
     fetch2: function(e) {
+    },
+    setOfficial: function(e) {
+      this.official = e.target.value;
     }
   },
   computed: {
