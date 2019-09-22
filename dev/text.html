@@ -21,12 +21,12 @@
             </v-ons-toolbar>
             
             <ul class="inning">
-                <li v-for="inningData in textData" style="color:white;">
+                <li v-for="inningData in textData">
                   <div class="inning-header">
                     {{ inningData.inning }}回<span v-if="inningData.topbottom">表</span><span v-else>裏</span>
                   </div>
                   <ul class="lines">
-                    <li class="text-line" v-for="data in inningData.texts" style="color:white;">
+                    <li class="text-line" v-for="data in inningData.texts">
                         {{ data }}
                     </li>
                   </ul>
