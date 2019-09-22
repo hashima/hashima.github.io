@@ -9,6 +9,7 @@ ul.inning {
 .inning-header {
     background-color: #fff;
     color: #000;
+    padding-left: 4px;
 }
 
 .inning li {
