@@ -2,8 +2,18 @@ ul.inning {
     list-style: none outside none;
     padding-left: 0;
     margin-top: 0;
+    margin-left: 5px;
 }
 .inning li {
     border-bottom: 1px solid gray;
     padding-top: 0.3em;
+}
+
+ul.lines {
+    list-style: none outside none;
+}
+
+.text-line li {
+    border-bottom: 1px solid gray;
+    padding: 2px 0 0 0;
 }
