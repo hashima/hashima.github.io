@@ -25,6 +25,7 @@ $array = [
 
 // Origin null is not allowed by Access-Control-Allow-Origin.とかのエラー回避の為、ヘッダー付与
 header("Access-Control-Allow-Origin: *");
+header("Content-Type: text/javascript; charset=utf-8");
 
 echo json_encode($array);
 
