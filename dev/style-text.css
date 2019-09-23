@@ -1,8 +1,13 @@
+
+.scoreboard {
+    margin: 3px 4px 3px 4px;
+}
+
+
 ul.inning {
     list-style: none outside none;
     padding: 2px 4px 6px 4px;
-    margin-top: 0;
-    margin-left: 5px;
+    margin: 0 2px 3px 5px;
 }
 
 .inning-header {
@@ -11,9 +16,9 @@ ul.inning {
     padding: 2px 0 2px 4px;
 }
 
-.inning li {
-    border-bottom: 1px solid gray;
-    padding-top: 0.3em;
+.inning-item {
+    margin: 0 0 5px 0;
+    padding: 0 0 5px 0;    
 }
 
 ul.lines {
@@ -22,8 +27,12 @@ ul.lines {
     background-color: #fff;
 }
 
-.text-line li {
+.text-line {
     border-bottom: 1px solid gray;
     padding: 2px 0 0 4px;
-    color: #003300;
+    color: #000000;
+}
+
+.text-line li:last-child{
+    padding-bottom: 5px;
 }

@@ -20,14 +20,53 @@
               <div class="center">{{ title }}</div>
             </v-ons-toolbar>
             
+            <div class="scoreboard">
+                <v-ons-row class="" style="background-color:lightgray;">
+                    <v-ons-col></v-ons-col>
+                    <v-ons-col>1</v-ons-col>
+                    <v-ons-col>2</v-ons-col>
+                    <v-ons-col>3</v-ons-col>
+                    <v-ons-col>4</v-ons-col>
+                    <v-ons-col>5</v-ons-col>
+                    <v-ons-col>6</v-ons-col>
+                    <v-ons-col>7</v-ons-col>
+                    <v-ons-col>計</v-ons-col>
+                  </v-ons-row>      
+            <v-ons-row class="" style="background-color:white;">
+              <v-ons-col>sugi</v-ons-col>
+              <v-ons-col>0</v-ons-col>
+              <v-ons-col>0</v-ons-col>
+              <v-ons-col>0</v-ons-col>
+              <v-ons-col>0</v-ons-col>
+              <v-ons-col>0</v-ons-col>
+              <v-ons-col>0</v-ons-col>
+              <v-ons-col>0</v-ons-col>
+              <v-ons-col>0</v-ons-col>
+            </v-ons-row>
+            <v-ons-row class="" style="background-color:white;">
+              <v-ons-col>sugi</v-ons-col>
+              <v-ons-col>0</v-ons-col>
+              <v-ons-col>0</v-ons-col>
+              <v-ons-col>0</v-ons-col>
+              <v-ons-col>0</v-ons-col>
+              <v-ons-col>0</v-ons-col>
+              <v-ons-col>0</v-ons-col>
+              <v-ons-col>0</v-ons-col>
+              <v-ons-col>0</v-ons-col>
+            </v-ons-row>
+</div>
+
             <ul class="inning">
-                <li v-for="inningData in textData">
+                <li class="inning-item" v-for="inningData in textData">
                   <div class="inning-header">
                     {{ inningData.inning }}回<span v-if="inningData.topbottom">表</span><span v-else>裏</span>
                   </div>
                   <ul class="lines">
                     <li class="text-line" v-for="data in inningData.texts">
                         {{ data }}
+                    </li>
+                    <li>
+                      <div style="color: black">得点</div>
                     </li>
                   </ul>
                 </li>
