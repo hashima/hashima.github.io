@@ -1,7 +1,6 @@
 ul.inning {
     list-style: none outside none;
-    padding-left: 4px;
-    padding-bottom: 6px;
+    padding: 2px 4px 6px 4px;
     margin-top: 0;
     margin-left: 5px;
 }
@@ -9,7 +8,7 @@ ul.inning {
 .inning-header {
     background-color: #d3d3d3;
     color: #000;
-    padding-left: 4px;
+    padding: 2px 0 2px 4px;
 }
 
 .inning li {
