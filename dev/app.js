@@ -2,6 +2,7 @@ const gamePage = {
   template: '#game',
   props: ['official',
           'officialLabel',
+          'officialValue',
           'gameName',
           'opponentName',
           'fieldName',
@@ -61,10 +62,21 @@ var vm = new Vue({
           page: gamePage,
           key: "gamePage",
           props: {
-            official: this.setOfficial,
+            value: false,
             officialLabel: "公式戦",
 
           },
+          computed: {
+            officialValue: {
+              get () {
+                return this.value
+              },
+              set (newVal)
+              {
+                if (this.value !== newVal) this.$emit('input', newVal)
+              }
+            }
+          }
         },
         {
           // icon: this.md() ? null : 'ion-home',

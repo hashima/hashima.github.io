@@ -42,12 +42,12 @@
               </label>
               <div class="right">
                 <v-ons-switch input-id="switch1"
-                  v-model="official"
+                  v-model="officialValue"
                 >
                 </v-ons-switch>
               </div>
             </v-ons-list-item>
-            <v-ons-list-item v-bind:show="official">
+            <v-ons-list-item v-show="officialValue">
                 <div class="center">        
                   <v-ons-input placeholder="大会名を入力してください"
                     v-model="gameName"
@@ -72,6 +72,9 @@
                   </div>
               </v-ons-list-item>
             </v-ons-list>
+            <section style="margin: 16px">
+              <v-ons-button modifier="large" style="margin: 6px 0">決　定</v-ons-button>
+            </section>    
       </v-ons-page>
     </template>
 
