@@ -111,7 +111,7 @@
               </div>
               <div class="score-item">
                 <div class="score">
-                  <v-ons-select modifier="select" v-model="selectedBatterResult" @change="selectedOnChangeBatterResult">
+                  <v-ons-select modifier="select" v-model="selectedBatterResult" v-on:change="selectedOnChangeBatterResult">
                     <option v-for="item in itemsBatter" :value="item.value">
                       {{ item.text }}
                     </option>
