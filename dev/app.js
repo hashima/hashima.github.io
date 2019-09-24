@@ -3,6 +3,7 @@ const gamePage = {
   props: ['official',
           'officialLabel',
           'officialValue',
+          'officialChange',
           'gameName',
           'opponentName',
           'fieldName',
@@ -64,17 +65,12 @@ var vm = new Vue({
           props: {
             value: false,
             officialLabel: "公式戦",
-
+            officialValue: false
+            
           },
-          computed: {
-            officialValue: {
-              get () {
-                return this.value
-              },
-              set (newVal)
-              {
-                if (this.value !== newVal) this.$emit('input', newVal)
-              }
+          methods: {
+            officialChange: function(){
+              this.$emit('officialValue')
             }
           }
         },
@@ -120,13 +116,12 @@ var vm = new Vue({
               { text: '3塁へ', value: '3塁へ' },
               { text: '本塁へ', value: '本塁へ' },
             ],
-            selectedOnChangeBatterResult: this.fetch,
             selectedOnChangeBatterDirection: this.fetch,
             selectedOnChangeBatterRun: this.fetch,
-            selectedBatterResult: this.selectedBatterResult,
+            selectedBatterResult: '----',
             selectedBatterDirection: this.selectedDirection,
             selectedBatterRun: this.selectedDirection,
-            showSelectedBatterDirection: this.shown,
+            showSelectedBatterDirection: true,
             showSelectedBatterRun: this.shown,
             itemsRunner: [
               { text: '結果', value: '結果' },
@@ -141,6 +136,14 @@ var vm = new Vue({
               { text: '3塁へ', value: '3塁へ' },
               { text: '本塁へ', value: '本塁へ' },
             ],
+          },
+          methods: {
+            selectedOnChangeBatterResult: function(){
+              // this.showSelectedBatterDirection = true
+              this.$emit('selectedBatterResult')
+              this.$emit('showSelectedBatterDirection')
+            }
+            
           },
           key: "offensePage"
         },
@@ -160,7 +163,6 @@ var vm = new Vue({
           key: "bottomPage"
         }
       ],
-      selectedBatterResult : '----',
       selectedDirection: '----',
       shown: true,
       official: false,
@@ -170,7 +172,7 @@ var vm = new Vue({
     axios.get("./score.json").then(response => (this.tabs[1].props.score = response.data));
     axios.get("./toporder.json").then(response => (this.tabs[2].props.toporder = response.data));
     this.tabs[0].props.official = false;
-    this.tabs[1].props.selectedBatterResult = this.selectedBatterResult;
+    // this.tabs[1].props.selectedBatterResult = false;
     this.tabs[1].props.selectedBatterDirection = this.selectedDirection;
     this.tabs[1].props.show = true;
     console.log(this.tabs[1].props.score);
