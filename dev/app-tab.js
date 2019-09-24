@@ -1,33 +1,66 @@
+const buttoncounter = Vue.component('button-counter', {
+  template: '<button v-on:click="increChild">{{ counter }}</button>',
+  data:  ()=> {
+      return {
+          counter: 0
+      }
+  },
+  methods: {
+      increChild: function () {
+          this.counter += 1
+          this.$emit('increment')
+      }
+  },
+})
+
 const homePage = {
   template: '#home',
-  props: ['score','itemsbatter','itemsDirection','selectOnChange','selectOnChange2','selectedItem','selectedItem2','initselect','show'],
+  props: [ 'total', 'value','score','itemsbatter','itemsDirection','selectOnChange2','selectedItem2','initselect','show'],
     // onChangeEvent(e){
     //   alert(this.tabs[0].props.score);
     // },
+    computed: {
+      selectedItem() {
+        return this.value
+      }
+    },
+    methods: {
+      selectOnChange(event) {
+          this.commitChange(event.target.value)
+      },
+      commitChange(newValue) {
+          this.$emit('input', newValue)
+      },
+      increParent: function () {
+        this.total += 1
+    },
+     },
+
 };
 
 const newsPage = {
   template: '#news'
 };
 
-const settingsPage = {
-  template: '#settings'
-};
+// const settingsPage = {
+//   template: '#settings'
+// };
 
 var vm = new Vue({
   el: '#app',
   template: '#main',
   data() {
     return {
-      activeIndex: 0,
+      message: 'init',
+      activeIndex: 2,
       tabs: [
         {
           icon: this.md() ? null : 'ion-home',
           label: 'Home',
           page: homePage,
-          data(): {
+          data: {
             showData: this.show,
-          }
+          },
           props: {
             score: [],
             itemsbatter: [
@@ -42,12 +75,12 @@ var vm = new Vue({
               { text: 'item5', value: 'item5' },
               { text: 'item6', value: 'item6' },
             ],
-            selectOnChange: this.fetch,
+            // selectOnChange: this.fetch,
             selectOnChange2: this.fetch2,
-            selectedItem: this.selectedBatter,
+            // selectedItem: this.selectedBatter,
             selectedItem2: this.selectedDirection,
             initselect: '----',
-            show: this.shown
+            show: this.shown,
           },
           key: "homePage"
         },
@@ -60,7 +93,7 @@ var vm = new Vue({
         {
           icon: this.md() ? null : 'ion-ios-settings',
           label: 'Settings',
-          page: settingsPage,
+          page: buttoncounter,
           key: "settingsPage"
         }
       ],
@@ -71,7 +104,7 @@ var vm = new Vue({
   },
   mounted: function () {
     axios.get("./score.json").then(response => (this.tabs[0].props.score = response.data));
-    this.tabs[0].props.selectedItem = this.selectedBatter;
+    // this.tabs[0].props.selectedItem = this.selectedBatter;
     this.tabs[0].props.selectedItem2 = this.selectedDirection;
     this.tabs[0].props.show = true;
     console.log("mounted");
@@ -97,7 +130,7 @@ var vm = new Vue({
       return this.shown;
     },
     fetch2: function(e) {
-    }
+    },
   },
   computed: {
     title() {
