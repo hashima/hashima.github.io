@@ -1,3 +1,18 @@
+var store = {
+  debug: true,
+  state: {
+    message: 'Hello!'
+  },
+  setMessageAction(newValue) {
+    if (this.debug) console.log('setMessageAction triggered with', newValue)
+    this.state.message = newValue
+  },
+  clearMessageAction() {
+    if (this.debug) console.log('clearMessageAction triggered')
+    this.state.message = ''
+  }
+}
+
 const buttoncounter = Vue.component('button-counter', {
   template: '<button v-on:click="increChild">{{ counter }}</button>',
   data:  ()=> {
@@ -9,6 +24,7 @@ const buttoncounter = Vue.component('button-counter', {
       increChild: function () {
           this.counter += 1
           this.$emit('increment')
+          store.setMessageAction('123')
       }
   },
 })
