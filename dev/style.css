@@ -94,6 +94,17 @@ body {
   color:#FFF;
 }
 
+.list-item--score-list-item-diamond{
+  width:auto;
+  background-color: #003300;
+  border: 2px solid #FFF;
+  height:68px;
+  overflow: hidden;
+  padding:2px;
+  margin-top:3px;
+  margin-bottom:3px;
+  color:#FFF;
+}
 .list-item--score-list-item__center {
   padding:0px;
 }
