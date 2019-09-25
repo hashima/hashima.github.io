@@ -180,7 +180,7 @@
               </div>
               <div class="score-item">
                 <div class="score">
-                  <v-ons-select modifier="select" v-model="selected2ndRunner" v-on:change="selectedOnChangeRunner('2nd')>
+                  <v-ons-select modifier="select" v-model="selected2ndRunner" v-on:change="selectedOnChangeRunner('2nd')">
                     <option v-for="item in itemsRunner" :value="item.value">
                       {{ item.text }}
                     </option>
@@ -209,7 +209,7 @@
               </div>
               <div class="score-item">
                 <div class="score">
-                  <v-ons-select modifier="select" v-model="selected3rdRunner">
+                  <v-ons-select modifier="select" v-model="selected3rdRunner" v-on:change="selectedOnChangeRunner('3rd')">
                     <option v-for="item in itemsRunner" :value="item.value">
                       {{ item.text }}
                     </option>
