@@ -112,7 +112,7 @@
               <div class="score-item">
                 <div class="score">
                   <v-ons-select modifier="select" v-model="selectedBatterResult" v-on:change="selectedOnChangeBatterResult">
-                    <option v-for="item in itemsBatter" :value="item.value">
+                    <option v-for="(item, index) in itemsBatter" :value="item.value" :key="index">
                       {{ item.text }}
                     </option>
                   </v-ons-select>
@@ -154,7 +154,7 @@
                   </v-ons-select>
                 </div>
                 <div class="position">
-                  <v-ons-select modifier="select" v-model="selected1stBase">
+                  <v-ons-select modifier="select" v-bind:disabled="showSelected1stRunner" v-model="selected1stBase">
                     <option v-for="item in itemsBase" :value="item.value">
                       {{ item.text }}
                     </option>
@@ -176,7 +176,7 @@
               </div>
               <div class="score-item">
                 <div class="score">
-                  <v-ons-select modifier="select" v-model="selected2ndRunner">
+                  <v-ons-select modifier="select" v-bind:disabled="showSelected2ndRunner" v-model="selected2ndRunner">
                     <option v-for="item in itemsRunner" :value="item.value">
                       {{ item.text }}
                     </option>
@@ -212,7 +212,7 @@
                   </v-ons-select>
                 </div>
                 <div class="position">
-                  <v-ons-select modifier="select" v-model="selected3rdBase">
+                  <v-ons-select modifier="select" v-bind:disabled="showSelected3rdRunner" v-model="selected3rdBase">
                     <option v-for="item in itemsBase" :value="item.value">
                       {{ item.text }}
                     </option>

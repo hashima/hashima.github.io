@@ -1,6 +1,9 @@
 // 子コンポーネント
 Vue.component('button-counter', {
-  template: '<button v-on:click="increChild">{{ counter }}</button>',
+  template: `
+  <button v-on:click="increChild">{{ counter }}
+  </button>
+  `,
   data:  ()=> {
       return {
           counter: 0

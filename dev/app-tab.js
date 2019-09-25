@@ -13,19 +13,19 @@ var store = {
   }
 }
 
-const buttoncounter = Vue.component('button-counter', {
-  template: '<button v-on:click="increChild">{{ counter }}</button>',
+const gamePage = Vue.component('game-page', {
+  template: '#settings',
   data:  ()=> {
       return {
-          counter: 0
-      }
+          counter: 0,
+          officialValue: false,
+          gameName: ""
+        }
   },
   methods: {
-      increChild: function () {
-          this.counter += 1
-          this.$emit('increment')
-          store.setMessageAction('123')
-      }
+    officialChange: function(){
+      this.$emit('officialValue')
+    }
   },
 })
 
@@ -109,7 +109,7 @@ var vm = new Vue({
         {
           icon: this.md() ? null : 'ion-ios-settings',
           label: 'Settings',
-          page: buttoncounter,
+          page: gamePage,
           key: "settingsPage"
         }
       ],
