@@ -104,7 +104,9 @@
         <div class="background" style="background-color:#003300;"></div>
         <div id="game">
             <div class="game-inning">
-              <span>{{ score.inning }}</span><span v-if="score.out1" style="color:red;">●</span><span v-else>●</span>
+              <span style="margin-right: 8px;">{{ score.inning }}</span>
+              <span v-if="score.out1" style="color:red;">●</span><span v-else>●</span>
+              <span v-if="score.out2" style="color:red;">●</span><span v-else>●</span>
             </div>
             <div class="team-name">
               <span>{{ score.topname }}</span>
