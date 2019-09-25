@@ -63,11 +63,15 @@ const gamePage = Vue.component('game-page', {
           gameName: "",
           opponentName: "",
           fieldName: "",
+          selectTopBottom:"top"
         }
   },
   methods: {
     officialChange: function(){
       this.$emit('officialValue')
+    },
+    onChangeTopBottom: function(){
+      this.$emit('selectTopBottom')
     }
   },
 })

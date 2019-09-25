@@ -72,6 +72,26 @@
                     </v-ons-input>          
                   </div>
               </v-ons-list-item>
+              <v-ons-list-item>
+                <div class="center">
+                  <v-ons-radio
+                    :input-id="'radio-1'"
+                    :value="'top'"
+                    v-model="selectTopBottom"
+                    v-on:change="onChangeTopBottom"
+                  >
+                  </v-ons-radio>
+                  <label style="margin-right: 25px;">先攻</label>
+                  <v-ons-radio
+                  :input-id="'radio-2'"
+                  :value="'bottom'"
+                  v-model="selectTopBottom"
+                  v-on:change="onChangeTopBottom"
+                  >
+                </v-ons-radio>
+                <label>後攻</label>
+                </div>
+              </v-ons-list-item>
             </v-ons-list>
             <section style="margin: 16px">
               <v-ons-button modifier="large" style="margin: 6px 0">決　定</v-ons-button>
