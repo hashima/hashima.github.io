@@ -9,9 +9,6 @@ const gamePage = {
           'fieldName',
           'gamedate',
    ],
-   event: {
-     'change'
-   }
 };
 
 const offensePage = {
