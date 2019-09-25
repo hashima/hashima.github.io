@@ -100,6 +100,11 @@ const offensePage = Vue.component('offense-page', {
         this.selectedBatterRun = "1塁Out"
         this.$emit('selectedBatterRun')
       }
+      else
+      {
+        this.selectedBatterRun = "3塁Out"
+        this.$emit('selectedBatterRun')
+      }
       this.showSelectedBatterDirection = false
       this.$emit('showSelectedBatterDirection')
       this.$emit('selectedBatterResult')
