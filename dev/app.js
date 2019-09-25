@@ -95,11 +95,11 @@ const offensePage = Vue.component('offense-page', {
   },
   methods: {
     selectedOnChangeBatterResult: function(){
-      // if(this.selectedBatterResult === "ゴロ")
-      // {
-      //   this.selectedBatterRun = "1塁Out"
-      //   this.$emit('selectedBatterRun')
-      // }
+      if(this.selectedBatterResult === "ゴロ")
+      {
+        // this.selectedBatterRun = "1塁Out"
+        // this.$emit('selectedBatterRun')
+      }
       this.showSelectedBatterDirection = false
       this.$emit('showSelectedBatterDirection')
       this.$emit('selectedBatterResult')
