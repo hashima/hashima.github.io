@@ -100,7 +100,6 @@
             </div>
         </div>
         <v-ons-list modifier="score-list">
-          <v-ons-list-header modifier="score-list-header">3回表</v-ons-list-header>
           <v-ons-list-item modifier="score-list-item">
             <div class="order">
               <span>4</span>
@@ -112,7 +111,7 @@
               <div class="score-item">
                 <div class="score">
                   <v-ons-select modifier="select" v-model="selectedBatterResult" v-on:change="selectedOnChangeBatterResult">
-                    <option v-for="item in itemsBatter" :value="item.value">
+                    <option v-for="(item, index) in itemsBatter" :value="item.value" :key="index">
                       {{ item.text }}
                     </option>
                   </v-ons-select>
@@ -137,6 +136,11 @@
               <v-ons-button modifier="ok-button">決定</v-ons-button>
             </div>
           </v-ons-list-item>
+          <v-ons-list-item modifier="score-list-item-diamond">
+            <div id="diamond">
+
+            </div>
+          </v-ons-list-item>
           <v-ons-list-item modifier="score-list-item">
             <div class="order">
               <span>3</span>
@@ -147,14 +151,14 @@
               </div>
               <div class="score-item">
                 <div class="score">
-                  <v-ons-select modifier="select" v-model="selected1stRunner">
+                  <v-ons-select modifier="select" v-model="selected1stRunner" v-on:change="selectedOnChangeRunner('1st')">
                     <option v-for="item in itemsRunner" :value="item.value">
                       {{ item.text }}
                     </option>
                   </v-ons-select>
                 </div>
                 <div class="position">
-                  <v-ons-select modifier="select" v-model="selected1stBase">
+                  <v-ons-select modifier="select" v-bind:disabled="showSelected1stRunner" v-model="selected1stBase">
                     <option v-for="item in itemsBase" :value="item.value">
                       {{ item.text }}
                     </option>
@@ -176,14 +180,14 @@
               </div>
               <div class="score-item">
                 <div class="score">
-                  <v-ons-select modifier="select" v-model="selected2ndRunner">
+                  <v-ons-select modifier="select" v-model="selected2ndRunner" v-on:change="selectedOnChangeRunner('2nd')">
                     <option v-for="item in itemsRunner" :value="item.value">
                       {{ item.text }}
                     </option>
                   </v-ons-select>
                 </div>
                 <div class="position">
-                  <v-ons-select modifier="select" v-model="selected2ndBase">
+                  <v-ons-select modifier="select" v-bind:disabled="showSelected2ndRunner" v-model="selected2ndBase">
                     <option v-for="item in itemsBase" :value="item.value">
                       {{ item.text }}
                     </option>
@@ -205,14 +209,14 @@
               </div>
               <div class="score-item">
                 <div class="score">
-                  <v-ons-select modifier="select" v-model="selected3rdRunner">
+                  <v-ons-select modifier="select" v-model="selected3rdRunner" v-on:change="selectedOnChangeRunner('3rd')">
                     <option v-for="item in itemsRunner" :value="item.value">
                       {{ item.text }}
                     </option>
                   </v-ons-select>
                 </div>
                 <div class="position">
-                  <v-ons-select modifier="select" v-model="selected3rdBase">
+                  <v-ons-select modifier="select" v-bind:disabled="showSelected3rdRunner" v-model="selected3rdBase">
                     <option v-for="item in itemsBase" :value="item.value">
                       {{ item.text }}
                     </option>
