@@ -109,7 +109,8 @@ const offensePage = Vue.component('offense-page', {
       this.$emit('showSelectedBatterRun')
       this.$emit('selectedBatterRun')
     },
-    selectedOnChange1stRunner: function(){
+    selectedOnChange1stRunner: function(base){
+      console.log(base)
       this.showSelected1stRunner = false
       this.$emit('showSelected1stRunner')
       this.$emit('selected1stRunner')
