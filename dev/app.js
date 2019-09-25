@@ -103,12 +103,13 @@ const offensePage = Vue.component('offense-page', {
   },
   methods: {
     selectedOnChangeBatterResult: function(){
+      this.itemsBatterRun = defaultSelectItem.itemsBatterRun
+      this.itemsDirection = defaultSelectItem.itemsDirection
       this.showSelectedBatterDirection = false
       this.$emit('showSelectedBatterDirection')
       this.$emit('selectedBatterResult')
     },
     selectedOnChangeBatterDirection: function(){
-      this.itemsBatterRun = defaultSelectItem.itemsBatterRun
       if(this.selectedBatterResult === "ゴロ")
       {
         this.selectedBatterRun = "1塁Out"
