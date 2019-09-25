@@ -97,6 +97,7 @@ body {
 .list-item--score-list-item-diamond{
   width:auto;
   background-color: #003300;
+  background-image: url("./images/diamond.png")
   border: 2px solid #FFF;
   height:78px;
   overflow: hidden;
