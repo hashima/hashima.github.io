@@ -1,3 +1,46 @@
+const defaultSelectItem = {
+  "itemsBatter" : [
+    { text: '----', value: '----' },
+    { text: 'ゴロ', value: 'ゴロ' },
+    { text: 'フライ', value: 'フライ' },
+    { text: '三振', value: '三振' },
+    { text: 'ヒット', value: 'ヒット' },
+    { text: '犠打', value: '犠打' },
+    { text: '犠飛', value: '犠飛' },
+    { text: '四球', value: '四球' },
+    { text: '死球', value: '死球' },
+    { text: '2塁打', value: '2塁打' },
+    { text: '3塁打', value: '3塁打' },
+    { text: '本塁打', value: '本塁打' },
+    { text: 'エラー', value: 'エラー' },
+  ],
+  "itemsDirection":[
+    { text: '----', value: '----' },
+    { text: 'P', value: 'P' },
+    { text: 'C', value: 'C' },
+    { text: '1B', value: '1B' },
+    { text: '2B', value: '2B' },
+    { text: '3B', value: '3B' },
+    { text: 'SS', value: 'SS' },
+    { text: 'LF', value: 'LF' },
+    { text: 'CF', value: 'CF' },
+    { text: 'RF', value: 'RF' },
+    { text: 'LF-CF', value: 'LF-CF' },
+    { text: 'CF-RF', value: 'CF-RF' },
+  ],
+  "itemsBatterRun":[
+    { text: '----', value: '----' },
+    { text: '1塁へ', value: '1塁へ' },
+    { text: '2塁へ', value: '2塁へ' },
+    { text: '3塁へ', value: '3塁へ' },
+    { text: '本塁へ', value: '本塁へ' },
+    { text: '1塁Out', value: '1塁Out' },
+    { text: '2塁Out', value: '2塁Out' },
+    { text: '3塁Out', value: '3塁Out' },
+    { text: '本塁Out', value: '本塁Out' },
+  ],
+}
+
 const gamePage = Vue.component('game-page', {
   template: '#game',
   data:  ()=> {
@@ -21,46 +64,9 @@ const offensePage = Vue.component('offense-page', {
   data:  ()=> {
     return {
           score: [],
-          itemsBatter: [
-            { text: '----', value: '----' },
-            { text: 'ゴロ', value: 'ゴロ' },
-            { text: 'フライ', value: 'フライ' },
-            { text: '三振', value: '三振' },
-            { text: 'ヒット', value: 'ヒット' },
-            { text: '犠打', value: '犠打' },
-            { text: '犠飛', value: '犠飛' },
-            { text: '四球', value: '四球' },
-            { text: '死球', value: '死球' },
-            { text: '2塁打', value: '2塁打' },
-            { text: '3塁打', value: '3塁打' },
-            { text: '本塁打', value: '本塁打' },
-            { text: 'エラー', value: 'エラー' },
-          ],
-          itemsDirection: [
-            { text: '----', value: '----' },
-            { text: 'P', value: 'P' },
-            { text: 'C', value: 'C' },
-            { text: '1B', value: '1B' },
-            { text: '2B', value: '2B' },
-            { text: '3B', value: '3B' },
-            { text: 'SS', value: 'SS' },
-            { text: 'LF', value: 'LF' },
-            { text: 'CF', value: 'CF' },
-            { text: 'RF', value: 'RF' },
-            { text: 'LF-CF', value: 'LF-CF' },
-            { text: 'CF-RF', value: 'CF-RF' },
-          ],
-          itemsBatterRun: [
-            { text: '----', value: '----' },
-            { text: '1塁へ', value: '1塁へ' },
-            { text: '2塁へ', value: '2塁へ' },
-            { text: '3塁へ', value: '3塁へ' },
-            { text: '本塁へ', value: '本塁へ' },
-            { text: '1塁Out', value: '1塁Out' },
-            { text: '2塁Out', value: '2塁Out' },
-            { text: '3塁Out', value: '3塁Out' },
-            { text: '本塁Out', value: '本塁Out' },
-          ],
+          itemsBatter: defaultSelectItem.itemsBatter,
+          itemsDirection:defaultSelectItem.itemsDirection,
+          itemsBatterRun: defaultSelectItem.itemsBatterRun,
           itemsRunner: [
             { text: '----', value: '----' },
             { text: '盗塁', value: '盗塁' },
@@ -100,6 +106,7 @@ const offensePage = Vue.component('offense-page', {
       this.$emit('selectedBatterResult')
     },
     selectedOnChangeBatterDirection: function(){
+      this.itemsBatterRun = defaultSelectItem.itemsBatterRun
       if(this.selectedBatterResult === "ゴロ")
       {
         this.selectedBatterRun = "1塁Out"
@@ -112,6 +119,15 @@ const offensePage = Vue.component('offense-page', {
       }
       else if(this.selectedBatterResult === "ヒット")
       {
+        this.itemsBatterRun = [
+          { text: '1塁へ', value: '1塁へ' },
+          { text: '2塁へ', value: '2塁へ' },
+          { text: '3塁へ', value: '3塁へ' },
+          { text: '本塁へ', value: '本塁へ' },
+          { text: '2塁Out', value: '2塁Out' },
+          { text: '3塁Out', value: '3塁Out' },
+          { text: '本塁Out', value: '本塁Out' },
+        ]
         this.selectedBatterRun = "1塁へ"
         this.$emit('selectedBatterRun')
       }
