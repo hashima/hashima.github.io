@@ -138,7 +138,7 @@
           </v-ons-list-item>
           <v-ons-list-item modifier="score-list-item-diamond">
             <div id="diamond">
-              
+
             </div>
           </v-ons-list-item>
           <v-ons-list-item modifier="score-list-item">
@@ -151,7 +151,7 @@
               </div>
               <div class="score-item">
                 <div class="score">
-                  <v-ons-select modifier="select" v-model="selected1stRunner">
+                  <v-ons-select modifier="select" v-model="selected1stRunner" v-on:change="selectedOnChange1stRunner">
                     <option v-for="item in itemsRunner" :value="item.value">
                       {{ item.text }}
                     </option>

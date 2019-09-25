@@ -22,7 +22,7 @@ const offensePage = Vue.component('offense-page', {
     return {
           score: [],
           itemsBatter: [
-            { text: '結果', value: '結果' },
+            { text: '----', value: '----' },
             { text: 'ゴロ', value: 'ゴロ' },
             { text: 'フライ', value: 'フライ' },
             { text: '三振', value: '三振' },
@@ -37,7 +37,7 @@ const offensePage = Vue.component('offense-page', {
             { text: 'エラー', value: 'エラー' },
           ],
           itemsDirection: [
-            { text: '方向', value: '方向' },
+            { text: '----', value: '----' },
             { text: 'P', value: 'P' },
             { text: 'C', value: 'C' },
             { text: '1B', value: '1B' },
@@ -51,7 +51,7 @@ const offensePage = Vue.component('offense-page', {
             { text: 'CF-RF', value: 'CF-RF' },
           ],
           itemsBatterRun: [
-            { text: '--', value: '--' },
+            { text: '----', value: '----' },
             { text: '1塁へ', value: '1塁へ' },
             { text: '2塁へ', value: '2塁へ' },
             { text: '3塁へ', value: '3塁へ' },
@@ -102,8 +102,13 @@ const offensePage = Vue.component('offense-page', {
     },
     selectedOnChangeBatterRun: function(){
       this.showSelectedBatterRun = false
-      this.$emit('selectedOnChangeBatterRun')
+      this.$emit('showSelectedBatterRun')
       this.$emit('selectedBatterRun')
+    },
+    selectedOnChange1stRunner: function(){
+      this.showSelected1stRunner = false
+      this.$emit('showSelected1stRunner')
+      this.$emit('selected1stRunner')
     }
   },
 })
