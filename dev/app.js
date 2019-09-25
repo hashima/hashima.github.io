@@ -39,6 +39,19 @@ const defaultSelectItem = {
     { text: '3塁Out', value: '3塁Out' },
     { text: '本塁Out', value: '本塁Out' },
   ],
+  "itemsRunner":[
+    { text: '----', value: '----' },
+    { text: '盗塁', value: '盗塁' },
+    { text: 'WP', value: 'WP' },
+    { text: 'PB', value: 'PB' },
+    { text: '進塁', value: '進塁' },
+  ],
+  "itemsBase":[
+    { text: '----', value: '----' },
+    { text: '2塁へ', value: '2塁へ' },
+    { text: '3塁へ', value: '3塁へ' },
+    { text: '本塁へ', value: '本塁へ' },
+  ]
 }
 
 const gamePage = Vue.component('game-page', {
@@ -67,19 +80,8 @@ const offensePage = Vue.component('offense-page', {
           itemsBatter: defaultSelectItem.itemsBatter,
           itemsDirection:defaultSelectItem.itemsDirection,
           itemsBatterRun: defaultSelectItem.itemsBatterRun,
-          itemsRunner: [
-            { text: '----', value: '----' },
-            { text: '盗塁', value: '盗塁' },
-            { text: 'WP', value: 'WP' },
-            { text: 'PB', value: 'PB' },
-            { text: '進塁', value: '進塁' },
-          ],
-          itemsBase: [
-            { text: '----', value: '----' },
-            { text: '2塁へ', value: '2塁へ' },
-            { text: '3塁へ', value: '3塁へ' },
-            { text: '本塁へ', value: '本塁へ' },
-          ],
+          itemsRunner:defaultSelectItem.itemsRunner,
+          itemsBase: defaultSelectItem.itemsBase,
           selectedBatterResult: '----',
           selectedBatterDirection: '----',
           selectedBatterRun: '----',
