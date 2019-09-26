@@ -206,15 +206,15 @@ body {
   color:#003300;
 }
 
-.list--order-list{
+#top-page .list {
   margin:4px 4px 0 4px;
 }
 
-.list-item--order-list-item{
+#top-page .list-item {
   width:auto;
   background-color: #003300;
   border: 2px solid #FFF;
-  height:52px;
+  height:50px;
   overflow: hidden;
   padding:2px;
   margin-top:0px;
@@ -222,21 +222,16 @@ body {
   color:#FFF;
 }
 
-.order-list-order{
+#top-page .order{
   float: left;
   font-size:20px;
-  padding: 10px 4px 0 4px;
+  padding: 6px 4px 0 4px;
   text-align: center;
-  height:32px;
-  width:20px;
+  height:30px;
+  width:18px;
   background-color: #FFF;
   color:#003300;
   overflow: hidden;
-}
-
-.list-item--order-list-item__center {
-  padding:0px;
-  height:38px;
 }
 
 .order-item {
@@ -258,7 +253,7 @@ body {
   width:180px;
 }
 
-.order-row .select-select{
+#top-page .select-select{
   font-size:20px;
   border :1px solid #fff;
   background-color: #003300;
@@ -266,9 +261,9 @@ body {
   margin:1px 0 0 1px;
 }
 
-.order-row .select-input{
+#top-page .select-input{
   font-size:20px;
   background-color: #003300;
   color:#FFF;
-  width:60px;
+  width:45px;
 }

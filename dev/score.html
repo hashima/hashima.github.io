@@ -263,11 +263,12 @@
     <template id="top">
       <v-ons-page>
         <div class="background" style="background-color:#003300;"></div>
+        <div id="top-page">
         <v-ons-list modifier="order-list">
           <v-ons-list-item modifier="order-list-item" v-for="(data, index) in toporder">
             <v-ons-row class="order-row">
               <v-ons-col width="32px">
-                <div class="order-list-order">
+                <div class="order">
                   {{data.order}}
                 </div>
               </v-ons-col>
@@ -285,6 +286,7 @@
         <section style="margin: 16px">
           <v-ons-button modifier="large" style="margin: 6px 0">決　定</v-ons-button>
         </section>
+        </div>
       </v-ons-page>
     </template>
       
