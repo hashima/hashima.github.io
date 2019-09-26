@@ -207,26 +207,27 @@ body {
 }
 
 .list--order-list{
-  margin: 2px 0 0 0;
+  margin:4px 4px 0 4px;
 }
 
 .list-item--order-list-item{
   width:auto;
   background-color: #003300;
-  border: 0px solid #FFF;
-  height:42px;
+  border: 2px solid #FFF;
+  height:68px;
   overflow: hidden;
   padding:2px;
-  margin-bottom:2px;
+  margin-top:3px;
+  margin-bottom:3px;
   color:#FFF;
 }
 
 .order-list-order{
   float: left;
-  font-size:26px;
-  padding:12px 4px 0 4px;
+  font-size:32px;
+  padding:18px 4px 0 4px;
   text-align: center;
-  height:20px;
+  height:42px;
   width:26px;
   background-color: #FFF;
   color:#003300;
