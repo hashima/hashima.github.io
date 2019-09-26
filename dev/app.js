@@ -171,6 +171,7 @@ const offensePage = Vue.component('offense-page', {
     getRunnerInfo: function(base){
       // return "test"
       if(this.score != null)
+      {
       if(base == '1st' && this.score.runner1st != null){
         return this.score.runner1st.name;
       }else if(base == '2nd' && this.score.runner2nd != null){
@@ -178,6 +179,7 @@ const offensePage = Vue.component('offense-page', {
       }else if(base == '3rd' && this.score.runner3rd != null){
         return this.score.runner3rd.name;
       }
+    }
       return null;
     }
   },
