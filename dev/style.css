@@ -222,6 +222,14 @@ body {
   color:#FFF;
 }
 
+.list-item--order-list-item__center {
+  padding: 0px;
+}
+
+#top-page .order-row {
+  height: 44px;
+}
+
 #top-page .order{
   float: left;
   font-size:20px;
