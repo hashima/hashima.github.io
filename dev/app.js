@@ -211,6 +211,29 @@ const bottomPage = {
   template: '#bottom'
 };
 
+const bottomPage = Vue.component('bottom-page', {
+  template: '#bottom',
+  data:  ()=> {
+      return {
+          order: [],
+          itemsRunner:defaultSelectItem.itemsRunner,
+          selected3rdRunner: '----',
+        }
+  },
+  mounted: function () {
+    axios.get("./toporder.json").then(response => (this.order = response.data));
+  },
+ methods: {
+    officialChange: function(){
+      this.$emit('officialValue')
+    },
+    onChangeTopBottom: function(){
+      this.$emit('selectTopBottom')
+    }
+  },
+})
+
+
 // ELEMENT.locale(ELEMENT.lang.ja);
 
 var vm = new Vue({

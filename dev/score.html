@@ -263,11 +263,6 @@
     <template id="top">
       <v-ons-page>
         <div class="background" style="background-color:#003300;"></div>
-          <!-- <ul>
-            <li v-for="data in toporder">
-              名前：{{data.name}}　年齢：{{data.number}}</p>
-            </li>
-          </ul> -->
         <v-ons-list modifier="order-list">
           <v-ons-list-item modifier="order-list-item" v-for="data in toporder">
             <v-ons-row>
@@ -283,13 +278,6 @@
                       </option>
                     </v-ons-select>  
               </v-ons-col>
-            <!-- <div class="order-item">
-              <v-ons-select modifier="order" v-model="selectedBatterResult" v-on:change="selectedOnChangeBatterResult">
-                <option v-for="item in itemsBatter" :value="item.value">
-                  {{ item.text }}
-                </option>
-              </v-ons-select>
-            </div> -->
             </v-ons-row>
           </v-ons-list-item>
         </v-ons-list>
