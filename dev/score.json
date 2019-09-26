@@ -1,7 +1,25 @@
 ﻿{
     "inning": "3回表",
+    "out1":true,
+    "out2":false,
     "topscore": 3,
-    "topname": "杉の実",
+    "topname": "杉",
     "bottomscore": 5,
-    "bottomname": "杉の実"
+    "bottomname": "杉",
+    "runner1st":{
+        "name":"ボビー",
+        "number":10,
+        "position":"SS"
+    },
+    "runner2nd":{
+        "name":"のあ",
+        "number":1,
+        "position":"P"
+    },
+    "runner3rd":{
+        "name":"とら",
+        "number":2,
+        "position":"C"
+    }
+    
 }

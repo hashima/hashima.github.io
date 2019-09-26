@@ -63,11 +63,15 @@ const gamePage = Vue.component('game-page', {
           gameName: "",
           opponentName: "",
           fieldName: "",
+          selectTopBottom:"top"
         }
   },
   methods: {
     officialChange: function(){
       this.$emit('officialValue')
+    },
+    onChangeTopBottom: function(){
+      this.$emit('selectTopBottom')
     }
   },
 })
@@ -163,20 +167,117 @@ const offensePage = Vue.component('offense-page', {
         this.$emit('showSelected3rdRunner')
         this.$emit('selected3rdRunner')
       }
+    },
+    getRunnerInfo: function(base){
+      // return "test"
+      if(this.score != null)
+      {
+      if(base == '1st' && this.score.runner1st != null){
+        return this.score.runner1st.name;
+      }else if(base == '2nd' && this.score.runner2nd != null){
+        return this.score.runner2nd.name;
+      }else if(base == '3rd' && this.score.runner3rd != null){
+        return this.score.runner3rd.name;
+      }
+    }
+      return null;
     }
   },
 })
 
-const topPage = {
+const topPage = Vue.component('top-page', {
   template: '#top',
-  props: ['toporder',
-        ],
-};
+  data:  ()=> {
+      return {
+          toporder: [],
+          itemsPosition:[
+            { text: '----', value: '----' },
+            { text: 'P', value: 'P' },
+            { text: 'C', value: 'C' },
+            { text: '1B', value: '1B' },
+            { text: '2B', value: '2B' },
+            { text: '3B', value: '3B' },
+            { text: 'SS', value: 'SS' },
+            { text: 'LF', value: 'LF' },
+            { text: 'CF', value: 'CF' },
+            { text: 'RF', value: 'RF' },
+          ],      
+          itemsRunner:defaultSelectItem.itemsRunner,
+          selectedPosition: ['----','----','----','----','----','----','----','----','----','----'],
+          selectedPosition0: '----',
+          selectedPosition1: '----',
+          selectedPosition2: '----',
+          selectedPosition3: '----',
+          selectedPosition4: '----',
+          selectedPosition5: '----',
+          selectedPosition6: '----',
+          selectedPosition7: '----',
+          selectedPosition8: '----',
+          selectedPosition9: '----',
+        }
+  },
+  mounted: function () {
+    axios.get("./toporder.json").then(response => (this.toporder = response.data));
+  },
+ methods: {
+    officialChange: function(){
+      this.$emit('officialValue')
+    },
+    onChangeTopBottom: function(){
+      this.$emit('selectTopBottom')
+    }
+  },
+})
 
-const bottomPage = {
-  template: '#bottom'
-};
+const bottomPage = Vue.component('bottom-page', {
+  template: '#bottom',
+  data:  ()=> {
+      return {
+          order: [],
+          itemsRunner:defaultSelectItem.itemsRunner,
+          selected3rdRunner: '----',
+        }
+  },
+  mounted: function () {
+    axios.get("./toporder.json").then(response => (this.order = response.data));
+  },
+ methods: {
+    officialChange: function(){
+      this.$emit('officialValue')
+    },
+    onChangeTopBottom: function(){
+      this.$emit('selectTopBottom')
+    }
+  },
+})
 
+const textPage = Vue.component('text-page', {
+  template: '#text',
+  data:  ()=> {
+      return {
+          textData: null,
+          state: 'initial',
+        }
+  },
+  mounted: function () {
+    axios.get("./text.json").then(response => (this.order = response.data));
+  },
+ methods: {
+  loadItem(done) {
+    setTimeout(() => {
+      axios.get("./text.json").then(response => (this.order = response.data));
+      done();
+    }, 400);
+    this.$forceUpdate();
+  },
+    officialChange: function(){
+      this.$emit('officialValue')
+    },
+    onChangeTopBottom: function(){
+      this.$emit('selectTopBottom')
+    }
+  },
+})
 // ELEMENT.locale(ELEMENT.lang.ja);
 
 var vm = new Vue({
@@ -184,7 +285,7 @@ var vm = new Vue({
   template: '#main',
   data() {
     return {
-      activeIndex: 1,
+      activeIndex: 2,
       title: "ScoreBook.mobi 開発版",
       tabs: [
         {
@@ -213,6 +314,12 @@ var vm = new Vue({
           label: '後',
           page: bottomPage,
           key: "bottomPage"
+        },
+        {
+          // icon: this.md() ? null : 'ion-ios-settings',
+          label: '速',
+          page: textPage,
+          key: "textPage"
         }
       ],
     };
