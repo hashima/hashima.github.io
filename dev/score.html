@@ -268,11 +268,11 @@
             <v-ons-row>
               <v-ons-col width="32px">
                 <div class="order-list-order">
-                  {{data.order}}
+                  {{data.order}}  {{index}}
                 </div>
               </v-ons-col>
               <v-ons-col>
-                  <v-ons-select modifier="select" v-model="'selectedPosition'+index">
+                  <v-ons-select modifier="select" v-model="selectedPosition">
                       <option v-for="item in itemsRunner" :value="item.value">
                         {{ item.text }}
                       </option>
