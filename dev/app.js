@@ -167,6 +167,9 @@ const offensePage = Vue.component('offense-page', {
         this.$emit('showSelected3rdRunner')
         this.$emit('selected3rdRunner')
       }
+    },
+    getRunnerInfo: function(){
+      return score.runner1st;
     }
   },
 })
