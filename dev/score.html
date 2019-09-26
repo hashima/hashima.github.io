@@ -264,7 +264,7 @@
       <v-ons-page>
         <div class="background" style="background-color:#003300;"></div>
         <v-ons-list modifier="order-list">
-          <v-ons-list-item modifier="order-list-item" v-for="data in toporder">
+          <v-ons-list-item modifier="order-list-item" v-for="(data, index) in toporder">
             <v-ons-row>
               <v-ons-col width="32px">
                 <div class="order-list-order">
@@ -272,7 +272,7 @@
                 </div>
               </v-ons-col>
               <v-ons-col>
-                  <v-ons-select modifier="select" v-model="'selectedPosition'+String(data.order)">
+                  <v-ons-select modifier="select" v-model="'selectedPosition'+index">
                       <option v-for="item in itemsRunner" :value="item.value">
                         {{ item.text }}
                       </option>

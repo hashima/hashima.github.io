@@ -204,6 +204,7 @@ const topPage = Vue.component('top-page', {
           ],      
           itemsRunner:defaultSelectItem.itemsRunner,
           selectedPosition: '----',
+          selectedPosition0: '----',
           selectedPosition1: '----',
           selectedPosition2: '----',
           selectedPosition3: '----',
