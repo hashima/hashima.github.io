@@ -272,7 +272,7 @@
                 </div>
               </v-ons-col>
               <v-ons-col>
-                  <v-ons-select modifier="select" v-model="'selectedPosition'+data.order">
+                  <v-ons-select modifier="select" v-model="'selectedPosition'+String(data.order)">
                       <option v-for="item in itemsRunner" :value="item.value">
                         {{ item.text }}
                       </option>
