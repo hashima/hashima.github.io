@@ -256,12 +256,20 @@ const textPage = Vue.component('text-page', {
   data:  ()=> {
       return {
           textData: null,
+          state: 'initial',
         }
   },
   mounted: function () {
     axios.get("./text.json").then(response => (this.order = response.data));
   },
  methods: {
+  loadItem(done) {
+    setTimeout(() => {
+      axios.get("./text.json").then(response => (this.order = response.data));
+      done();
+    }, 400);
+    this.$forceUpdate();
+  },
     officialChange: function(){
       this.$emit('officialValue')
     },

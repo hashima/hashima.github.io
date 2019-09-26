@@ -1,6 +1,7 @@
 [
   {
     "inning":1,
+    "score":3,
     "topbottom":true,
     "texts":
       [
@@ -13,6 +14,7 @@
   },
   {
     "inning":1,
+    "score":5,
     "topbottom":false,
     "texts":
       [
