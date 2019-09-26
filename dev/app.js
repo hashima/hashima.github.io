@@ -190,6 +190,8 @@ const topPage = Vue.component('top-page', {
   data:  ()=> {
       return {
           toporder: [],
+          itemsRunner:defaultSelectItem.itemsRunner,
+          selected3rdRunner: '----',
         }
   },
   mounted: function () {
