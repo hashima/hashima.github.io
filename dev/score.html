@@ -270,13 +270,12 @@
           </ul> -->
         <v-ons-list modifier="order-list">
           <v-ons-list-item modifier="order-list-item" v-for="data in toporder">
-        <v-ons-row>
-            <v-ons-col width="50px">
-
-            </v-ons-col><div class="order-list-order">
-              <span>{{data.order}}</span>
-            </div>
-          </v-ons-col>
+            <v-ons-row>
+              <v-ons-col width="22px">
+                <div class="order-list-order">
+                  {{data.order}}
+                </div>
+              </v-ons-col>
             <!-- <div class="order-item">
               <v-ons-select modifier="order" v-model="selectedBatterResult" v-on:change="selectedOnChangeBatterResult">
                 <option v-for="item in itemsBatter" :value="item.value">
@@ -284,7 +283,7 @@
                 </option>
               </v-ons-select>
             </div> -->
-        </v-ons-row>
+            </v-ons-row>
           </v-ons-list-item>
         </v-ons-list>
 
