@@ -300,12 +300,60 @@
     <template id="text">
         <v-ons-page>
           <div class="background" style="background-color:#003300;"></div>
-          <p style="text-align: center">
-              Change the settings.
-          </p>
+          <div class="scoreboard">
+              <v-ons-row class="" style="background-color:lightgray;">
+                  <v-ons-col></v-ons-col>
+                  <v-ons-col>1</v-ons-col>
+                  <v-ons-col>2</v-ons-col>
+                  <v-ons-col>3</v-ons-col>
+                  <v-ons-col>4</v-ons-col>
+                  <v-ons-col>5</v-ons-col>
+                  <v-ons-col>6</v-ons-col>
+                  <v-ons-col>7</v-ons-col>
+                  <v-ons-col>計</v-ons-col>
+                </v-ons-row>      
+          <v-ons-row class="" style="background-color:white;">
+            <v-ons-col>sugi</v-ons-col>
+            <v-ons-col>0</v-ons-col>
+            <v-ons-col>0</v-ons-col>
+            <v-ons-col>0</v-ons-col>
+            <v-ons-col>0</v-ons-col>
+            <v-ons-col>0</v-ons-col>
+            <v-ons-col>0</v-ons-col>
+            <v-ons-col>0</v-ons-col>
+            <v-ons-col>0</v-ons-col>
+          </v-ons-row>
+          <v-ons-row class="" style="background-color:white;">
+            <v-ons-col>sugi</v-ons-col>
+            <v-ons-col>0</v-ons-col>
+            <v-ons-col>0</v-ons-col>
+            <v-ons-col>0</v-ons-col>
+            <v-ons-col>0</v-ons-col>
+            <v-ons-col>0</v-ons-col>
+            <v-ons-col>0</v-ons-col>
+            <v-ons-col>0</v-ons-col>
+            <v-ons-col>0</v-ons-col>
+          </v-ons-row>
+</div>
+
+          <ul class="inning">
+              <li class="inning-item" v-for="inningData in textData">
+                <div class="inning-header">
+                  {{ inningData.inning }}回<span v-if="inningData.topbottom">表</span><span v-else>裏</span>
+                </div>
+                <ul class="lines">
+                  <li class="text-line" v-for="data in inningData.texts">
+                      {{ data }}
+                  </li>
+                  <li>
+                    <div style="color: black">得点</div>
+                  </li>
+                </ul>
+              </li>
+          </ul>
         </v-ons-page>
       </template>
-      
+
     <div id="app"><script src="./app.js?v=1"></script></div>
   </body>
 </html>

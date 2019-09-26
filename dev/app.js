@@ -255,9 +255,7 @@ const textPage = Vue.component('text-page', {
   template: '#text',
   data:  ()=> {
       return {
-          order: [],
-          itemsRunner:defaultSelectItem.itemsRunner,
-          selected3rdRunner: '----',
+          textData: null,
         }
   },
   mounted: function () {
