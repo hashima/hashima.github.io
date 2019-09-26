@@ -203,7 +203,7 @@ const topPage = Vue.component('top-page', {
             { text: 'RF', value: 'RF' },
           ],      
           itemsRunner:defaultSelectItem.itemsRunner,
-          selected3rdRunner: '----',
+          selectedPosition: '----',
         }
   },
   mounted: function () {
