@@ -219,10 +219,6 @@ const topPage = Vue.component('top-page', {
   },
 })
 
-const bottomPage = {
-  template: '#bottom'
-};
-
 const bottomPage = Vue.component('bottom-page', {
   template: '#bottom',
   data:  ()=> {
