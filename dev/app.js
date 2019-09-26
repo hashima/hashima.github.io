@@ -193,7 +193,7 @@ const topPage = Vue.component('top-page', {
         }
   },
   mounted: function () {
-    axios.get("./toporder.json").then(response => (this.tabs[2].props.toporder = response.data));
+    axios.get("./toporder.json").then(response => (this.toporder = response.data));
   },
  methods: {
     officialChange: function(){
