@@ -231,6 +231,7 @@ body {
 
 .list-item--order-list-item__center {
   padding:0px;
+  height:42px;
 }
 
 .order-item {
