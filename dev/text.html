@@ -56,22 +56,19 @@
             </v-ons-row>
 </div>
 
-            <ul class="inning">
-                <li class="inning-item" v-for="inningData in textData">
-                  <div class="inning-header">
-                    {{ inningData.inning }}回<span v-if="inningData.topbottom">表</span><span v-else>裏</span>
-                  </div>
-                  <ul class="lines">
-                    <li class="text-line" v-for="data in inningData.texts">
-                        {{ data }}
-                    </li>
-                    <li>
-                      <div style="color: black">得点</div>
-                    </li>
-                  </ul>
-                </li>
-            </ul>
-          </v-ons-page>
+<v-ons-list modifier="text-list">
+    <v-ons-list-item modifier="text-list-item" v-for="data in textData">
+      <v-ons-row>
+          <v-ons-col v-if="data.type == 'header'">
+              {{data.title}}
+          </v-ons-col>
+          <v-ons-col v-else-if="data.type == 'text'">
+              {{data.text}}
+          </v-ons-col>
+          </v-ons-row>
+</v-ons-list-item>
+
+</v-ons-page>
     </template>
  
     <div id="app"><script src="./app-text.js?v=1"></script></div>

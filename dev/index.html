@@ -19,34 +19,16 @@
             <v-ons-toolbar>
               <div class="center">{{ title }}</div>
             </v-ons-toolbar>
-            
-            <div>
-              <p style="width:100%;"><a href="score.html" style="margin: 0 auto; 
-                display:block;
-                width:100px;
-                padding-top:10px;
-                padding-bottom:10px;
-                text-align:center;
-                background-color: white;
-                border:2px solid;
-                border-color:#aaaaaa #444444 #444444 #aaaaaa;
-              ">スコア入力</a></p>
-            </div>
-            <div>
-              <p style="width:100%;"><a href="text.html" style="margin: 0 auto; 
-                display:block;
-                width:100px;
-                padding-top:10px;
-                padding-bottom:10px;
-                text-align:center;
-                background-color: white;
-                border:2px solid;
-                border-color:#aaaaaa #444444 #444444 #aaaaaa;
-              ">テキスト速報</a></p>
-            </div>
+
+            <img src="../logo.png" width="300px" height="355px" style="display: block;margin:10px auto 0;" />
+    
+            <section style="margin: 16px">
+                <v-ons-button modifier="large" v-on:click="gotosite('score.html')" style="margin: 6px 0;">スコア入力</v-ons-button>
+                <v-ons-button modifier="large" v-on:click="gotosite('text.html')" style="margin: 6px 0;">テキスト速報</v-ons-button>
+            </section>
           </v-ons-page>
     </template>
  
-    <div id="app"><script src="./app.js?v=1"></script></div>
+    <div id="app"><script src="./index.js?v=1"></script></div>
   </body>
 </html>

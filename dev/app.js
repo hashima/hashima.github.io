@@ -255,17 +255,17 @@ const textPage = Vue.component('text-page', {
   template: '#text',
   data:  ()=> {
       return {
-          textData: null,
+          textData: [],
           state: 'initial',
         }
   },
   mounted: function () {
-    axios.get("./text.json").then(response => (this.order = response.data));
+    axios.get("./text.json").then(response => (this.textData = response.data));
   },
  methods: {
   loadItem(done) {
     setTimeout(() => {
-      axios.get("./text.json").then(response => (this.order = response.data));
+      axios.get("./text.json").then(response => (this.textData = response.data));
       done();
     }, 400);
     this.$forceUpdate();
@@ -285,7 +285,7 @@ var vm = new Vue({
   template: '#main',
   data() {
     return {
-      activeIndex: 2,
+      activeIndex: 4,
       title: "ScoreBook.mobi 開発版",
       tabs: [
         {
@@ -336,6 +336,9 @@ var vm = new Vue({
   methods: {
     md() {
       return this.$ons.platform.isAndroid();
+    },
+    gotosite: function(url) {
+      window.location.href = url;
     },
     fetch: function(e) {
      if(e.target.value == "item3")

@@ -342,9 +342,22 @@
             <v-ons-col>0</v-ons-col>
             <v-ons-col>0</v-ons-col>
           </v-ons-row>
-</div>
+          </div>
 
-          <ul class="inning">
+          <v-ons-list modifier="text-list">
+              <v-ons-list-item modifier="text-list-item" v-for="data in textData">
+                <v-ons-row>
+                    <v-ons-col v-if="data.type == 'header'">
+                        {{data.title}}
+                    </v-ons-col>
+                    <v-ons-col v-else-if="data.type == 'text'">
+                        {{data.text}}
+                    </v-ons-col>
+                    </v-ons-row>
+          </v-ons-list-item>
+
+              
+          <!-- <ul class="inning">
               <li class="inning-item" v-for="inningData in textData">
                 <div class="inning-header">
                   {{ inningData.inning }}回<span v-if="inningData.topbottom">表</span><span v-else>裏</span>
@@ -358,7 +371,7 @@
                   </li>
                 </ul>
               </li>
-          </ul>
+          </ul> -->
         </v-ons-page>
       </template>
 
