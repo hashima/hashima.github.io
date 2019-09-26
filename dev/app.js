@@ -170,7 +170,7 @@ const offensePage = Vue.component('offense-page', {
     },
     getRunnerInfo: function(){
       // return "test"
-      return this.score;
+      return this.score.runner1st;
     }
   },
 })
