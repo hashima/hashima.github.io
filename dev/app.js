@@ -168,12 +168,13 @@ const offensePage = Vue.component('offense-page', {
         this.$emit('selected3rdRunner')
       }
     },
-    getRunnerInfo: function(){
+    getRunnerInfo: function(base){
       // return "test"
-      if(this.score != null && this.score.runner1st != null)
-        return this.score.runner1st.name;
-      else
-        return null;
+      if(this.score != null)
+        if(base == '1st' && this.score.runner1st != null)
+          return this.score.runner1st.name;
+
+      return null;
     }
   },
 })
