@@ -251,7 +251,27 @@ const bottomPage = Vue.component('bottom-page', {
   },
 })
 
-
+const textPage = Vue.component('text-page', {
+  template: '#text',
+  data:  ()=> {
+      return {
+          order: [],
+          itemsRunner:defaultSelectItem.itemsRunner,
+          selected3rdRunner: '----',
+        }
+  },
+  mounted: function () {
+    axios.get("./text.json").then(response => (this.order = response.data));
+  },
+ methods: {
+    officialChange: function(){
+      this.$emit('officialValue')
+    },
+    onChangeTopBottom: function(){
+      this.$emit('selectTopBottom')
+    }
+  },
+})
 // ELEMENT.locale(ELEMENT.lang.ja);
 
 var vm = new Vue({
@@ -288,6 +308,12 @@ var vm = new Vue({
           label: '後',
           page: bottomPage,
           key: "bottomPage"
+        },
+        {
+          // icon: this.md() ? null : 'ion-ios-settings',
+          label: '速',
+          page: textPage,
+          key: "textPage"
         }
       ],
     };
