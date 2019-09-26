@@ -277,7 +277,11 @@
                 </div>
               </v-ons-col>
               <v-ons-col>
-
+                  <v-ons-select modifier="select" v-model="selected3rdRunner" v-on:change="selectedOnChangeRunner('3rd')">
+                      <option v-for="item in itemsRunner" :value="item.value">
+                        {{ item.text }}
+                      </option>
+                    </v-ons-select>  
               </v-ons-col>
             <!-- <div class="order-item">
               <v-ons-select modifier="order" v-model="selectedBatterResult" v-on:change="selectedOnChangeBatterResult">
