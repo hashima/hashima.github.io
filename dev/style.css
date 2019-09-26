@@ -95,7 +95,7 @@ body {
 }
 
 #diamond {
-  width:auto;
+  width:120px;
   height: 78px;
   background-image: url("./images/diamond.png")
 
