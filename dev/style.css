@@ -257,3 +257,18 @@ body {
   color:#FFF;
   width:180px;
 }
+
+.order-row .select-select{
+  font-size:20px;
+  border :1px solid #fff;
+  background-color: #003300;
+  color:#FFF;
+  margin:1px 0 0 1px;
+}
+
+.order-row .select-input{
+  font-size:20px;
+  background-color: #003300;
+  color:#FFF;
+  width:60px;
+}
