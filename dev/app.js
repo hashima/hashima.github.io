@@ -185,11 +185,22 @@ const offensePage = Vue.component('offense-page', {
   },
 })
 
-const topPage = {
+const topPage = Vue.component('top-page', {
   template: '#top',
-  props: ['toporder',
-        ],
-};
+  data:  ()=> {
+      return {
+          toporder: [],
+        }
+  },
+  methods: {
+    officialChange: function(){
+      this.$emit('officialValue')
+    },
+    onChangeTopBottom: function(){
+      this.$emit('selectTopBottom')
+    }
+  },
+})
 
 const bottomPage = {
   template: '#bottom'
