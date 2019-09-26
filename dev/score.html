@@ -268,25 +268,25 @@
               名前：{{data.name}}　年齢：{{data.number}}</p>
             </li>
           </ul> -->
-        <!-- <v-ons-list modifier="order-list">
+        <v-ons-list modifier="order-list">
           <v-ons-list-item modifier="order-list-item" v-for="data in toporder">
-            <div class="order-list-order">
+        <v-ons-row>
+            <v-ons-col width="50px">
+
+            </v-ons-col><div class="order-list-order">
               <span>{{data.order}}</span>
             </div>
-            <div class="order-item">
+          </v-ons-col>
+            <!-- <div class="order-item">
               <v-ons-select modifier="order" v-model="selectedBatterResult" v-on:change="selectedOnChangeBatterResult">
                 <option v-for="item in itemsBatter" :value="item.value">
                   {{ item.text }}
                 </option>
               </v-ons-select>
-            </div>
-          </v-ons-list-item>
-        </v-ons-list> -->
-
-        <v-ons-row v-for="data in toporder">
-            <v-ons-col width="50px">{{data.order}}</v-ons-col>
-            <v-ons-col>Text</v-ons-col>
+            </div> -->
         </v-ons-row>
+          </v-ons-list-item>
+        </v-ons-list>
 
         <section style="margin: 16px">
           <v-ons-button modifier="large" style="margin: 6px 0">決　定</v-ons-button>
