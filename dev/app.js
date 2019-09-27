@@ -246,7 +246,7 @@ const textPage = Vue.component('text-page', {
   data:  ()=> {
       return {
           textData: null,
-          top: [],
+          // top: [],
           state: 'initial',
         }
   },
@@ -261,13 +261,13 @@ const textPage = Vue.component('text-page', {
         return "&nbsp;";
       }
     },
-    // top: function(){
-    //   if(this.textData != null){
-    //     return this.textData.scoreboard.top;
-    //   }else{
-    //     return [null,null,null,null,null,null,null,];
-    //   }
-    // },
+    top: function(){
+      if(this.textData != null){
+        return this.textData.scoreboard.top;
+      }else{
+        return [null,null,null,null,null,null,null,];
+      }
+    },
     bottomname: function(){
       if(this.textData != null){
         return this.textData.scoreboard.bottomname;
@@ -296,7 +296,7 @@ const textPage = Vue.component('text-page', {
         axios.get("./text.json").then(response => (this.textData = response.data));
         done();
       }, 400);
-      this.top = this.textData.scoreboard.top;
+      // this.top = this.textData.scoreboard.top;
       this.$forceUpdate();
     },
     officialChange: function(){
