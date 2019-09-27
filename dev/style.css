@@ -285,6 +285,7 @@ body {
   background-color: #003300;
   color:#FFF;
   margin:1px 0 0 1px;
+  width: 100%;
 }
 
 #order-page .select-input--selectOrderName{
