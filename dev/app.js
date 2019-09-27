@@ -266,6 +266,13 @@ const textPage = Vue.component('text-page', {
       }else{
         return "&nbsp;";
       }
+    },
+    texts: function(){
+      if(this.textData != null){
+        return this.textData.texts;
+      }else{
+        return [];
+      }
     }
   },
   methods: {
