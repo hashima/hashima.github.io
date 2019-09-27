@@ -217,7 +217,7 @@ const bottomPage = Vue.component('bottom-page', {
   template: '#bottom',
   data:  ()=> {
     return {
-        toporder: [],
+      bottomorder: [],
         itemsPosition:[
           { text: '----', value: '----' },
           { text: 'P', value: 'P' },
