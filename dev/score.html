@@ -348,7 +348,7 @@
       </v-ons-page>
     </template>
 
-    <template id="text" v-if="textData != null && textData.scoreboard != null && textData.scoreboard.topname != null">
+    <template id="text">
         <v-ons-page>
           <div class="background" style="background-color:#003300;"></div>
           <v-ons-pull-hook
@@ -372,7 +372,7 @@
                   <v-ons-col>計</v-ons-col>
                 </v-ons-row>      
                 <v-ons-row class="" style="background-color:white;">
-                  <v-ons-col>{{ textData.scoreboard.topname }}</v-ons-col><v-ons-col>&nbsp;</v-ons-col>
+                  <v-ons-col>{{ topname }}</v-ons-col><v-ons-col>&nbsp;</v-ons-col>
                   <v-ons-col>0</v-ons-col>
                   <v-ons-col>0</v-ons-col>
             <v-ons-col>0</v-ons-col>
@@ -383,7 +383,7 @@
             <v-ons-col>0</v-ons-col>
           </v-ons-row>
           <v-ons-row class="" style="background-color:white;">
-            <v-ons-col>{{ textData.scoreboard.bottomname }}</v-ons-col><v-ons-col>&nbsp;</v-ons-col>
+            <v-ons-col>{{ bottomname }}</v-ons-col><v-ons-col>&nbsp;</v-ons-col>
             <v-ons-col>0</v-ons-col>
             <v-ons-col>0</v-ons-col>
             <v-ons-col>0</v-ons-col>
