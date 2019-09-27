@@ -204,16 +204,8 @@ const topPage = Vue.component('top-page', {
           ],      
           itemsRunner:defaultSelectItem.itemsRunner,
           selectedPosition: ['----','----','----','----','----','----','----','----','----','----'],
-          selectedPosition0: '----',
-          selectedPosition1: '----',
-          selectedPosition2: '----',
-          selectedPosition3: '----',
-          selectedPosition4: '----',
-          selectedPosition5: '----',
-          selectedPosition6: '----',
-          selectedPosition7: '----',
-          selectedPosition8: '----',
-          selectedPosition9: '----',
+          selectedName: ['----','----','----','----','----','----','----','----','----','----'],
+          selectedNumber: ['----','----','----','----','----','----','----','----','----','----'],
         }
   },
   mounted: function () {
