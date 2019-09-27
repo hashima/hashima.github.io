@@ -3,8 +3,8 @@
     "topname": "杉",
     "bottomname": "杉",
     "inning": [1,2,3,4,5,6,7,"計"],
-    "top":[1,2,0,null,null,null,null],
-    "bottom":[1,2,3,null,null,null,null]
+    "top":[1,2,0,null,null,null,null,3],
+    "bottom":[1,2,3,null,null,null,null,5]
   },
   "texts": [
   {
