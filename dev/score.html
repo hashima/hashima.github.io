@@ -348,7 +348,7 @@
       </v-ons-page>
     </template>
 
-    <template id="text" v-if="textData && textData.scoreboard && textData.scoreboard.topname">
+    <template id="text" v-if="textData != null && textData.scoreboard != null && textData.scoreboard.topname != null">
         <v-ons-page>
           <div class="background" style="background-color:#003300;"></div>
           <v-ons-pull-hook
