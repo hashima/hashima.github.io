@@ -295,6 +295,7 @@ const textPage = Vue.component('text-page', {
         axios.get("./text.json").then(response => (this.textData = response.data));
         done();
       }, 400);
+      this.$emit("top");
       this.$forceUpdate();
     },
     officialChange: function(){
