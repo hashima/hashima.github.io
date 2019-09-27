@@ -1,5 +1,10 @@
-{
-
+{ 
+  "scoreboard": {
+    "topname": "杉",
+    "bottomname": "杉",
+    "top":[1,2,0,null,null,null,null],
+    "bottom":[1,2,3,null,null,null,null]
+  },
   "texts": [
   {
     "type":"header",
