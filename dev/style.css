@@ -206,11 +206,11 @@ body {
   color:#003300;
 }
 
-#top-page .list {
+#order-page .list {
   margin:4px 4px 0 4px;
 }
 
-#top-page .list-item {
+#order-page .list-item {
   width:auto;
   background-color: #003300;
   border: 2px solid #FFF;
@@ -226,11 +226,11 @@ body {
   padding: 0px;
 }
 
-#top-page .order-row {
+#order-page .order-row {
   height: 44px;
 }
 
-#top-page .order{
+#order-page .order{
   float: left;
   font-size:20px;
   padding: 6px 4px 0 4px;
@@ -261,7 +261,7 @@ body {
   width:180px;
 }
 
-#top-page .select-select{
+#order-page .select-select{
   font-size:20px;
   border :1px solid #fff;
   background-color: #003300;
@@ -269,7 +269,7 @@ body {
   margin:1px 0 0 1px;
 }
 
-#top-page .select-input{
+#order-page .select-input{
   font-size:20px;
   background-color: #003300;
   color:#FFF;
