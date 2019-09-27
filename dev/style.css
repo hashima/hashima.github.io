@@ -217,7 +217,7 @@ body {
   border-top: 2px solid #FFF;
   border-left: 2px solid #FFF;
   border-right: 2px solid #FFF;
-  height:48px;
+  height:46px;
   overflow: hidden;
   padding:2px;
   margin-top:0px;
@@ -230,7 +230,7 @@ body {
 }
 
 #order-page .order-row {
-  height: 42px;
+  height: 40px;
 }
 
 #order-page .order{
