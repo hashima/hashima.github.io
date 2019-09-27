@@ -208,6 +208,7 @@ body {
 
 #order-page .list {
   margin:4px 4px 0 4px;
+  border-bottom: 2px solid #FFF;
 }
 
 #order-page .list-item {
@@ -222,10 +223,6 @@ body {
   margin-top:0px;
   margin-bottom:0px;
   color:#FFF;
-}
-
-#order-page .list-item:last-child {
-  border-bottom: 2px solid #FFF;
 }
 
 .list-item--order-list-item__center {
