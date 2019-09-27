@@ -246,11 +246,13 @@ const textPage = Vue.component('text-page', {
   data:  ()=> {
       return {
           textData: [],
+          scoreboard: {},
           state: 'initial',
         }
   },
   mounted: function () {
     axios.get("./text.json").then(response => (this.textData = response.data));
+    this.scoreboard = this.textData.scoreboard;
   },
  methods: {
   loadItem(done) {
@@ -258,6 +260,7 @@ const textPage = Vue.component('text-page', {
       axios.get("./text.json").then(response => (this.textData = response.data));
       done();
     }, 400);
+    this.scoreboard = this.textData.scoreboard;
     this.$forceUpdate();
   },
     officialChange: function(){
