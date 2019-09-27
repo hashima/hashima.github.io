@@ -308,4 +308,6 @@ body {
 
 #text-page .scoreboard ons-col {
   border :1px solid lightgray;
+  text-align: center;
+  vertical-align: middle;
 }
