@@ -251,8 +251,6 @@ const textPage = Vue.component('text-page', {
   },
   mounted: function () {
     axios.get("./text.json").then(response => (this.textData = response.data));
-    this.topname = this.textData.scoreboard.topname;
-    this.bottomname = this.textData.scoreboard.bottomname;
   },
   computed: {
     topname: function(){
