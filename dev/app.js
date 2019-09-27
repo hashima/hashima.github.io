@@ -211,35 +211,35 @@ const topPage = Vue.component('top-page', {
   mounted: function () {
     axios.get("./toporder.json").then(response => (this.toporder = response.data));
   },
- methods: {
-    officialChange: function(){
-      this.$emit('officialValue')
-    },
-    onChangeTopBottom: function(){
-      this.$emit('selectTopBottom')
-    }
-  },
 })
 
 const bottomPage = Vue.component('bottom-page', {
   template: '#bottom',
   data:  ()=> {
       return {
-          order: [],
+        return {
+          toporder: [],
+          itemsPosition:[
+            { text: '----', value: '----' },
+            { text: 'P', value: 'P' },
+            { text: 'C', value: 'C' },
+            { text: '1B', value: '1B' },
+            { text: '2B', value: '2B' },
+            { text: '3B', value: '3B' },
+            { text: 'SS', value: 'SS' },
+            { text: 'LF', value: 'LF' },
+            { text: 'CF', value: 'CF' },
+            { text: 'RF', value: 'RF' }
+          ],      
           itemsRunner:defaultSelectItem.itemsRunner,
-          selected3rdRunner: '----',
+          selectedPosition: ['----','----','----','----','----','----','----','----','----','----'],
+          selectedName: ['----','----','----','----','----','----','----','----','----','----'],
+          selectedNumber: ['----','----','----','----','----','----','----','----','----','----']
         }
+      }
   },
   mounted: function () {
     axios.get("./toporder.json").then(response => (this.order = response.data));
-  },
- methods: {
-    officialChange: function(){
-      this.$emit('officialValue')
-    },
-    onChangeTopBottom: function(){
-      this.$emit('selectTopBottom')
-    }
   },
 })
 

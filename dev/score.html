@@ -307,9 +307,44 @@
     <template id="bottom">
       <v-ons-page>
         <div class="background" style="background-color:#003300;"></div>
-        <p style="text-align: center">
-            Change the settings.
-        </p>
+        <div id="order-page">
+        <v-ons-list modifier="order-list">
+          <v-ons-list-item modifier="order-list-item" v-for="(data, index) in toporder">
+            <v-ons-row class="order-row">
+              <v-ons-col width="30px">
+                <div class="order">
+                  {{data.order}}
+                </div>
+              </v-ons-col>
+              <v-ons-col width="50px">
+                  <v-ons-select modifier="select" v-model="selectedPosition[index]">
+                      <option v-for="item in itemsPosition" :value="item.value">
+                        {{ item.text }}
+                      </option>
+                    </v-ons-select>  
+              </v-ons-col>
+              <v-ons-col style="margin: 0 3px 0 0;padding: 0 2px 0 0;">
+                  <v-ons-select modifier="selectOrderName" v-model="selectedName[index]">
+                      <option v-for="item in itemsPosition" :value="item.value">
+                        {{ item.text }}
+                      </option>
+                    </v-ons-select>  
+              </v-ons-col>
+              <v-ons-col width="50px">
+                  <v-ons-select modifier="select" v-model="selectedNumber[index]">
+                      <option v-for="item in itemsPosition" :value="item.value">
+                        {{ item.text }}
+                      </option>
+                    </v-ons-select>  
+              </v-ons-col>
+            </v-ons-row>
+          </v-ons-list-item>
+        </v-ons-list>
+
+        <section style="margin: 16px">
+          <v-ons-button modifier="large" style="margin: 6px 0">決　定</v-ons-button>
+        </section>
+        </div>
       </v-ons-page>
     </template>
 
