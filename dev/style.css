@@ -278,3 +278,10 @@ body {
   color:#FFF;
   width:45px;
 }
+
+#order-page .select-input--selectOrderName{
+  font-size: 20px;
+  background-color: #003300;
+  color:#FFF;
+  width: auto;
+}
