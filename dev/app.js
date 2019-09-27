@@ -275,7 +275,7 @@ const textPage = Vue.component('text-page', {
         return "&nbsp;";
       }
     },
-    tobottomp: function(){
+    bottom: function(){
       if(this.textData != null){
         return this.textData.scoreboard.bottom;
       }else{
