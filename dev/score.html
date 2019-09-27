@@ -351,6 +351,7 @@
     <template id="text">
         <v-ons-page>
           <div class="background" style="background-color:#003300;"></div>
+          <div id="text-page">
           <v-ons-pull-hook
           :action="loadItem"
           @changestate="state = $event.state"
@@ -392,6 +393,7 @@
                   </v-ons-row>
                 </v-ons-list-item>
               </v-ons-list>
+              </div>
             </v-ons-page>
       </template>
 
