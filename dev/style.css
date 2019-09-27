@@ -213,7 +213,9 @@ body {
 #order-page .list-item {
   width:auto;
   background-color: #003300;
-  border: 2px 2px 0 2px solid #FFF;
+  border-top: 2px solid #FFF;
+  border-left: 2px solid #FFF;
+  border-right: 2px solid #FFF;
   height:50px;
   overflow: hidden;
   padding:2px;
