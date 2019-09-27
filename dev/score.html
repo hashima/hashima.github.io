@@ -280,14 +280,14 @@
                     </v-ons-select>  
               </v-ons-col>
               <v-ons-col style="margin: 0 3px 0 0;padding: 0 2px 0 0;">
-                  <v-ons-select modifier="selectOrderName" v-model="selectedPosition[index]">
+                  <v-ons-select modifier="selectOrderName" v-model="selectedName[index]">
                       <option v-for="item in itemsPosition" :value="item.value">
                         {{ item.text }}
                       </option>
                     </v-ons-select>  
               </v-ons-col>
               <v-ons-col width="50px">
-                  <v-ons-select modifier="select" v-model="selectedPosition[index]">
+                  <v-ons-select modifier="select" v-model="selectedNumber[index]">
                       <option v-for="item in itemsPosition" :value="item.value">
                         {{ item.text }}
                       </option>
