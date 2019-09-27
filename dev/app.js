@@ -246,8 +246,6 @@ const textPage = Vue.component('text-page', {
   data:  ()=> {
       return {
           textData: [],
-          topname: "",
-          bottomname: "",
           state: 'initial',
         }
   },
@@ -256,15 +254,23 @@ const textPage = Vue.component('text-page', {
     this.topname = this.textData.scoreboard.topname;
     this.bottomname = this.textData.scoreboard.bottomname;
   },
- methods: {
-  loadItem(done) {
-    setTimeout(() => {
-      axios.get("./text.json").then(response => (this.textData = response.data));
-      done();
-    }, 400);
-    this.scoreboard = this.textData.scoreboard;
-    this.$forceUpdate();
+  computed: {
+    topname: function(){
+      return this.textData.scoreboard.topname
+    },
+    bottomname: function(){
+      return this.textData.scoreboard.bottomname
+    }
   },
+  methods: {
+    loadItem(done) {
+      setTimeout(() => {
+        axios.get("./text.json").then(response => (this.textData = response.data));
+        done();
+      }, 400);
+      this.scoreboard = this.textData.scoreboard;
+      this.$forceUpdate();
+    },
     officialChange: function(){
       this.$emit('officialValue')
     },
@@ -300,9 +306,6 @@ var vm = new Vue({
           label: '先',
           page: topPage,
           key: "topPage",
-          props: {
-            toporder: [],
-          }
         },
         {
           // icon: this.md() ? null : 'ion-ios-settings',
