@@ -354,12 +354,12 @@
           <v-ons-pull-hook
           :action="loadItem"
           @changestate="state = $event.state"
-        >
-          <span v-show="state === 'initial'"> Pull to refresh </span>
-          <span v-show="state === 'preaction'"> Release </span>
-          <span v-show="state === 'action'"> Loading... </span>
-        </v-ons-pull-hook>
-                  <div class="scoreboard">
+          >
+            <span v-show="state === 'initial'"> Pull to refresh </span>
+            <span v-show="state === 'preaction'"> Release </span>
+            <span v-show="state === 'action'"> Loading... </span>
+          </v-ons-pull-hook>
+            <div class="scoreboard">
               <v-ons-row class="" style="background-color:lightgray;">
                   <v-ons-col></v-ons-col>
                   <v-ons-col>1</v-ons-col>
@@ -371,9 +371,9 @@
                   <v-ons-col>7</v-ons-col>
                   <v-ons-col>計</v-ons-col>
                 </v-ons-row>      
-          <v-ons-row class="" style="background-color:white;">
-            <v-ons-col>{{ textData.scoreboard.topname }}</v-ons-col>
-            <v-ons-col>0</v-ons-col>
+                <v-ons-row class="" style="background-color:white;">
+                  <v-ons-col>{{ textData.scoreboard.top }}</v-ons-col>
+                  <v-ons-col>0</v-ons-col>
             <v-ons-col>0</v-ons-col>
             <v-ons-col>0</v-ons-col>
             <v-ons-col>0</v-ons-col>
