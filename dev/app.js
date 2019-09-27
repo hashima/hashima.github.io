@@ -254,11 +254,18 @@ const textPage = Vue.component('text-page', {
   },
   computed: {
     topname: function(){
-
-      return this.textData.scoreboard.topname
+      if(this.textData != null){
+        return this.textData.scoreboard.topname;
+      }else{
+        return "&nbsp;";
+      }
     },
     bottomname: function(){
-      return this.textData.scoreboard.bottomname
+      if(this.textData != null){
+        return this.textData.scoreboard.bottomname;
+      }else{
+        return "&nbsp;";
+      }
     }
   },
   methods: {
