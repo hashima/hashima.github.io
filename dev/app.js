@@ -321,7 +321,7 @@ var vm = new Vue({
   template: '#main',
   data() {
     return {
-      activeIndex: 2,
+      activeIndex: 4,
       title: "ScoreBook.mobi 開発版",
       tabs: [
         {
