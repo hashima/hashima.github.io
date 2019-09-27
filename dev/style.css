@@ -310,4 +310,9 @@ body {
   border :1px solid lightgray;
   text-align: center;
   vertical-align: middle;
+  padding: 4px 0 0 0;
+}
+
+#text-page .red {
+  color: red;
 }
