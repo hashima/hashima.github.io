@@ -254,6 +254,13 @@ const textPage = Vue.component('text-page', {
     axios.get("./text.json").then(response => (this.textData = response.data));
   },
   computed: {
+    inning: function(){
+      if(this.textData != null){
+        return this.textData.scoreboard.inning;
+      }else{
+        return [null,null,null,null,null,null,null,];
+      }
+    },
     topname: function(){
       if(this.textData != null){
         return this.textData.scoreboard.topname;

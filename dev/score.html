@@ -361,15 +361,10 @@
           </v-ons-pull-hook>
             <div class="scoreboard">
               <v-ons-row class="" style="background-color:lightgray;">
-                  <v-ons-col></v-ons-col>
-                  <v-ons-col>1</v-ons-col>
-                  <v-ons-col>2</v-ons-col>
-                  <v-ons-col>3</v-ons-col>
-                  <v-ons-col>4</v-ons-col>
-                  <v-ons-col>5</v-ons-col>
-                  <v-ons-col>6</v-ons-col>
-                  <v-ons-col>7</v-ons-col>
-                  <v-ons-col>計</v-ons-col>
+                  <v-ons-col>&nbsp;</v-ons-col>
+                  <v-ons-col v-for="data in inning">
+                      {{ data }}
+                  </v-ons-col>
                 </v-ons-row>      
                 <v-ons-row class="" style="background-color:white;">
                   <v-ons-col>{{ topname }}</v-ons-col><v-ons-col>&nbsp;</v-ons-col>
