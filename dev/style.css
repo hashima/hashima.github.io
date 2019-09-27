@@ -306,11 +306,37 @@ body {
   border :1px solid lightgray;
 }
 
+#text-page .list-item {
+  padding: 0;
+  border: none;
+  margin: 0;
+}
+
+#text-page .center {
+  margin: 0;
+  padding: 0;
+  min-height: 26px;
+}
+
 #text-page .scoreboard ons-col {
   border :1px solid lightgray;
   text-align: center;
   vertical-align: middle;
-  padding: 4px 0 0 0;
+  padding: 4px 0 0 4px;
+}
+
+#text-page .header {
+  background-color: lightgray;
+  min-height: 26px;
+  padding: 2px 0 0 4px;
+  font-weight: bold;
+}
+
+#text-page .text {
+  background-color: white;
+  border-bottom: 1px solid lightgray;
+  min-height: 26px;
+  margin: 4px 0 2px 8px;
 }
 
 #text-page .red {
