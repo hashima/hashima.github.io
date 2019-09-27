@@ -245,7 +245,7 @@ const textPage = Vue.component('text-page', {
   template: '#text',
   data:  ()=> {
       return {
-          textData: [],
+          textData: null,
           state: 'initial',
         }
   },
@@ -254,6 +254,7 @@ const textPage = Vue.component('text-page', {
   },
   computed: {
     topname: function(){
+
       return this.textData.scoreboard.topname
     },
     bottomname: function(){
