@@ -295,3 +295,10 @@ body {
   color:#FFF;
   width: 100%;
 }
+
+#text-page .scoreboard {
+  margin: 4px 3px 0 3px;
+  border :1px solid #fff;
+
+
+}
