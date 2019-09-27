@@ -298,10 +298,14 @@ body {
 
 #text-page .scoreboard {
   margin: 4px 3px 0 3px;
-  border :1px solid #fff;
+  border :1px solid lightgray;
 }
 
 #text-page .list {
   margin: 4px 3px 0 3px;
-  border :1px solid #fff;
+  border :1px solid lightgray;
+}
+
+#text-page .scoreboard ons-col {
+  border :1px solid lightgray;
 }
