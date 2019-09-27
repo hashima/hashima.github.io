@@ -246,7 +246,7 @@ const textPage = Vue.component('text-page', {
   data:  ()=> {
       return {
           textData: [],
-          scoreboard: {},
+          scoreboard: null,
           state: 'initial',
         }
   },
