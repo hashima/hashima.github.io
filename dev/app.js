@@ -268,7 +268,7 @@ const textPage = Vue.component('text-page', {
       }
     },
     texts: function(){
-      if(this.textData != null){
+      if(this.textData != null && this.textData.texts != null){
         return this.textData.texts;
       }else{
         return [];
