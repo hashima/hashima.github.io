@@ -279,6 +279,14 @@ body {
   width:45px;
 }
 
+#order-page .select-selectOrderName{
+  font-size:20px;
+  border :1px solid #fff;
+  background-color: #003300;
+  color:#FFF;
+  margin:1px 0 0 1px;
+}
+
 #order-page .select-input--selectOrderName{
   font-size: 20px;
   background-color: #003300;
