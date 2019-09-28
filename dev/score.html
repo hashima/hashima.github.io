@@ -382,7 +382,7 @@
               </div>
 
               <v-ons-list modifier="text-list">
-                <v-ons-list-item modifier="text-list-item" v-for="data in texts">
+                <v-ons-list-item modifier="text-list-item"v-bind:class="[data.type]" v-for="data in texts">
                   <v-ons-row>
                     <v-ons-col class="header" v-if="data.type == 'header'">
                         {{data.title}}
