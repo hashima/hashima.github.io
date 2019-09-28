@@ -356,9 +356,9 @@
           :action="loadItem"
           @changestate="state = $event.state"
           >
-            <span v-show="state === 'initial'"> Pull to refresh </span>
-            <span v-show="state === 'preaction'"> Release </span>
-            <span v-show="state === 'action'"> Loading... </span>
+            <span class="loadstate" v-show="state === 'initial'"> Pull to refresh </span>
+            <span class="loadstate" v-show="state === 'preaction'"> Release </span>
+            <span class="loadstate" v-show="state === 'action'"> Loading... </span>
           </v-ons-pull-hook>
             <div class="scoreboard">
               <v-ons-row class="" style="background-color:lightgray;">

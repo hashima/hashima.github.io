@@ -296,6 +296,10 @@ body {
   width: 100%;
 }
 
+#text-page .loadstate {
+  color: white;
+}
+
 #text-page .scoreboard {
   margin: 4px 3px 0 3px;
   border :1px solid lightgray;
