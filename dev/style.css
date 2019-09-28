@@ -306,7 +306,7 @@ body {
   border :1px solid lightgray;
 }
 
-#text-page .list-item {
+#text-page .text.list-item {
   padding: 0;
   border: none;
   margin: 0 0 0 4px;
@@ -324,16 +324,16 @@ body {
   padding: 4px 0 0 0;
 }
 
-#text-page ons-col .header {
+#text-page .header.list-item {
   background-color: lightgray;
   min-height: 26px;
-  padding: 3px 0 0 4px;
+  padding: 1px 0 0 0;
   font-weight: bold;
 }
 
 #text-page .text {
   background-color: white;
-  min-height: 26px;
+  min-height: 24px;
   margin: 4px 0 2px 0;
 }
 

@@ -381,14 +381,18 @@
                 </v-ons-row>
               </div>
 
+              <div class="text-news">
               <v-ons-list modifier="text-list">
-                <v-ons-list-item modifier="text-list-item"v-bind:class="[data.type]" v-for="data in texts">
+                <v-ons-list-item modifier="text-list-item" v-bind:class="[data.type]" v-for="data in texts">
                   <v-ons-row>
                     <v-ons-col class="header" v-if="data.type == 'header'">
                         {{data.title}}
                     </v-ons-col>
                     <v-ons-col class="text" v-else-if="data.type == 'text'">
                         {{ data.num }} : <span v-bind:class="[data.c]" >{{data.text}}</span>
+                    </v-ons-col>
+                    <v-ons-col class="stat" v-else-if="data.type == 'stat'">
+                        <span>&nbsp;</span>
                     </v-ons-col>
                   </v-ons-row>
                 </v-ons-list-item>
