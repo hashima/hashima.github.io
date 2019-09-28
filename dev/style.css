@@ -189,6 +189,7 @@ body {
 
 #offense-page .list-item--score-list-item-diamond__center {
   padding: 0;
+  width: 320px;
 }
 
 #diamond {

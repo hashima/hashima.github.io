@@ -249,9 +249,24 @@
           </v-ons-list-item>
           <v-ons-list-item modifier="score-list-item-diamond">
               <div id="diamond">
-                  {{ getRunnerInfo('1st') }}
+                  <!-- {{ getRunnerInfo('1st') }}
                   {{ getRunnerInfo('2nd') }}
-                  {{ getRunnerInfo('3rd') }}
+                  {{ getRunnerInfo('3rd') }} -->
+                  <v-ons-row style="height: 19px;">
+                      <v-ons-col style="width: 32%;">&nbsp;</v-ons-col>
+                      <v-ons-col style="width: 36%;">&nbsp;</v-ons-col>
+                      <v-ons-col style="width: 32%;">&nbsp;</v-ons-col>
+                  </v-ons-row>
+                  <v-ons-row style="height: 24px;">
+                      <v-ons-col style="width: 32%;">&nbsp;</v-ons-col>
+                      <v-ons-col style="width: 36%;text-align: center;">{{ getRunnerInfo('2nd') }}</v-ons-col>
+                      <v-ons-col style="width: 32%;">&nbsp;</v-ons-col>
+                  </v-ons-row>
+                  <v-ons-row style="height: 22px;">
+                      <v-ons-col style="width: 32%;text-align: right;padding-right: 2px;">{{ getRunnerInfo('3rd') }}</v-ons-col>
+                      <v-ons-col style="width: 36%;">&nbsp;</v-ons-col>
+                      <v-ons-col style="width: 32%;padding-left: 6px">{{ getRunnerInfo('1st') }}</v-ons-col>
+                  </v-ons-row>
               </div>
               <div class="right">
                   <v-ons-button modifier="ok-button">決定</v-ons-button>
