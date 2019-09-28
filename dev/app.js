@@ -314,7 +314,6 @@ const textPage = Vue.component('text-page', {
     }
   },
 })
-// ELEMENT.locale(ELEMENT.lang.ja);
 
 var vm = new Vue({
   el: '#app',

@@ -94,12 +94,6 @@ body {
   color:#FFF;
 }
 
-#diamond {
-  width:250px;
-  height: 73px;
-  background-image: url("./images/diamond.png")
-
-}
 .list-item--score-list-item-diamond{
   width:auto;
   background-color: #003300;
@@ -183,6 +177,24 @@ body {
 
 .name{
   margin:1px 0 0 0;
+}
+
+#offense-page .list-item__center {
+  background-image: none;
+}
+
+#offense-page .list-item__right {
+  background-image: none;
+}
+
+#offense-page .list-item--score-list-item-diamond__center {
+  padding: 0;
+}
+
+#diamond {
+  width:320px;
+  height: 65px;
+  background-image: url("./images/diamond.png")
 }
 
 .position{
