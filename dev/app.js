@@ -184,6 +184,9 @@ const offensePage = Vue.component('offense-page', {
       }
     }
       return null;
+    },
+    advance: function(count){
+      
     }
   },
 })
