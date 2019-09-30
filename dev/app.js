@@ -54,6 +54,18 @@ const defaultSelectItem = {
     { text: '2塁Out', value: '2塁Out' },
     { text: '3塁Out', value: '3塁Out' },
     { text: '本塁Out', value: '本塁Out' },
+  ],
+  "itemsBase2":[
+    { text: '----', value: '----' },
+    { text: '3塁へ', value: '3塁へ' },
+    { text: '本塁へ', value: '本塁へ' },
+    { text: '3塁Out', value: '3塁Out' },
+    { text: '本塁Out', value: '本塁Out' },
+  ],
+  "itemsBase3":[
+    { text: '----', value: '----' },
+    { text: '本塁へ', value: '本塁へ' },
+    { text: '本塁Out', value: '本塁Out' },
   ]
 }
 
@@ -89,6 +101,8 @@ const offensePage = Vue.component('offense-page', {
           itemsBatterRun: defaultSelectItem.itemsBatterRun,
           itemsRunner:defaultSelectItem.itemsRunner,
           itemsBase: defaultSelectItem.itemsBase,
+          itemsBase2: defaultSelectItem.itemsBase2,
+          itemsBase3: defaultSelectItem.itemsBase3,
           selectedBatterResult: '----',
           selectedBatterDirection: '----',
           selectedBatterRun: '----',
