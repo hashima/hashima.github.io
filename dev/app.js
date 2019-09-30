@@ -126,6 +126,7 @@ const offensePage = Vue.component('offense-page', {
     selectedOnChangeBatterResult: function(){
       if(this.selectedBatterResult === "三振")
       {
+        this.showSelectedBatterDirection = true
       }
       else
       {
