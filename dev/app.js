@@ -51,6 +51,9 @@ const defaultSelectItem = {
     { text: '2塁へ', value: '2塁へ' },
     { text: '3塁へ', value: '3塁へ' },
     { text: '本塁へ', value: '本塁へ' },
+    { text: '2塁Out', value: '2塁Out' },
+    { text: '3塁Out', value: '3塁Out' },
+    { text: '本塁Out', value: '本塁Out' },
   ]
 }
 

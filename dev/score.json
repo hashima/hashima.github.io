@@ -6,6 +6,11 @@
     "topname": "杉",
     "bottomscore": 5,
     "bottomname": "杉",
+    "batter":{
+        "name":"かいせい",
+        "number":5,
+        "position":"CF"
+    },
     "runner1st":{
         "name":"ボビー",
         "number":10,
