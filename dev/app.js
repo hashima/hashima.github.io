@@ -231,6 +231,9 @@ const offensePage = Vue.component('offense-page', {
         this.selected3rdRunner = "進塁";
         this.selected3rdBase = "本塁へ";
       }
+      this.showSelected1stRunner = false;
+      this.showSelected2ndRunner = false;
+      this.showSelected3rdRunner = false;
      
     }
   },
