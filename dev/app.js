@@ -140,7 +140,7 @@ const offensePage = Vue.component('offense-page', {
         ]
         this.selectedBatterRun = "1塁へ"
         this.$emit('selectedBatterRun')
-        this.$emit('selectedOnChangeBatterRun')
+        this.selectedOnChangeBatterRun()
       }
       this.showSelectedBatterRun = false
       this.$emit('showSelectedBatterRun')
