@@ -124,11 +124,29 @@ const offensePage = Vue.component('offense-page', {
   },
   methods: {
     selectedOnChangeBatterResult: function(){
-      if(this.selectedBatterResult === "三振")
+      if(this.selectedBatterResult === "ゴロ")
+      {
+        this.selectedBatterRun = "1塁Out"
+        this.showSelectedBatterRun = true
+        this.$emit('selectedBatterRun')
+      }
+      else if(this.selectedBatterResult === "フライ")
+      {
+        this.selectedBatterRun = "1塁Out"
+        this.showSelectedBatterRun = true
+        this.$emit('selectedBatterRun')
+      }
+      else if(this.selectedBatterResult === "三振")
       {
         this.showSelectedBatterDirection = true
       }
       else if(this.selectedBatterResult === "犠打")
+      {
+        this.selectedBatterRun = "1塁Out"
+        this.showSelectedBatterRun = true
+        this.$emit('selectedBatterRun')
+      }
+      else if(this.selectedBatterResult === "犠飛")
       {
         this.selectedBatterRun = "1塁Out"
         this.showSelectedBatterRun = true
@@ -144,23 +162,9 @@ const offensePage = Vue.component('offense-page', {
       }
     },
     selectedOnChangeBatterDirection: function(){
-      if(this.selectedBatterResult === "ゴロ")
+      if(this.selectedBatterResult === "ヒット")
       {
-        this.selectedBatterRun = "1塁Out"
-        this.showSelectedBatterRun = true
-        this.$emit('selectedBatterRun')
-      }
-      else if(this.selectedBatterResult === "フライ")
-      {
-        this.selectedBatterRun = "1塁Out"
-        this.showSelectedBatterRun = true
-        this.$emit('selectedBatterRun')
-      }
-      else
-      {
-        if(this.selectedBatterResult === "ヒット")
-        {
-          this.itemsBatterRun = [
+        this.itemsBatterRun = [
           { text: '1塁へ', value: '1塁へ' },
           { text: '2塁へ', value: '2塁へ' },
           { text: '3塁へ', value: '3塁へ' },
@@ -168,11 +172,10 @@ const offensePage = Vue.component('offense-page', {
           { text: '2塁Out', value: '2塁Out' },
           { text: '3塁Out', value: '3塁Out' },
           { text: '本塁Out', value: '本塁Out' },
-          ]
-          this.selectedBatterRun = "1塁へ"
-          this.$emit('selectedBatterRun')
-          this.selectedOnChangeBatterRun()
-        }
+        ]
+        this.selectedBatterRun = "1塁へ"
+        this.$emit('selectedBatterRun')
+        this.selectedOnChangeBatterRun()
         this.showSelectedBatterRun = false
       }
       this.$emit('showSelectedBatterRun')
