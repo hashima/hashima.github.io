@@ -115,13 +115,14 @@ body {
 
 .order{
   float: left;
-  font-size:32px;
-  padding:18px 4px 0 4px;
-  text-align: center;
   height:42px;
   width:26px;
+  background-image: url("./images/batter.png");
+  /* font-size:32px;
+  padding:18px 4px 0 4px;
+  text-align: center;
   background-color: #FFF;
-  color:#003300;
+  color:#003300; */
 }
 
 .batter-score{
@@ -201,7 +202,7 @@ body {
 #diamond {
   width:320px;
   height: 65px;
-  background-image: url("./images/diamond.png")
+  background-image: url("./images/diamond.png");
 }
 
 .position{
