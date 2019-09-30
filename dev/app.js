@@ -194,6 +194,34 @@ const offensePage = Vue.component('offense-page', {
         this.showSelected2ndRunnerBase = false;
         this.showSelected3rdRunnerBase = false;
       }
+      else if(this.selectedBatterResult === "3塁打")
+      {
+        this.selectedBatterRun = "3塁へ"
+        this.$emit('selectedBatterRun')
+        this.showSelectedBatterDirection = false
+        this.$emit('showSelectedBatterDirection')
+        this.selectedOnChangeBatterRun()
+        this.showSelected1stRunner = true;
+        this.showSelected2ndRunner = true;
+        this.showSelected3rdRunner = true;
+        this.showSelected1stRunnerBase = false;
+        this.showSelected2ndRunnerBase = false;
+        this.showSelected3rdRunnerBase = false;
+      }
+      else if(this.selectedBatterResult === "本塁打")
+      {
+        this.selectedBatterRun = "本塁へ"
+        this.$emit('selectedBatterRun')
+        this.showSelectedBatterDirection = false
+        this.$emit('showSelectedBatterDirection')
+        this.selectedOnChangeBatterRun()
+        this.showSelected1stRunner = true;
+        this.showSelected2ndRunner = true;
+        this.showSelected3rdRunner = true;
+        this.showSelected1stRunnerBase = false;
+        this.showSelected2ndRunnerBase = false;
+        this.showSelected3rdRunnerBase = false;
+      }
       else
       {
         this.itemsBatterRun = defaultSelectItem.itemsBatterRun
