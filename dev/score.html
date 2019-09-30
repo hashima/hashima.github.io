@@ -126,7 +126,7 @@
             </div>
             <div class="player-item">
               <div class="player-label">
-                <span>{{ score.batter.position }} {{ score.batter.name }} #{{ score.batter.number }}</span>
+                <span v-if="score.batter">{{ score.batter.position }} {{ score.batter.name }} #{{ score.batter.number }}</span>
               </div>
               <div class="score-item">
                 <div class="score">
