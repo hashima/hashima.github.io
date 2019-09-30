@@ -175,7 +175,7 @@
                   </v-ons-select>
                 </div>
                 <div class="position">
-                  <v-ons-select modifier="select" v-bind:disabled="showSelected1stRunner" v-model="selected1stBase">
+                  <v-ons-select modifier="select" v-bind:disabled="showSelected1stRunnerBase" v-model="selected1stBase">
                     <option v-for="item in itemsBase" :value="item.value">
                       {{ item.text }}
                     </option>
@@ -201,7 +201,7 @@
                   </v-ons-select>
                 </div>
                 <div class="position">
-                  <v-ons-select modifier="select" v-bind:disabled="showSelected2ndRunner" v-model="selected2ndBase">
+                  <v-ons-select modifier="select" v-bind:disabled="showSelected2ndRunnerBase" v-model="selected2ndBase">
                     <option v-for="item in itemsBase2" :value="item.value">
                       {{ item.text }}
                     </option>
@@ -227,7 +227,7 @@
                   </v-ons-select>
                 </div>
                 <div class="position">
-                  <v-ons-select modifier="select" v-bind:disabled="showSelected3rdRunner" v-model="selected3rdBase">
+                  <v-ons-select modifier="select" v-bind:disabled="showSelected3rdRunnerBase" v-model="selected3rdBase">
                     <option v-for="item in itemsBase3" :value="item.value">
                       {{ item.text }}
                     </option>

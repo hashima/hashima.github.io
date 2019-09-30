@@ -114,9 +114,9 @@ const offensePage = Vue.component('offense-page', {
           selected1stBase: '----',
           selected2ndBase: '----',
           selected3rdBase: '----',
-          showSelected1stRunner: true,
-          showSelected2ndRunner: true,
-          showSelected3rdRunner: true
+          showSelected1stRunnerBase: true,
+          showSelected2ndRunnerBase: true,
+          showSelected3rdRunnerBase: true
     }
   },
   mounted: function () {
@@ -184,10 +184,10 @@ const offensePage = Vue.component('offense-page', {
         this.showSelectedBatterDirection = false
         this.$emit('showSelectedBatterDirection')
         this.selectedOnChangeBatterRun()
-        this.showSelected1stRunner = true;
-        this.showSelected2ndRunner = true;
-        this.showSelected3rdRunner = true;
-     }
+        this.showSelected1stRunnerBase = true;
+        this.showSelected2ndRunnerBase = true;
+        this.showSelected3rdRunnerBase = true;
+      }
       else
       {
         this.itemsBatterRun = defaultSelectItem.itemsBatterRun
@@ -261,20 +261,20 @@ const offensePage = Vue.component('offense-page', {
       console.log(base)
       if(base == '1st')
       {
-        this.showSelected1stRunner = false
-        this.$emit('showSelected1stRunner')
+        this.showSelected1stRunnerBase = false
+        this.$emit('showSelected1stRunnerBase')
         this.$emit('selected1stRunner')
       }
       else if(base == '2nd')
       {
-        this.showSelected2ndRunner = false
-        this.$emit('showSelected2ndRunner')
+        this.showSelected2ndRunnerBase = false
+        this.$emit('showSelected2ndRunnerBase')
         this.$emit('selected2ndRunner')
       }
       else if(base == '3rd')
       {
-        this.showSelected3rdRunner = false
-        this.$emit('showSelected3rdRunner')
+        this.showSelected3rdRunnerBase = false
+        this.$emit('showSelected3rdRunnerBase')
         this.$emit('selected3rdRunner')
       }
     },
@@ -329,9 +329,9 @@ const offensePage = Vue.component('offense-page', {
         this.selected3rdRunner = "進塁";
         this.selected3rdBase = "本塁へ";
       }
-      this.showSelected1stRunner = false;
-      this.showSelected2ndRunner = false;
-      this.showSelected3rdRunner = false;
+      this.showSelected1stRunnerBase = false;
+      this.showSelected2ndRunnerBase = false;
+      this.showSelected3rdRunnerBase = false;
      
     }
   },
