@@ -113,7 +113,7 @@ body {
   padding-right:2px;
 }
 
-.order{
+.order-batter{
   float: left;
   height:56px;
   width:30px;
@@ -123,6 +123,17 @@ body {
   text-align: center;
   background-color: #FFF;
   color:#003300; */
+}
+
+.order{
+  float: left;
+  height:42px;
+  width:26px;
+  font-size:32px;
+  padding:18px 4px 0 4px;
+  text-align: center;
+  background-color: #FFF;
+  color:#003300;
 }
 
 .batter-score{
