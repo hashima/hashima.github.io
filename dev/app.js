@@ -140,6 +140,15 @@ const offensePage = Vue.component('offense-page', {
         ]
         this.selectedBatterRun = "1塁へ"
         this.$emit('selectedBatterRun')
+        if(this.selectedBatterRun == "1塁へ"){
+          this.advance(1);
+        } else if(this.selectedBatterRun == "2塁へ"){
+          this.advance(2);
+        } else if(this.selectedBatterRun == "3塁へ"){
+          this.advance(3);
+        } else if(this.selectedBatterRun == "本塁へ"){
+          this.advance(4);
+        }
       }
       this.showSelectedBatterRun = false
       this.$emit('showSelectedBatterRun')
@@ -149,15 +158,6 @@ const offensePage = Vue.component('offense-page', {
       this.showSelectedBatterRun = false
       this.$emit('showSelectedBatterRun')
       this.$emit('selectedBatterRun')
-      if(this.selectedBatterRun == "1塁へ"){
-        this.advance(1);
-      } else if(this.selectedBatterRun == "2塁へ"){
-        this.advance(2);
-      } else if(this.selectedBatterRun == "3塁へ"){
-        this.advance(3);
-      } else if(this.selectedBatterRun == "本塁へ"){
-        this.advance(4);
-      }
     },
     selectedOnChangeRunner: function(base){
       console.log(base)
