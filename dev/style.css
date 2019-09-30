@@ -141,17 +141,6 @@ body {
   background-image: url("./images/3rd.png");
 }
 
-.order{
-  float: left;
-  height:42px;
-  width:26px;
-  font-size:32px;
-  padding:18px 4px 0 4px;
-  text-align: center;
-  background-color: #FFF;
-  color:#003300;
-}
-
 .batter-score{
   width:auto;
   border: 2px solid #FFF;
