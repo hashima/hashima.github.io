@@ -124,11 +124,17 @@ const offensePage = Vue.component('offense-page', {
   },
   methods: {
     selectedOnChangeBatterResult: function(){
-      this.itemsBatterRun = defaultSelectItem.itemsBatterRun
-      this.itemsDirection = defaultSelectItem.itemsDirection
-      this.showSelectedBatterDirection = false
-      this.$emit('showSelectedBatterDirection')
-      this.$emit('selectedBatterResult')
+      if(this.selectedBatterResult === "三振")
+      {
+      }
+      else
+      {
+        this.itemsBatterRun = defaultSelectItem.itemsBatterRun
+        this.itemsDirection = defaultSelectItem.itemsDirection
+        this.showSelectedBatterDirection = false
+        this.$emit('showSelectedBatterDirection')
+        this.$emit('selectedBatterResult')
+      }
     },
     selectedOnChangeBatterDirection: function(){
       if(this.selectedBatterResult === "ゴロ")
