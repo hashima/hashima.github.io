@@ -118,11 +118,27 @@ body {
   height:56px;
   width:30px;
   background-image: url("./images/batter.png");
-  /* font-size:32px;
-  padding:18px 4px 0 4px;
-  text-align: center;
-  background-color: #FFF;
-  color:#003300; */
+}
+
+.order-1st{
+  float: left;
+  height:56px;
+  width:30px;
+  background-image: url("./images/1st.png");
+}
+
+.order-2nd{
+  float: left;
+  height:56px;
+  width:30px;
+  background-image: url("./images/2nd.png");
+}
+
+.order-3rd{
+  float: left;
+  height:56px;
+  width:30px;
+  background-image: url("./images/3rd.png");
 }
 
 .order{
