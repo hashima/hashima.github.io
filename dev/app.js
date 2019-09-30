@@ -140,6 +140,7 @@ const offensePage = Vue.component('offense-page', {
         ]
         this.selectedBatterRun = "1塁へ"
         this.$emit('selectedBatterRun')
+        this.advance(1);
       }
       this.showSelectedBatterRun = false
       this.$emit('showSelectedBatterRun')
