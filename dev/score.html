@@ -126,7 +126,7 @@
             </div>
             <div class="player-item">
               <div class="player-label">
-                <span v-if="score.batter">{{ score.batter.position }} {{ score.batter.name }} #{{ score.batter.number }}</span>
+                <span v-if="score.batter">{{ score.batter.order }}番 {{ score.batter.position }} {{ score.batter.name }} #{{ score.batter.number }}</span>
               </div>
               <div class="score-item">
                 <div class="score">
@@ -163,7 +163,7 @@
             </div>
             <div class="player-item">
               <div class="player-label">
-                <span>{{ score.runner1st.position }} {{ score.runner1st.name }} #{{ score.runner1st.number }} {{ score.runner1st.history }}</span>
+                <span>{{ score.runner1st.order }}番 {{ score.runner1st.position }} {{ score.runner1st.name }} #{{ score.runner1st.number }} {{ score.runner1st.history }}</span>
               </div>
               <div class="score-item">
                 <div class="score">
@@ -189,7 +189,7 @@
             </div>
             <div class="player-item">
               <div class="player-label">
-                <span>{{ score.runner2nd.position }} {{ score.runner2nd.name }} #{{ score.runner2nd.number }} {{ score.runner2nd.history }}</span>
+                <span>{{ score.runner2nd.order }}番 {{ score.runner2nd.position }} {{ score.runner2nd.name }} #{{ score.runner2nd.number }} {{ score.runner2nd.history }}</span>
               </div>
               <div class="score-item">
                 <div class="score">
@@ -215,7 +215,7 @@
             </div>
             <div class="player-item">
               <div class="player-label">
-                <span>{{ score.runner3rd.position }} {{ score.runner3rd.name }} #{{ score.runner3rd.number }} {{ score.runner3rd.history }}</span>
+                <span>{{ score.runner3rd.order }}番 {{ score.runner3rd.position }} {{ score.runner3rd.name }} #{{ score.runner3rd.number }} {{ score.runner3rd.history }}</span>
               </div>
               <div class="score-item">
                 <div class="score">
