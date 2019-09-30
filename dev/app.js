@@ -202,6 +202,10 @@ const offensePage = Vue.component('offense-page', {
           this.selected1stRunner = "進塁";
           this.selected1stBase = "2塁へ";
         }
+        this.selected2ndRunner = "進塁";
+        this.selected2ndBase = "3塁へ";
+        this.selected3rdRunner = "進塁";
+        this.selected3rdBase = "本塁へ";
       }
       else if(count == 2)
       {
@@ -209,7 +213,11 @@ const offensePage = Vue.component('offense-page', {
         {
           this.selected1stRunner = "進塁";
           this.selected1stBase = "3塁へ";
-        }
+         }
+         this.selected2ndRunner = "進塁";
+         this.selected2ndBase = "本塁へ";
+         this.selected3rdRunner = "進塁";
+         this.selected3rdBase = "本塁へ";
       }
       else if(count == 3 || count == 4)
       {
@@ -218,6 +226,10 @@ const offensePage = Vue.component('offense-page', {
           this.selected1stRunner = "進塁";
           this.selected1stBase = "本塁へ";
         }
+        this.selected2ndRunner = "進塁";
+        this.selected2ndBase = "本塁へ";
+        this.selected3rdRunner = "進塁";
+        this.selected3rdBase = "本塁へ";
       }
      
     }
