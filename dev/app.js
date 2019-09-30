@@ -187,6 +187,9 @@ const offensePage = Vue.component('offense-page', {
         this.showSelectedBatterDirection = false
         this.$emit('showSelectedBatterDirection')
         this.selectedOnChangeBatterRun()
+        this.showSelected1stRunner = false;
+        this.showSelected2ndRunner = false;
+        this.showSelected3rdRunner = false;
         this.showSelected1stRunnerBase = true;
         this.showSelected2ndRunnerBase = true;
         this.showSelected3rdRunnerBase = true;
