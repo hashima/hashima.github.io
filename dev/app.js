@@ -152,23 +152,7 @@ const offensePage = Vue.component('offense-page', {
         this.showSelectedBatterRun = true
         this.$emit('selectedBatterRun')
       }
-      else if(this.selectedBatterResult === "死球")
-      {
-        this.selectedBatterRun = "1塁"
-        this.showSelectedBatterRun = true
-        this.$emit('selectedBatterRun')
-      }
-      else
-      {
-        this.itemsBatterRun = defaultSelectItem.itemsBatterRun
-        this.itemsDirection = defaultSelectItem.itemsDirection
-        this.showSelectedBatterDirection = false
-        this.$emit('showSelectedBatterDirection')
-        this.$emit('selectedBatterResult')
-      }
-    },
-    selectedOnChangeBatterDirection: function(){
-      if(this.selectedBatterResult === "ヒット")
+      else if(this.selectedBatterResult === "四球")
       {
         this.itemsBatterRun = [
           { text: '1塁へ', value: '1塁へ' },
@@ -184,7 +168,23 @@ const offensePage = Vue.component('offense-page', {
         this.selectedOnChangeBatterRun()
         this.showSelectedBatterRun = false
       }
-      else if(this.selectedBatterResult === "四球")
+      else if(this.selectedBatterResult === "死球")
+      {
+        this.selectedBatterRun = "1塁へ"
+        this.showSelectedBatterRun = true
+        this.$emit('selectedBatterRun')
+      }
+      else
+      {
+        this.itemsBatterRun = defaultSelectItem.itemsBatterRun
+        this.itemsDirection = defaultSelectItem.itemsDirection
+        this.showSelectedBatterDirection = false
+        this.$emit('showSelectedBatterDirection')
+        this.$emit('selectedBatterResult')
+      }
+    },
+    selectedOnChangeBatterDirection: function(){
+      if(this.selectedBatterResult === "ヒット")
       {
         this.itemsBatterRun = [
           { text: '1塁へ', value: '1塁へ' },
