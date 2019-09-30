@@ -106,7 +106,7 @@ const offensePage = Vue.component('offense-page', {
     }
   },
   mounted: function () {
-    axios.get("./score.json").then(response => (this.score = response.data));
+    axios.get("./score.json?timestamp="+now.getTime()).then(response => (this.score = response.data));
   },
   methods: {
     selectedOnChangeBatterResult: function(){
