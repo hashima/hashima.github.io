@@ -186,7 +186,11 @@ const offensePage = Vue.component('offense-page', {
       return null;
     },
     advance: function(count){
-      
+      if(this.score.runner1st != null)
+      {
+        this.selected1stRunner = "進塁";
+        this.selected1stBase = "2塁へ";
+      }
     }
   },
 })
