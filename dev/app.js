@@ -132,12 +132,14 @@ const offensePage = Vue.component('offense-page', {
         this.selectedBatterRun = "1塁Out"
         this.showSelectedBatterRun = true
         this.$emit('selectedBatterRun')
+        this.showSelectedBatterDirection = false
       }
       else if(this.selectedBatterResult === "フライ")
       {
         this.selectedBatterRun = "1塁Out"
         this.showSelectedBatterRun = true
         this.$emit('selectedBatterRun')
+        this.showSelectedBatterDirection = false
       }
       else if(this.selectedBatterResult === "三振")
       {
@@ -148,12 +150,14 @@ const offensePage = Vue.component('offense-page', {
         this.selectedBatterRun = "1塁Out"
         this.showSelectedBatterRun = true
         this.$emit('selectedBatterRun')
+        this.showSelectedBatterDirection = false
         this.advance(1);
       }
       else if(this.selectedBatterResult === "犠飛")
       {
         this.selectedBatterRun = "1塁Out"
         this.showSelectedBatterRun = true
+        this.showSelectedBatterDirection = false
         this.$emit('selectedBatterRun')
         this.advance(1);
       }
