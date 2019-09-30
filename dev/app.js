@@ -181,7 +181,12 @@ const offensePage = Vue.component('offense-page', {
       {
         this.selectedBatterRun = "2塁へ"
         this.$emit('selectedBatterRun')
+        this.showSelectedBatterDirection = false
+        this.$emit('showSelectedBatterDirection')
         this.selectedOnChangeBatterRun()
+        this.showSelected1stRunner = true;
+        this.showSelected2ndRunner = true;
+        this.showSelected3rdRunner = true;
      }
       else
       {
