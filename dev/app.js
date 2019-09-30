@@ -114,6 +114,9 @@ const offensePage = Vue.component('offense-page', {
           selected1stBase: '----',
           selected2ndBase: '----',
           selected3rdBase: '----',
+          showSelected1stRunner: false,
+          showSelected2ndRunner: false,
+          showSelected3rdRunner: false,
           showSelected1stRunnerBase: true,
           showSelected2ndRunnerBase: true,
           showSelected3rdRunnerBase: true
