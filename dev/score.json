@@ -14,17 +14,20 @@
     "runner1st":{
         "name":"ボビー",
         "number":10,
-        "position":"SS"
+        "position":"SS",
+        "history":"ヒット"
     },
-    "runner2nd-":{
+    "runner2nd":{
         "name":"のあ",
         "number":1,
-        "position":"P"
+        "position":"P",
+        "history":"ヒット-盗塁"
     },
     "runner3rd":{
         "name":"とら",
         "number":2,
-        "position":"C"
+        "position":"C",
+        "history":"ヒット-盗塁-盗塁"
     }
     
 }
