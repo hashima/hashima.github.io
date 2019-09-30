@@ -180,6 +180,20 @@ const offensePage = Vue.component('offense-page', {
         this.selectedOnChangeBatterRun()
         this.showSelectedBatterRun = true
       }
+      else if(this.selectedBatterResult === "ヒット")
+      {
+        this.selectedBatterRun = "1塁へ"
+        this.$emit('selectedBatterRun')
+        this.showSelectedBatterDirection = false
+        this.$emit('showSelectedBatterDirection')
+        this.selectedOnChangeBatterRun()
+        this.showSelected1stRunner = true;
+        this.showSelected2ndRunner = true;
+        this.showSelected3rdRunner = true;
+        this.showSelected1stRunnerBase = false;
+        this.showSelected2ndRunnerBase = false;
+        this.showSelected3rdRunnerBase = false;
+      }
       else if(this.selectedBatterResult === "2塁打")
       {
         this.selectedBatterRun = "2塁へ"
@@ -222,7 +236,21 @@ const offensePage = Vue.component('offense-page', {
         this.showSelected2ndRunnerBase = false;
         this.showSelected3rdRunnerBase = false;
       }
-      else
+      else if(this.selectedBatterResult === "エラー")
+      {
+        this.selectedBatterRun = "1塁へ"
+        this.$emit('selectedBatterRun')
+        this.showSelectedBatterDirection = false
+        this.$emit('showSelectedBatterDirection')
+        this.selectedOnChangeBatterRun()
+        this.showSelected1stRunner = true;
+        this.showSelected2ndRunner = true;
+        this.showSelected3rdRunner = true;
+        this.showSelected1stRunnerBase = false;
+        this.showSelected2ndRunnerBase = false;
+        this.showSelected3rdRunnerBase = false;
+      }
+     else
       {
         this.itemsBatterRun = defaultSelectItem.itemsBatterRun
         this.itemsDirection = defaultSelectItem.itemsDirection
