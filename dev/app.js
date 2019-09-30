@@ -140,7 +140,6 @@ const offensePage = Vue.component('offense-page', {
         ]
         this.selectedBatterRun = "1塁へ"
         this.$emit('selectedBatterRun')
-        this.advance(1);
       }
       this.showSelectedBatterRun = false
       this.$emit('showSelectedBatterRun')
@@ -150,6 +149,7 @@ const offensePage = Vue.component('offense-page', {
       this.showSelectedBatterRun = false
       this.$emit('showSelectedBatterRun')
       this.$emit('selectedBatterRun')
+        this.advance(1);
     },
     selectedOnChangeRunner: function(base){
       console.log(base)
