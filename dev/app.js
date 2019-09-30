@@ -150,9 +150,17 @@ const offensePage = Vue.component('offense-page', {
         this.showSelectedBatterRun = true
         this.$emit('selectedBatterRun')
       }
-      else if(this.selectedBatterResult === "ヒット")
+      else if(this.selectedBatterResult === "犠打")
       {
-        this.itemsBatterRun = [
+        this.selectedBatterRun = "1塁Out"
+        this.showSelectedBatterRun = true
+        this.$emit('selectedBatterRun')
+      }
+      else
+      {
+        if(this.selectedBatterResult === "ヒット")
+        {
+          this.itemsBatterRun = [
           { text: '1塁へ', value: '1塁へ' },
           { text: '2塁へ', value: '2塁へ' },
           { text: '3塁へ', value: '3塁へ' },
@@ -160,11 +168,12 @@ const offensePage = Vue.component('offense-page', {
           { text: '2塁Out', value: '2塁Out' },
           { text: '3塁Out', value: '3塁Out' },
           { text: '本塁Out', value: '本塁Out' },
-        ]
-        this.selectedBatterRun = "1塁へ"
+          ]
+          this.selectedBatterRun = "1塁へ"
+          this.$emit('selectedBatterRun')
+          this.selectedOnChangeBatterRun()
+        }
         this.showSelectedBatterRun = false
-        this.$emit('selectedBatterRun')
-        this.selectedOnChangeBatterRun()
       }
       this.$emit('showSelectedBatterRun')
       this.$emit('selectedBatterDirection')
