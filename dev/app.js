@@ -508,7 +508,7 @@ const topPage = Vue.component('top-page', {
         }
   },
   mounted: function () {
-    axios.get("./toporder.json").then(response => (this.toporder = response.data.order, member = response.data.member));
+    axios.get("./toporder.json").then(response => (this.toporder = response.data.order, this.member = response.data.member));
   },
 })
 
