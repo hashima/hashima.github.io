@@ -509,7 +509,10 @@ const topPage = Vue.component('top-page', {
   },
   mounted: function () {
     axios.get("./toporder.json").then(response => (this.toporder = response.data.order, this.reserve = response.data.reserve));
+    this.selectedName[0] = "ボビー";
   },
+  computed: {
+  }
 })
 
 const bottomPage = Vue.component('bottom-page', {
