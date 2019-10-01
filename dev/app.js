@@ -354,18 +354,15 @@ const offensePage = Vue.component('offense-page', {
         this.showSelected1stRunnerBase = false
         this.$emit('showSelected1stRunnerBase')
         this.$emit('selected1stRunner')
-        if(this.selected1stRunner == "盗塁")
-        {
-          this.selected1stBase = "2塁へ"
-          if(this.score.runner2nd != null){
-            this.selected2ndRunner = "盗塁"
-            this.selected2ndBase = "3塁へ"
-            this.showSelected2ndRunnerBase = false
-            if(this.score.runner3rd != null){
-              this.selected3rdRunner = "盗塁"
-              this.selected3rdBase = "本塁へ"
-              this.showSelected3rdRunnerBase = false
-            }
+        this.selected1stBase = "2塁へ"
+        if(this.score.runner2nd != null){
+          this.selected2ndRunner = his.selected1stRunner
+          this.selected2ndBase = "3塁へ"
+          this.showSelected2ndRunnerBase = false
+          if(this.score.runner3rd != null){
+            this.selected3rdRunner = his.selected1stRunner
+            this.selected3rdBase = "本塁へ"
+            this.showSelected3rdRunnerBase = false
           }
         }
       }
@@ -374,7 +371,13 @@ const offensePage = Vue.component('offense-page', {
         this.showSelected2ndRunnerBase = false
         this.$emit('showSelected2ndRunnerBase')
         this.$emit('selected2ndRunner')
-      }
+        this.selected2ndBase = "2塁へ"
+        if(this.score.runner3rd != null){
+          this.selected3rdRunner = his.selected2ndRunner
+          this.selected3rdBase = "本塁へ"
+          this.showSelected3rdRunnerBase = false
+        }
+  }
       else if(base == '3rd')
       {
         this.showSelected3rdRunnerBase = false
