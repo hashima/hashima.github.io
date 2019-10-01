@@ -349,7 +349,6 @@ const offensePage = Vue.component('offense-page', {
       }
     },
     selectedOnChangeRunner: function(base){
-      console.log(base)
       if(base == '1st')
       {
         this.showSelected1stRunnerBase = false
@@ -361,12 +360,11 @@ const offensePage = Vue.component('offense-page', {
           if(this.score.runner2nd != null){
             this.selected2ndRunner = "盗塁"
             this.$emit('selected2ndRunner')
-            console.log(this.selected2ndRunner)
             this.selected2ndBase = "3塁へ"
             this.$emit('selected2ndBase')
             if(this.score.runner3rd != null){
               this.selected3rdRunner = "盗塁"
-              this.selected3rdase = "本塁へ"
+              this.selected3rdBase = "本塁へ"
             }
           }
         }
