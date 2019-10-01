@@ -151,7 +151,10 @@ const offensePage = Vue.component('offense-page', {
       }
       else if(this.selectedBatterResult === "三振")
       {
+        this.selectedBatterRun = "----"
+        this.selectedBatterDirection = "----"
         this.showSelectedBatterDirection = true
+        this.showSelectedBatterRun = true
         this.resetRunner();
       }
       else if(this.selectedBatterResult === "犠打")
