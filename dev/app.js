@@ -45,6 +45,7 @@ const defaultSelectItem = {
     { text: 'WP', value: 'WP' },
     { text: 'PB', value: 'PB' },
     { text: '進塁', value: '進塁' },
+    { text: 'ボーク', value: 'ボーク' },
   ],
   "itemsBase":[
     { text: '----', value: '----' },
@@ -190,14 +191,23 @@ const offensePage = Vue.component('offense-page', {
         this.$emit('selectedBatterRun')
         this.selectedOnChangeBatterRun()
         this.showSelectedBatterRun = false
-      }
+        this.showSelected1stRunner = true;
+        this.showSelected2ndRunner = true;
+        this.showSelected3rdRunner = true;
+     }
       else if(this.selectedBatterResult === "死球")
       {
         this.selectedBatterRun = "1塁へ"
         this.$emit('selectedBatterRun')
         this.selectedOnChangeBatterRun()
         this.showSelectedBatterRun = true
-      }
+        this.showSelected1stRunner = true;
+        this.showSelected2ndRunner = true;
+        this.showSelected3rdRunner = true;
+        this.showSelected1stRunnerBase = true;
+        this.showSelected2ndRunnerBase = true;
+        this.showSelected3rdRunnerBase = true;
+    }
       else if(this.selectedBatterResult === "ヒット")
       {
         this.selectedBatterRun = "1塁へ"
