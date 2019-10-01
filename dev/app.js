@@ -142,7 +142,7 @@ const offensePage = Vue.component('offense-page', {
         this.showSelectedBatterRun = true
         this.$emit('selectedBatterRun')
         this.showSelectedBatterDirection = false
-        //this.resetRunner();
+        this.resetRunner();
         this.advanceForce();
       }
       else if(this.selectedBatterResult === "フライ")
@@ -437,7 +437,7 @@ const offensePage = Vue.component('offense-page', {
       this.showSelected3rdRunnerBase = false;
      
     },
-    advanceForce: function(count){
+    advanceForce: function(){
       if(this.score.runner1st != null && this.score.runner2nd != null && this.score.runner3rd != null)
       {
         advance(1);
