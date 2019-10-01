@@ -149,6 +149,7 @@ const offensePage = Vue.component('offense-page', {
         this.showSelectedBatterRun = true
         this.$emit('selectedBatterRun')
         this.showSelectedBatterDirection = false
+        this.resetRunner();
       }
       else if(this.selectedBatterResult === "三振")
       {
