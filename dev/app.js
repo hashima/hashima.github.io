@@ -360,7 +360,9 @@ const offensePage = Vue.component('offense-page', {
           this.selected1stBase = "2塁へ"
           if(this.runner2nd != null){
             this.selected2ndRunner = "盗塁"
+            this.$emit('selected2ndRunner')
             this.selected2ndBase = "3塁へ"
+            this.$emit('selected2ndBase')
             if(this.runner3rd != null){
               this.selected3rdRunner = "盗塁"
               this.selected3rdase = "本塁へ"
