@@ -195,7 +195,7 @@ const offensePage = Vue.component('offense-page', {
         this.showSelected1stRunner = true;
         this.showSelected2ndRunner = true;
         this.showSelected3rdRunner = true;
-     }
+      }
       else if(this.selectedBatterResult === "死球")
       {
         this.selectedBatterRun = "1塁へ"
@@ -208,7 +208,7 @@ const offensePage = Vue.component('offense-page', {
         this.showSelected1stRunnerBase = true;
         this.showSelected2ndRunnerBase = true;
         this.showSelected3rdRunnerBase = true;
-    }
+      }
       else if(this.selectedBatterResult === "ヒット")
       {
         this.selectedBatterRun = "1塁へ"
@@ -358,13 +358,13 @@ const offensePage = Vue.component('offense-page', {
         if(this.selected1stRunner == "盗塁")
         {
           this.selected1stBase = "2塁へ"
-          if(this.runner2nd != null){
+          if(this.score.runner2nd != null){
             this.selected2ndRunner = "盗塁"
             this.$emit('selected2ndRunner')
             console.log(this.selected2ndRunner)
             this.selected2ndBase = "3塁へ"
             this.$emit('selected2ndBase')
-            if(this.runner3rd != null){
+            if(this.score.runner3rd != null){
               this.selected3rdRunner = "盗塁"
               this.selected3rdase = "本塁へ"
             }
