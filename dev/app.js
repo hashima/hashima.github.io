@@ -142,7 +142,7 @@ const offensePage = Vue.component('offense-page', {
         this.showSelectedBatterRun = true
         this.$emit('selectedBatterRun')
         this.showSelectedBatterDirection = false
-        this.resetRunner();
+        //this.resetRunner();
         this.advanceForce();
       }
       else if(this.selectedBatterResult === "フライ")
