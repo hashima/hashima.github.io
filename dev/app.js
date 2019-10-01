@@ -133,6 +133,7 @@ const offensePage = Vue.component('offense-page', {
         this.showSelectedBatterRun = true
         this.$emit('selectedBatterRun')
         this.showSelectedBatterDirection = true
+        resetRunner()
       }
       else if(this.selectedBatterResult === "ゴロ")
       {
@@ -406,6 +407,21 @@ const offensePage = Vue.component('offense-page', {
       this.showSelected2ndRunnerBase = false;
       this.showSelected3rdRunnerBase = false;
      
+    },
+    resetRunner: function(){
+      this.selected1stRunner = "----";
+      this.selected1stBase = "----";
+      this.selected2ndRunner = "----";
+      this.selected2ndBase = "----";
+      this.selected3rdRunner = "----";
+      this.selected3rdBase = "----";
+      this.showSelected1stRunner= false;
+      this.showSelected2ndRunner = false;
+      this.showSelected3rdRunner = false;
+      this.showSelected1stRunnerBase = true;
+      this.showSelected2ndRunnerBase = true;
+      this.showSelected3rdRunnerBase = true;
+
     }
   },
 })
