@@ -143,6 +143,7 @@ const offensePage = Vue.component('offense-page', {
         this.$emit('selectedBatterRun')
         this.showSelectedBatterDirection = false
         this.resetRunner();
+        this.advanceForce();
       }
       else if(this.selectedBatterResult === "フライ")
       {
@@ -423,6 +424,23 @@ const offensePage = Vue.component('offense-page', {
       this.showSelected2ndRunnerBase = false;
       this.showSelected3rdRunnerBase = false;
      
+    },
+    advanceForce: function(count){
+      if(this.score.runner1st != null && this.score.runner2nd != null && this.score.runner3rd != null)
+      {
+        advance(1);
+      }
+      else if(this.score.runner1st != null && this.score.runner2nd != null && this.score.runner3rd == null){
+        advance(1);
+      }
+      else if(this.score.runner1st != null && this.score.runner2nd == null && this.score.runner3rd != null){
+        this.selected1stRunner = "進塁";
+        this.selected1stBase = "2塁へ";
+      }
+      else if(this.score.runner1st != null && this.score.runner2nd == null && this.score.runner3rd == null){
+          this.selected1stRunner = "進塁";
+          this.selected1stBase = "2塁へ";
+      }
     },
     resetRunner: function(){
       this.selected1stRunner = "----";
