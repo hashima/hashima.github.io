@@ -377,12 +377,13 @@ const offensePage = Vue.component('offense-page', {
           this.selected3rdBase = "本塁へ"
           this.showSelected3rdRunnerBase = false
         }
-  }
+      }
       else if(base == '3rd')
       {
         this.showSelected3rdRunnerBase = false
         this.$emit('showSelected3rdRunnerBase')
         this.$emit('selected3rdRunner')
+        this.selected3rdBase = "本塁へ"
       }
     },
     getRunnerInfo: function(base){
