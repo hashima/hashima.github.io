@@ -440,10 +440,10 @@ const offensePage = Vue.component('offense-page', {
     advanceForce: function(){
       if(this.score.runner1st != null && this.score.runner2nd != null && this.score.runner3rd != null)
       {
-        advance(1);
+        this.advance(1);
       }
       else if(this.score.runner1st != null && this.score.runner2nd != null && this.score.runner3rd == null){
-        advance(1);
+        this.advance(1);
       }
       else if(this.score.runner1st != null && this.score.runner2nd == null && this.score.runner3rd != null){
         this.selected1stRunner = "進塁";
