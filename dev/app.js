@@ -410,11 +410,17 @@ const offensePage = Vue.component('offense-page', {
     },
     resetRunner: function(){
       this.selected1stRunner = "----";
+      this.$emit('selected1stRunner')
       this.selected1stBase = "----";
+      this.$emit('selected1stBase')
       this.selected2ndRunner = "----";
+      this.$emit('selected2ndRunner')
       this.selected2ndBase = "----";
+      this.$emit('selected2ndBase')
       this.selected3rdRunner = "----";
+      this.$emit('selected3rdRunner')
       this.selected3rdBase = "----";
+      this.$emit('selected3rdBase')
       this.showSelected1stRunner= false;
       this.showSelected2ndRunner = false;
       this.showSelected3rdRunner = false;
