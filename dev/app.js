@@ -359,12 +359,12 @@ const offensePage = Vue.component('offense-page', {
           this.selected1stBase = "2塁へ"
           if(this.score.runner2nd != null){
             this.selected2ndRunner = "盗塁"
-            this.$emit('selected2ndRunner')
             this.selected2ndBase = "3塁へ"
-            this.$emit('selected2ndBase')
+            this.showSelected2ndRunnerBase = false
             if(this.score.runner3rd != null){
               this.selected3rdRunner = "盗塁"
               this.selected3rdBase = "本塁へ"
+              this.showSelected3rdRunnerBase = false
             }
           }
         }
