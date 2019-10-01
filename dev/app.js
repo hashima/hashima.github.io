@@ -355,6 +355,7 @@ const offensePage = Vue.component('offense-page', {
         this.showSelected1stRunnerBase = false
         this.$emit('showSelected1stRunnerBase')
         this.$emit('selected1stRunner')
+        console.log(this.selected1stRunner)
         if(this.selected1stRunner == "盗塁")
         {
           this.selected1stBase = "2塁へ"
