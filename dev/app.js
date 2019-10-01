@@ -488,7 +488,7 @@ const topPage = Vue.component('top-page', {
   data:  ()=> {
       return {
         toporder: [],
-        member: [],
+        reserve: [],
         itemsPosition:[
             { text: '----', value: '----' },
             { text: 'P', value: 'P' },
@@ -508,7 +508,7 @@ const topPage = Vue.component('top-page', {
         }
   },
   mounted: function () {
-    axios.get("./toporder.json").then(response => (this.toporder = response.data.order, this.member = response.data.member));
+    axios.get("./toporder.json").then(response => (this.toporder = response.data.order, this.reserve = response.data.reserve));
   },
 })
 
