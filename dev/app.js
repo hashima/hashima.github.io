@@ -536,7 +536,7 @@ const bottomPage = Vue.component('bottom-page', {
       }
   },
   mounted: function () {
-    axios.get("./toporder.json").then(response => (this.bottomorder = response.data));
+    axios.get("./toporder.json").then(response => (this.bottomorder = response.data.order));
   },
 })
 
