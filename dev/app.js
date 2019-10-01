@@ -133,7 +133,7 @@ const offensePage = Vue.component('offense-page', {
         this.showSelectedBatterRun = true
         this.$emit('selectedBatterRun')
         this.showSelectedBatterDirection = true
-        resetRunner()
+        resetRunner();
       }
       else if(this.selectedBatterResult === "ゴロ")
       {
