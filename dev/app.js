@@ -485,7 +485,8 @@ const offensePage = Vue.component('offense-page', {
 
     },
     buttonPhSubmit: function() {
-      this.dialogPhVisible = false
+      this.dialogPhVisible = false;
+      this.score.batter.name = this.selectedName;
     }
   },
 })
