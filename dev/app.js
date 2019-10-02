@@ -493,8 +493,8 @@ const offensePage = Vue.component('offense-page', {
     },
     buttonPr1Submit: function() {
       this.dialogPr1Visible = false
-      // this.score.batter.number = this.selectedName
-      // this.score.batter.name = this.getMemberName(this.selectedName)
+      this.score.runner1st.number = this.selectedPr1Name
+      this.score.runner1st.name = this.getMemberName(this.selectedPr1Name)
     },
     getMemberName: function(number) {
       for(let item of this.reserve) {
