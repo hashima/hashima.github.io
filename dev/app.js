@@ -490,7 +490,7 @@ const offensePage = Vue.component('offense-page', {
       this.score.batter.name = this.getMemberName(this.selectedName)
     },
     getMemberName: function(number) {
-      for(let item in this.reserve) {
+      for(let item of this.reserve) {
         if(number == item.number)
         {
           return item.name;
