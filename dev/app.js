@@ -127,6 +127,7 @@ const offensePage = Vue.component('offense-page', {
   },
   mounted: function () {
     axios.get("./score.json").then(response => (this.score = response.data));
+    axios.get("./toporder.json").then(response => (this.toporder = response.data.order, this.reserve = response.data.reserve));
   },
   methods: {
     selectedOnChangeBatterResult: function(){
