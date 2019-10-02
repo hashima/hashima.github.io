@@ -122,8 +122,9 @@ const offensePage = Vue.component('offense-page', {
           showSelected1stRunnerBase: true,
           showSelected2ndRunnerBase: true,
           showSelected3rdRunnerBase: true,
-          selectedName: "----"
-    }
+          selectedName: "----",
+          reserve: []
+        }
   },
   mounted: function () {
     axios.get("./score.json").then(response => (this.score = response.data));
