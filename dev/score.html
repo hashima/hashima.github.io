@@ -216,7 +216,7 @@
               </div>
             </div>
             <div class="right">
-              <v-ons-button modifier="pr-button">代走</v-ons-button>
+              <v-ons-button modifier="pr-button" @click="dialogPr2Visible = true">代走</v-ons-button>
             </div>
          </v-ons-list-item>
           <v-ons-list-item modifier="score-list-item" v-if="score.runner3rd">
@@ -245,7 +245,7 @@
               </div>
             </div>
             <div class="right">
-              <v-ons-button modifier="pr-button">代走</v-ons-button>
+              <v-ons-button modifier="pr-button" @click="dialogPr3Visible = true">代走</v-ons-button>
             </div>
          </v-ons-list-item>
           <v-ons-list-item modifier="score-list-item-diamond">
@@ -323,6 +323,23 @@
         </p> 
         <section style="margin: 16px">
         <v-ons-button modifier="large" style="margin: 6px 0" @click="buttonPr2Submit">決　定</v-ons-button>
+          </section>
+        </v-ons-dialog>
+
+        <v-ons-dialog
+        cancelable
+        :visible.sync="dialogPr3Visible"
+      >
+        <p style="text-align: center">代走 3塁</p>
+        <p style="text-align: center">
+          <v-ons-select modifier="selectPr3 selectDialog" v-model="selectedPr3Name">
+            <option v-for="item in reserve" :value="item.number" :key="item.number">
+              {{ item.name }}
+            </option>
+          </v-ons-select>
+        </p> 
+        <section style="margin: 16px">
+        <v-ons-button modifier="large" style="margin: 6px 0" @click="buttonPr3Submit">決　定</v-ons-button>
           </section>
         </v-ons-dialog>
 

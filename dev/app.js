@@ -507,6 +507,12 @@ const offensePage = Vue.component('offense-page', {
       this.score.runner2nd.name = this.getMemberName(this.selectedPr2Name)
       this.score.runner2nd.history = ""
     },
+    buttonPr3Submit: function() {
+      this.dialogPr3Visible = false
+      this.score.runner3rd.number = this.selectedPr3Name
+      this.score.runner3rd.name = this.getMemberName(this.selectedPr3Name)
+      this.score.runner3rd.history = ""
+    },
     getMemberName: function(number) {
       for(let item of this.reserve) {
         if(number == item.number)
