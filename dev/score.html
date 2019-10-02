@@ -298,7 +298,7 @@
       >
         <p style="text-align: center">代走 1塁</p>
         <p style="text-align: center">
-          <v-ons-select modifier="selectPr1" v-model="selectedPr1Name">
+          <v-ons-select modifier="selectPr1 selectDialog" v-model="selectedPr1Name">
             <option v-for="item in reserve" :value="item.number" :key="item.number">
               {{ item.name }}
             </option>

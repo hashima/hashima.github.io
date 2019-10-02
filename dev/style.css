@@ -272,6 +272,14 @@ body {
   width:150px;
 }
 
+.select--selectDialog{
+  text-align: center;
+  margin: 0 auto 0 auto;
+}
+.select-input--selectDialog{
+  width:150px;
+}
+
 #order-page .list {
   margin:4px 4px 0 4px;
   border-bottom: 2px solid #FFF;
