@@ -282,13 +282,13 @@
         <p style="text-align: center">代打 <span v-if="score.batter">{{ score.batter.order }}番</span></p>
         <p style="text-align: center">
           <v-ons-select modifier="selectPh" v-model="selectedName">
-            <option v-for="item in reserve" :value="item.name">
+            <option v-for="item in reserve" :value="item.number" :key="item.number">
               {{ item.name }}
             </option>
           </v-ons-select>
         </p> 
         <section style="margin: 16px">
-          <v-ons-button modifier="large" style="margin: 6px 0" @click="dialogPhVisible = false">決　定</v-ons-button>
+          <v-ons-button modifier="large" style="margin: 6px 0" @click="buttonPhSubmit">決　定</v-ons-button>
         </section>
       </v-ons-dialog>
 

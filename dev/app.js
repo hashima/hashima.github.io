@@ -483,6 +483,9 @@ const offensePage = Vue.component('offense-page', {
       this.showSelected2ndRunnerBase = true;
       this.showSelected3rdRunnerBase = true;
 
+    },
+    buttonPhSubmit: function() {
+      this.dialogPhVisible = false
     }
   },
 })
