@@ -264,7 +264,7 @@ body {
   color:#003300;
 }
 
-#offense-page .select-input--selectPh{
+.select-input--selectPh{
   margin: 0 auto 0 auto;
   width:120px;
 }
