@@ -280,7 +280,7 @@
           :visible.sync="dialogPhVisible"
         >
         <p style="text-align: center">Lorem ipsum</p>
-        <v-ons-select modifier="selectOrderName" v-model="selectedName[0]">
+        <v-ons-select modifier="selectOrderName" v-model="selectedName">
           <option v-for="item in reserve" :value="item.name">
             {{ item.name }}
           </option>
