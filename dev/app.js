@@ -96,6 +96,7 @@ const offensePage = Vue.component('offense-page', {
   template: '#offense',
   data:  ()=> {
     return {
+          dialogPhVisible: false,
           score: [],
           itemsBatter: defaultSelectItem.itemsBatter,
           itemsDirection:defaultSelectItem.itemsDirection,
