@@ -154,7 +154,7 @@
               </div>
             </div>
             <div class="right">
-              <v-ons-button modifier="ph-button">代打</v-ons-button>
+              <v-ons-button modifier="ph-button" @click="dialogPhVisible = true">代打</v-ons-button>
             </div>
           </v-ons-list-item>
           <v-ons-list-item style="height:5px;background-color: white;">
@@ -315,25 +315,25 @@
           </v-ons-list-item>
         </v-ons-list>
         <p>
-          <v-ons-button @click="dialogVisible = true">
+          <v-ons-button @click="dialogPhVisible = true">
             Simple Dialog
           </v-ons-button>
         </p>
 
         <v-ons-dialog
-      cancelable
-      :visible.sync="dialogVisible"
-    >
-      <p style="text-align: center">Lorem ipsum</p>
-      <v-ons-select modifier="selectOrderName" v-model="selectedName[0]">
-        <option v-for="item in reserve" :value="item.name">
-          {{ item.name }}
-        </option>
-      </v-ons-select> 
-      <section style="margin: 16px">
-        <v-ons-button modifier="large" style="margin: 6px 0">決　定</v-ons-button>
-      </section>
- </v-ons-dialog>
+          cancelable
+          :visible.sync="dialogPh"
+        >
+          <p style="text-align: center">Lorem ipsum</p>
+          <v-ons-select modifier="selectOrderName" v-model="selectedName[0]">
+            <option v-for="item in reserve" :value="item.name">
+              {{ item.name }}
+            </option>
+          </v-ons-select> 
+          <section style="margin: 16px">
+            <v-ons-button modifier="large" style="margin: 6px 0">決　定</v-ons-button>
+          </section>
+        </v-ons-dialog>
 
         <section style="margin: 16px">
           <v-ons-button modifier="large" style="margin: 6px 0">決　定</v-ons-button>
