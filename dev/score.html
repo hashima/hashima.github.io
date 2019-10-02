@@ -309,6 +309,23 @@
           </section>
         </v-ons-dialog>
 
+        <v-ons-dialog
+        cancelable
+        :visible.sync="dialogPr2Visible"
+      >
+        <p style="text-align: center">代走 2塁</p>
+        <p style="text-align: center">
+          <v-ons-select modifier="selectPr2 selectDialog" v-model="selectedPr2Name">
+            <option v-for="item in reserve" :value="item.number" :key="item.number">
+              {{ item.name }}
+            </option>
+          </v-ons-select>
+        </p> 
+        <section style="margin: 16px">
+        <v-ons-button modifier="large" style="margin: 6px 0" @click="buttonPr2Submit">決　定</v-ons-button>
+          </section>
+        </v-ons-dialog>
+
       </div>
       </v-ons-page>
     </template>
