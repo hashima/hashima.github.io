@@ -487,6 +487,7 @@ const topPage = Vue.component('top-page', {
   template: '#top',
   data:  ()=> {
       return {
+        dialogVisible: false,
         toporder: [],
         reserve: [],
         itemsPosition:[

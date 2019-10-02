@@ -305,7 +305,19 @@
             </v-ons-row>
           </v-ons-list-item>
         </v-ons-list>
+        <p>
+          <v-ons-button @click="dialogVisible = true">
+            Simple Dialog
+          </v-ons-button>
+        </p>
 
+        <v-ons-dialog
+      cancelable
+      :visible.sync="dialogVisible"
+    >
+      <p style="text-align: center">Lorem ipsum</p>
+    </v-ons-dialog>
+    
         <section style="margin: 16px">
           <v-ons-button modifier="large" style="margin: 6px 0">決　定</v-ons-button>
         </section>
