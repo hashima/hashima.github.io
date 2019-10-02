@@ -121,7 +121,8 @@ const offensePage = Vue.component('offense-page', {
           showSelected3rdRunner: false,
           showSelected1stRunnerBase: true,
           showSelected2ndRunnerBase: true,
-          showSelected3rdRunnerBase: true
+          showSelected3rdRunnerBase: true,
+          selectedName: "----"
     }
   },
   mounted: function () {
