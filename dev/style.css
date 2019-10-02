@@ -231,7 +231,18 @@ body {
   padding:0 0 0 0px;
 }
 
-#offense-page .button--ph-button .button--pr-button{
+#offense-page .button--pr-button{
+  margin: 0 0 0 auto;
+  font-size:12px;
+  padding:12px 0px 0 0px;
+  text-align: center;
+  height:61px;
+  width:38px;
+  background-color: #FFF;
+  color:#003300;
+}
+
+#offense-page .button--ph-button{
   margin: 0 0 0 auto;
   font-size:12px;
   padding:12px 0px 0 0px;
