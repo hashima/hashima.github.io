@@ -491,27 +491,35 @@ const offensePage = Vue.component('offense-page', {
 
     },
     buttonPhSubmit: function() {
-      this.dialogPhVisible = false
-      this.score.batter.number = this.selectedName
-      this.score.batter.name = this.getMemberName(this.selectedName)
+      if(this.selectedName != "----"){
+        this.dialogPhVisible = false
+        this.score.batter.number = this.selectedName
+        this.score.batter.name = this.getMemberName(this.selectedName)
+      }
     },
     buttonPr1Submit: function() {
-      this.dialogPr1Visible = false
-      this.score.runner1st.number = this.selectedPr1Name
-      this.score.runner1st.name = this.getMemberName(this.selectedPr1Name)
-      this.score.runner1st.history = ""
+      if(this.selectedPr1Name != "----"){
+        this.dialogPr1Visible = false
+        this.score.runner1st.number = this.selectedPr1Name
+        this.score.runner1st.name = this.getMemberName(this.selectedPr1Name)
+        this.score.runner1st.history = ""
+      }
     },
     buttonPr2Submit: function() {
-      this.dialogPr2Visible = false
-      this.score.runner2nd.number = this.selectedPr2Name
-      this.score.runner2nd.name = this.getMemberName(this.selectedPr2Name)
-      this.score.runner2nd.history = ""
+      if(this.selectedPr2Name != "----"){
+        this.dialogPr2Visible = false
+        this.score.runner2nd.number = this.selectedPr2Name
+        this.score.runner2nd.name = this.getMemberName(this.selectedPr2Name)
+        this.score.runner2nd.history = ""
+      }
     },
     buttonPr3Submit: function() {
-      this.dialogPr3Visible = false
-      this.score.runner3rd.number = this.selectedPr3Name
-      this.score.runner3rd.name = this.getMemberName(this.selectedPr3Name)
-      this.score.runner3rd.history = ""
+      if(this.selectedPr3Name != "----"){
+        this.dialogPr3Visible = false
+        this.score.runner3rd.number = this.selectedPr3Name
+        this.score.runner3rd.name = this.getMemberName(this.selectedPr3Name)
+        this.score.runner3rd.history = ""
+      }
     },
     getMemberName: function(number) {
       for(let item of this.reserve) {
