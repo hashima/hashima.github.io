@@ -509,7 +509,10 @@ const topPage = Vue.component('top-page', {
   },
   mounted: function () {
     axios.get("./toporder.json").then(response => (this.toporder = response.data.order, this.reserve = response.data.reserve));
-    this.reserve.unshift({"name":"----"});
+    this.reserve.unshift({"name":"----","number":0,"position":"P"});
+    for(let v of this.reserve) {
+      console.log(v);
+    }
     this.selectedName[0] = "ボビー";
   },
   computed: {
