@@ -316,8 +316,13 @@
       :visible.sync="dialogVisible"
     >
       <p style="text-align: center">Lorem ipsum</p>
+      <v-ons-select modifier="selectOrderName" v-model="selectedName[0]">
+        <option v-for="item in reserve" :value="item.name">
+          {{ item.name }}
+        </option>
+      </v-ons-select> 
     </v-ons-dialog>
-    
+
         <section style="margin: 16px">
           <v-ons-button modifier="large" style="margin: 6px 0">決　定</v-ons-button>
         </section>
