@@ -264,6 +264,10 @@ body {
   color:#003300;
 }
 
+#offense-page .select-input--selectPh{
+  width:120px;
+}
+
 #order-page .list {
   margin:4px 4px 0 4px;
   border-bottom: 2px solid #FFF;
