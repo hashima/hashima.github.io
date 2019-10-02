@@ -264,9 +264,11 @@ body {
   color:#003300;
 }
 
-.select-input--selectPh{
+.select--selectPh{
   margin: 0 auto 0 auto;
-  width:120px;
+}
+.select-input--selectPh{
+  width:150px;
 }
 
 #order-page .list {
