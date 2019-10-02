@@ -1,39 +1,9 @@
 {
   "reserve":[
     {
-      "name":"ボビー",
-      "number":10,
-      "position":"SS"
-    },
-    {
       "name":"かける",
       "number":0,
       "position":"LF"
-    },
-    {
-      "name":"のあ",
-      "number":1,
-      "position":"P"
-    },
-    {
-      "name":"とら",
-      "number":2,
-      "position":"C"
-    },
-    {
-      "name":"たいき",
-      "number":3,
-      "position":"1B"
-    },
-    {
-      "name":"しえ",
-      "number":4,
-      "position":"2B"
-    },
-    {
-      "name":"かいせい",
-      "number":5,
-      "position":"CF"
     },
     {
       "name":"あきと",
@@ -41,24 +11,9 @@
       "position":"2B"
     },
     {
-      "name":"ゆずき",
-      "number":7,
-      "position":"LF"
-    },
-    {
       "name":"そうた",
       "number":8,
       "position":"SS"
-    },
-    {
-      "name":"ケビン",
-      "number":9,
-      "position":"RF"
-    },
-    {
-      "name":"はる",
-      "number":11,
-      "position":"3B"
     },
     {
       "name":"いっせい",
