@@ -96,8 +96,9 @@ const offensePage = Vue.component('offense-page', {
   template: '#offense',
   data:  ()=> {
     return {
-          dialogPhVisible: false,
-          score: [],
+      dialogPhVisible: false,
+      dialogPr1Visible: false,
+      score: [],
           itemsBatter: defaultSelectItem.itemsBatter,
           itemsDirection:defaultSelectItem.itemsDirection,
           itemsBatterRun: defaultSelectItem.itemsBatterRun,
@@ -123,6 +124,7 @@ const offensePage = Vue.component('offense-page', {
           showSelected2ndRunnerBase: true,
           showSelected3rdRunnerBase: true,
           selectedName: "----",
+          selectedPr1Name: "----",
           reserve: []
         }
   },
@@ -488,6 +490,11 @@ const offensePage = Vue.component('offense-page', {
       this.dialogPhVisible = false
       this.score.batter.number = this.selectedName
       this.score.batter.name = this.getMemberName(this.selectedName)
+    },
+    buttonPr1Submit: function() {
+      this.dialogPr1Visible = false
+      // this.score.batter.number = this.selectedName
+      // this.score.batter.name = this.getMemberName(this.selectedName)
     },
     getMemberName: function(number) {
       for(let item of this.reserve) {
