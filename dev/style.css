@@ -231,7 +231,7 @@ body {
   padding:0 0 0 0px;
 }
 
-#offense-page .button--ph-button{
+#offense-page .button--ph-button.button--pr-button{
   margin: 0 0 0 auto;
   font-size:12px;
   padding:12px 0px 0 0px;
