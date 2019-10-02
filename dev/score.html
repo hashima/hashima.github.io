@@ -274,6 +274,22 @@
               </div>    
             </v-ons-list-item>  
         </v-ons-list>
+
+        <v-ons-dialog
+        cancelable
+        :visible.sync="dialogPh"
+      >
+        <p style="text-align: center">Lorem ipsum</p>
+        <v-ons-select modifier="selectOrderName" v-model="selectedName[0]">
+          <option v-for="item in reserve" :value="item.name">
+            {{ item.name }}
+          </option>
+        </v-ons-select> 
+        <section style="margin: 16px">
+          <v-ons-button modifier="large" style="margin: 6px 0">決　定</v-ons-button>
+        </section>
+      </v-ons-dialog>
+
       </div>
       </v-ons-page>
     </template>
