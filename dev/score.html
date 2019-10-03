@@ -154,7 +154,7 @@
               </div>
             </div>
             <div class="right">
-              <v-ons-button modifier="ph-button" @click="dialogPhVisible = true">代打</v-ons-button>
+              <v-ons-button modifier="ph-button" @click="dialogPhVisible = true" v-bind:disabled="showButtonPh">代打</v-ons-button>
             </div>
           </v-ons-list-item>
           <v-ons-list-item style="height:5px;background-color: white;">

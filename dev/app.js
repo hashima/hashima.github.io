@@ -129,7 +129,8 @@ const offensePage = Vue.component('offense-page', {
           selectedPr1Name: "----",
           selectedPr2Name: "----",
           selectedPr3Name: "----",
-          reserve: []
+          reserve: [],
+          showButtonPh: false
         }
   },
   mounted: function () {
@@ -297,6 +298,12 @@ const offensePage = Vue.component('offense-page', {
         this.$emit('showSelectedBatterDirection')
         this.$emit('selectedBatterResult')
       }
+      if(this.selectedBatterResult === "----"){
+        this.showButtonPh = false;
+      }else{
+        this.showButtonPh = true;
+      }
+
     },
     selectedOnChangeBatterDirection: function(){
       if(this.selectedBatterResult === "ヒット")
