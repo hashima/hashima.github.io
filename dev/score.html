@@ -154,7 +154,7 @@
               </div>
             </div>
             <div class="right">
-              <v-ons-button modifier="ph-button" @click="dialogPhVisible = true" v-bind:disabled="showButtonPh">代打</v-ons-button>
+              <v-ons-button modifier="ph-button" @click="dialogPhVisible = true" v-bind:style="{ opacity: opacityButtonPh }" v-bind:disabled="showButtonPh">代打</v-ons-button>
             </div>
           </v-ons-list-item>
           <v-ons-list-item style="height:5px;background-color: white;">
@@ -187,7 +187,7 @@
               </div>
             </div>
             <div class="right">
-              <v-ons-button modifier="pr-button" @click="dialogPr1Visible = true">代走</v-ons-button>
+              <v-ons-button modifier="pr-button" @click="dialogPr1Visible = true" v-bind:style="{ opacity: opacityButtonPr1 }" v-bind:disabled="showButtonPr1">代走</v-ons-button>
             </div>
          </v-ons-list-item>
           <v-ons-list-item modifier="score-list-item" v-if="score.runner2nd">
@@ -216,7 +216,7 @@
               </div>
             </div>
             <div class="right">
-              <v-ons-button modifier="pr-button" @click="dialogPr2Visible = true">代走</v-ons-button>
+              <v-ons-button modifier="pr-button" @click="dialogPr2Visible = true" v-bind:style="{ opacity: opacityButtonPr2 }" v-bind:disabled="showButtonPr2">代走</v-ons-button>
             </div>
          </v-ons-list-item>
           <v-ons-list-item modifier="score-list-item" v-if="score.runner3rd">
@@ -245,7 +245,7 @@
               </div>
             </div>
             <div class="right">
-              <v-ons-button modifier="pr-button" @click="dialogPr3Visible = true">代走</v-ons-button>
+              <v-ons-button modifier="pr-button" @click="dialogPr3Visible = true" v-bind:style="{ opacity: opacityButtonPr3 }" v-bind:disabled="showButtonPr3">代走</v-ons-button>
             </div>
          </v-ons-list-item>
           <v-ons-list-item modifier="score-list-item-diamond">
@@ -288,7 +288,7 @@
           </v-ons-select>
         </p> 
         <section style="margin: 16px">
-          <v-ons-button modifier="large" style="margin: 6px 0" @click="buttonPhSubmit">決　定</v-ons-button>
+          <v-ons-button modifier="large" sytle="margin: 6px 0;" @click="buttonPhSubmit">決　定</v-ons-button>
         </section>
       </v-ons-dialog>
 

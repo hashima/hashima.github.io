@@ -130,7 +130,14 @@ const offensePage = Vue.component('offense-page', {
           selectedPr2Name: "----",
           selectedPr3Name: "----",
           reserve: [],
-          showButtonPh: false
+          showButtonPh: false,
+          showButtonPr1: false,
+          showButtonPr2: false,
+          showButtonPr3: false,
+          opacityButtonPh: '1.0',
+          opacityButtonPr1: '1.0',
+          opacityButtonPr2: '1.0',
+          opacityButtonPr3: '1.0'
         }
   },
   mounted: function () {
@@ -200,6 +207,7 @@ const offensePage = Vue.component('offense-page', {
           { text: '本塁Out', value: '本塁Out' },
         ]
         this.selectedBatterRun = "1塁へ"
+        this.showSelectedBatterDirection = true
         this.$emit('selectedBatterRun')
         this.selectedOnChangeBatterRun()
         this.showSelectedBatterRun = false
@@ -210,6 +218,7 @@ const offensePage = Vue.component('offense-page', {
       else if(this.selectedBatterResult === "死球")
       {
         this.selectedBatterRun = "1塁へ"
+        this.showSelectedBatterDirection = true
         this.$emit('selectedBatterRun')
         this.selectedOnChangeBatterRun()
         this.showSelectedBatterRun = true
@@ -298,12 +307,7 @@ const offensePage = Vue.component('offense-page', {
         this.$emit('showSelectedBatterDirection')
         this.$emit('selectedBatterResult')
       }
-      if(this.selectedBatterResult === "----"){
-        this.showButtonPh = false;
-      }else{
-        this.showButtonPh = true;
-      }
-
+      this.switchDisplay();
     },
     selectedOnChangeBatterDirection: function(){
       if(this.selectedBatterResult === "ヒット")
@@ -373,15 +377,20 @@ const offensePage = Vue.component('offense-page', {
         this.$emit('selected1stRunner')
         this.selected1stBase = "2塁へ"
         if(this.score.runner2nd != null){
-          this.selected2ndRunner = his.selected1stRunner
+          this.selected2ndRunner = this.selected1stRunner
           this.selected2ndBase = "3塁へ"
           this.showSelected2ndRunnerBase = false
           if(this.score.runner3rd != null){
-            this.selected3rdRunner = his.selected1stRunner
+            this.selected3rdRunner = this.selected1stRunner
             this.selected3rdBase = "本塁へ"
             this.showSelected3rdRunnerBase = false
           }
         }
+        if(this.selected1stRunner == "----"){
+          this.selected1stBase = "----"
+          this.showSelected1stRunnerBase = true
+        }
+        this.switchDisplay()
       }
       else if(base == '2nd')
       {
@@ -390,10 +399,15 @@ const offensePage = Vue.component('offense-page', {
         this.$emit('selected2ndRunner')
         this.selected2ndBase = "2塁へ"
         if(this.score.runner3rd != null){
-          this.selected3rdRunner = his.selected2ndRunner
+          this.selected3rdRunner = this.selected2ndRunner
           this.selected3rdBase = "本塁へ"
           this.showSelected3rdRunnerBase = false
         }
+        if(this.selected2ndRunner == "----"){
+          this.selected2ndBase = "----"
+          this.showSelected2ndRunnerBase = true
+        }
+        this.switchDisplay()
       }
       else if(base == '3rd')
       {
@@ -401,6 +415,11 @@ const offensePage = Vue.component('offense-page', {
         this.$emit('showSelected3rdRunnerBase')
         this.$emit('selected3rdRunner')
         this.selected3rdBase = "本塁へ"
+        this.switchDisplay()
+        if(this.selected3rdRunner == "----"){
+          this.selected3rdBase = "----"
+          this.showSelected3rdRunnerBase = true
+        }
       }
     },
     getRunnerInfo: function(base){
@@ -416,6 +435,37 @@ const offensePage = Vue.component('offense-page', {
       }
     }
       return null;
+    },
+    switchDisplay: function() {
+      if(this.selectedBatterResult === "----"){
+        this.showButtonPh = false;
+        this.opacityButtonPh = 1.0;
+      }else{
+        this.showButtonPh = true;
+        this.opacityButtonPh = 0.4;
+      }
+
+      if(this.selected1stRunner === "----"){
+        this.showButtonPr1 = false;
+        this.opacityButtonPr1 = 1.0;
+      }else{
+        this.showButtonPr1 = true;
+        this.opacityButtonPr1 = 0.4;
+      }
+      if(this.selected2ndRunner === "----"){
+        this.showButtonPr2 = false;
+        this.opacityButtonPr2 = 1.0;
+      }else{
+        this.showButtonPr2 = true;
+        this.opacityButtonPr2 = 0.4;
+      }
+      if(this.selected3rdRunner === "----"){
+        this.showButtonPr3 = false;
+        this.opacityButtonPr3 = 1.0;
+      }else{
+        this.showButtonPr3 = true;
+        this.opacityButtonPr3 = 0.4;
+      }
     },
     advance: function(count){
       if(count == 1)
