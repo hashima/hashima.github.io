@@ -131,7 +131,13 @@ const offensePage = Vue.component('offense-page', {
           selectedPr3Name: "----",
           reserve: [],
           showButtonPh: false,
-          opacity: '1.0'
+          showButtonPr1: false,
+          showButtonPr2: false,
+          showButtonPr3: false,
+          opacityButtonPh: '1.0',
+          opacityButtonPr1: '1.0',
+          opacityButtonPr2: '1.0',
+          opacityButtonPr3: '1.0'
         }
   },
   mounted: function () {
@@ -301,10 +307,10 @@ const offensePage = Vue.component('offense-page', {
       }
       if(this.selectedBatterResult === "----"){
         this.showButtonPh = false;
-        this.opacity = 1.0;
+        this.opacityButtonPh = 1.0;
       }else{
         this.showButtonPh = true;
-        this.opacity = 0.2;
+        this.opacityButtonPh = 0.4;
       }
 
     },
@@ -385,6 +391,13 @@ const offensePage = Vue.component('offense-page', {
             this.showSelected3rdRunnerBase = false
           }
         }
+        if(this.selected1stRunner === "----"){
+          this.showButtonPr1 = false;
+          this.opacityButtonPr1 = 1.0;
+        }else{
+          this.showButtonPr1 = true;
+          this.opacityButtonPr1 = 0.4;
+        }
       }
       else if(base == '2nd')
       {
@@ -397,6 +410,13 @@ const offensePage = Vue.component('offense-page', {
           this.selected3rdBase = "本塁へ"
           this.showSelected3rdRunnerBase = false
         }
+        if(this.selected2ndRunner === "----"){
+          this.showButtonPr2 = false;
+          this.opacityButtonPr2 = 1.0;
+        }else{
+          this.showButtonPr2 = true;
+          this.opacityButtonPr2 = 0.4;
+        }
       }
       else if(base == '3rd')
       {
@@ -404,6 +424,13 @@ const offensePage = Vue.component('offense-page', {
         this.$emit('showSelected3rdRunnerBase')
         this.$emit('selected3rdRunner')
         this.selected3rdBase = "本塁へ"
+        if(this.selected3rdRunner === "----"){
+          this.showButtonPr3 = false;
+          this.opacityButtonPr3 = 1.0;
+        }else{
+          this.showButtonPr3 = true;
+          this.opacityButtonPr3 = 0.4;
+        }
       }
     },
     getRunnerInfo: function(base){
