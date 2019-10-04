@@ -130,7 +130,11 @@ const offensePage = Vue.component('offense-page', {
           selectedPr2Name: "----",
           selectedPr3Name: "----",
           reserve: [],
-          showButtonPh: false
+          showButtonPh: false,
+          styleObject: {
+            margin: '6px 0',
+            opacity: '0.0'
+          }
         }
   },
   mounted: function () {
