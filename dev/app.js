@@ -382,11 +382,11 @@ const offensePage = Vue.component('offense-page', {
         this.$emit('selected1stRunner')
         this.selected1stBase = "2塁へ"
         if(this.score.runner2nd != null){
-          this.selected2ndRunner = his.selected1stRunner
+          this.selected2ndRunner = this.selected1stRunner
           this.selected2ndBase = "3塁へ"
           this.showSelected2ndRunnerBase = false
           if(this.score.runner3rd != null){
-            this.selected3rdRunner = his.selected1stRunner
+            this.selected3rdRunner = this.selected1stRunner
             this.selected3rdBase = "本塁へ"
             this.showSelected3rdRunnerBase = false
           }
@@ -406,7 +406,7 @@ const offensePage = Vue.component('offense-page', {
         this.$emit('selected2ndRunner')
         this.selected2ndBase = "2塁へ"
         if(this.score.runner3rd != null){
-          this.selected3rdRunner = his.selected2ndRunner
+          this.selected3rdRunner = this.selected2ndRunner
           this.selected3rdBase = "本塁へ"
           this.showSelected3rdRunnerBase = false
         }
