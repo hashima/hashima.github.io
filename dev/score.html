@@ -187,7 +187,7 @@
               </div>
             </div>
             <div class="right">
-              <v-ons-button modifier="pr-button" @click="dialogPr1Visible = true">代走</v-ons-button>
+              <v-ons-button modifier="pr-button" @click="dialogPr1Visible = true" v-bind:style="{ opacity: opacityButtonPr1 }" v-bind:disabled="showButtonPr1">代走</v-ons-button>
             </div>
          </v-ons-list-item>
           <v-ons-list-item modifier="score-list-item" v-if="score.runner2nd">
