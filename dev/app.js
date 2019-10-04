@@ -132,8 +132,7 @@ const offensePage = Vue.component('offense-page', {
           reserve: [],
           showButtonPh: false,
           styleObject: {
-            margin: '6px 0',
-            opacity: '0.0'
+            opacity: '1.0'
           }
         }
   },

@@ -154,7 +154,7 @@
               </div>
             </div>
             <div class="right">
-              <v-ons-button modifier="ph-button" @click="dialogPhVisible = true" v-bind:disabled="showButtonPh">代打</v-ons-button>
+              <v-ons-button modifier="ph-button" @click="dialogPhVisible = true" v-bind:style="styleObject" v-bind:disabled="showButtonPh">代打</v-ons-button>
             </div>
           </v-ons-list-item>
           <v-ons-list-item style="height:5px;background-color: white;">
@@ -288,7 +288,7 @@
           </v-ons-select>
         </p> 
         <section style="margin: 16px">
-          <v-ons-button modifier="large" v-bind:style="styleObject" @click="buttonPhSubmit">決　定</v-ons-button>
+          <v-ons-button modifier="large" sytle="margin: 6px 0;" @click="buttonPhSubmit">決　定</v-ons-button>
         </section>
       </v-ons-dialog>
 
