@@ -207,6 +207,7 @@ const offensePage = Vue.component('offense-page', {
           { text: '本塁Out', value: '本塁Out' },
         ]
         this.selectedBatterRun = "1塁へ"
+        this.showSelectedBatterDirection = true
         this.$emit('selectedBatterRun')
         this.selectedOnChangeBatterRun()
         this.showSelectedBatterRun = false
@@ -217,6 +218,7 @@ const offensePage = Vue.component('offense-page', {
       else if(this.selectedBatterResult === "死球")
       {
         this.selectedBatterRun = "1塁へ"
+        this.showSelectedBatterDirection = true
         this.$emit('selectedBatterRun')
         this.selectedOnChangeBatterRun()
         this.showSelectedBatterRun = true
