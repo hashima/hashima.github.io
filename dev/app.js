@@ -301,10 +301,10 @@ const offensePage = Vue.component('offense-page', {
       }
       if(this.selectedBatterResult === "----"){
         this.showButtonPh = false;
-        styleObject.opacity = 1.0;
+        this.opacity = 1.0;
       }else{
         this.showButtonPh = true;
-        styleObject.opacity = 0.2;
+        this.opacity = 0.2;
       }
 
     },
