@@ -305,7 +305,7 @@ const offensePage = Vue.component('offense-page', {
         this.$emit('showSelectedBatterDirection')
         this.$emit('selectedBatterResult')
       }
-      switchDisplay();
+      this.switchDisplay();
     },
     selectedOnChangeBatterDirection: function(){
       if(this.selectedBatterResult === "ヒット")
@@ -384,7 +384,7 @@ const offensePage = Vue.component('offense-page', {
             this.showSelected3rdRunnerBase = false
           }
         }
-        switchDisplay()
+        this.switchDisplay()
       }
       else if(base == '2nd')
       {
@@ -397,7 +397,7 @@ const offensePage = Vue.component('offense-page', {
           this.selected3rdBase = "本塁へ"
           this.showSelected3rdRunnerBase = false
         }
-        switchDisplay()
+        this.switchDisplay()
       }
       else if(base == '3rd')
       {
@@ -405,7 +405,7 @@ const offensePage = Vue.component('offense-page', {
         this.$emit('showSelected3rdRunnerBase')
         this.$emit('selected3rdRunner')
         this.selected3rdBase = "本塁へ"
-        switchDisplay()
+        this.switchDisplay()
       }
     },
     getRunnerInfo: function(base){
