@@ -388,7 +388,6 @@ const offensePage = Vue.component('offense-page', {
         }
         if(this.selected1stRunner == "----"){
           this.selected1stBase = "----"
-          this.selected1stBase = "----"
           this.showSelected1stRunnerBase = true
         }
         this.switchDisplay()
@@ -406,7 +405,6 @@ const offensePage = Vue.component('offense-page', {
         }
         if(this.selected2ndRunner == "----"){
           this.selected2ndBase = "----"
-          this.selected2ndBase = "----"
           this.showSelected2ndRunnerBase = true
         }
         this.switchDisplay()
@@ -419,7 +417,6 @@ const offensePage = Vue.component('offense-page', {
         this.selected3rdBase = "本塁へ"
         this.switchDisplay()
         if(this.selected3rdRunner == "----"){
-          this.selected3rdBase = "----"
           this.selected3rdBase = "----"
           this.showSelected3rdRunnerBase = true
         }
