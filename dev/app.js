@@ -305,14 +305,7 @@ const offensePage = Vue.component('offense-page', {
         this.$emit('showSelectedBatterDirection')
         this.$emit('selectedBatterResult')
       }
-      if(this.selectedBatterResult === "----"){
-        this.showButtonPh = false;
-        this.opacityButtonPh = 1.0;
-      }else{
-        this.showButtonPh = true;
-        this.opacityButtonPh = 0.4;
-      }
-
+      switchDisplay();
     },
     selectedOnChangeBatterDirection: function(){
       if(this.selectedBatterResult === "ヒット")
@@ -391,13 +384,7 @@ const offensePage = Vue.component('offense-page', {
             this.showSelected3rdRunnerBase = false
           }
         }
-        if(this.selected1stRunner === "----"){
-          this.showButtonPr1 = false;
-          this.opacityButtonPr1 = 1.0;
-        }else{
-          this.showButtonPr1 = true;
-          this.opacityButtonPr1 = 0.4;
-        }
+        switchDisplay()
       }
       else if(base == '2nd')
       {
@@ -410,13 +397,7 @@ const offensePage = Vue.component('offense-page', {
           this.selected3rdBase = "本塁へ"
           this.showSelected3rdRunnerBase = false
         }
-        if(this.selected2ndRunner === "----"){
-          this.showButtonPr2 = false;
-          this.opacityButtonPr2 = 1.0;
-        }else{
-          this.showButtonPr2 = true;
-          this.opacityButtonPr2 = 0.4;
-        }
+        switchDisplay()
       }
       else if(base == '3rd')
       {
@@ -424,13 +405,7 @@ const offensePage = Vue.component('offense-page', {
         this.$emit('showSelected3rdRunnerBase')
         this.$emit('selected3rdRunner')
         this.selected3rdBase = "本塁へ"
-        if(this.selected3rdRunner === "----"){
-          this.showButtonPr3 = false;
-          this.opacityButtonPr3 = 1.0;
-        }else{
-          this.showButtonPr3 = true;
-          this.opacityButtonPr3 = 0.4;
-        }
+        switchDisplay()
       }
     },
     getRunnerInfo: function(base){
@@ -446,6 +421,37 @@ const offensePage = Vue.component('offense-page', {
       }
     }
       return null;
+    },
+    switchDisplay: function() {
+      if(this.selectedBatterResult === "----"){
+        this.showButtonPh = false;
+        this.opacityButtonPh = 1.0;
+      }else{
+        this.showButtonPh = true;
+        this.opacityButtonPh = 0.4;
+      }
+
+      if(this.selected1stRunner === "----"){
+        this.showButtonPr1 = false;
+        this.opacityButtonPr1 = 1.0;
+      }else{
+        this.showButtonPr1 = true;
+        this.opacityButtonPr1 = 0.4;
+      }
+      if(this.selected2ndRunner === "----"){
+        this.showButtonPr2 = false;
+        this.opacityButtonPr2 = 1.0;
+      }else{
+        this.showButtonPr2 = true;
+        this.opacityButtonPr2 = 0.4;
+      }
+      if(this.selected3rdRunner === "----"){
+        this.showButtonPr3 = false;
+        this.opacityButtonPr3 = 1.0;
+      }else{
+        this.showButtonPr3 = true;
+        this.opacityButtonPr3 = 0.4;
+      }
     },
     advance: function(count){
       if(count == 1)
