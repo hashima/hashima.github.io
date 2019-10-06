@@ -31,11 +31,4 @@ class ApiController extends Controller
         ]);
     }
 
-    public function text()
-    {
-        return response()->json({
-            
-        });
-
-    }
 }

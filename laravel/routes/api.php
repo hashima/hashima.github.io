@@ -7,7 +7,7 @@ Route::group(["middleware" => "guest:api"], function () {
 });
 
 Route::group(["middleware" => "guest:api"], function () {
-    Route::get("/text", "ApiController@text");
+    Route::get("/text", "TextController@text");
 });
 
 Route::group(["middleware" => "auth:api"], function () {
