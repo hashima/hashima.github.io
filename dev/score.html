@@ -373,7 +373,7 @@
                 {{ data.name }}
               </v-ons-col>
               <v-ons-col width="46px">
-                <v-ons-button modifier="change-button" v-on:change="buttonPChange()">交代</v-ons-button>
+                <v-ons-button modifier="change-button" @click="dialogPlayerChange = true;onChangeOrder = index">交代</v-ons-button>
               </v-ons-col>
             </v-ons-row>
           </v-ons-list-item>
@@ -387,7 +387,7 @@
           cancelable
           :visible.sync="dialogPlayerChange"
         >
-          <p style="text-align: center"><span >番</span></p>
+          <p style="text-align: center"><span >{{ onChangeOrder }}番</span></p>
           <p style="text-align: center">
           <!-- <v-ons-select modifier="selectPh" v-model="selectedName">
             <option v-for="item in reserve" :value="item.number" :key="item.number">

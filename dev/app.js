@@ -594,6 +594,7 @@ const topPage = Vue.component('top-page', {
   data:  ()=> {
       return {
         dialogPlayerChange: false,
+        onChangeOrder: 0,
         toporder: [],
         reserve: [],
         itemsPosition:[
