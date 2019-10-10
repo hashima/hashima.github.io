@@ -618,6 +618,8 @@ const topPage = Vue.component('top-page', {
   },
   created: function() {
     axios.get("./membertop.json").then(response => (this.member = response.data.member));
+    console.log('created');
+    console.log(this.member);
   },
   mounted: function () {
     axios.get("./toporder.json").then(response => (this.toporder = response.data.order, this.reserve = response.data.reserve));
