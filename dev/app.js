@@ -646,6 +646,7 @@ const topPage = Vue.component('top-page', {
         }
       }
       this.$set('member', order);
+      return;
     }
   }, 
   computed: {
