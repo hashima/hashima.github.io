@@ -651,14 +651,14 @@ const topPage = Vue.component('top-page', {
   computed: {
     members: function() {
       console.log('filter');
-      let members = [];
+      let mems = [];
       for (let i in this.member) {
         let p = this.member[i];
         if (p.order > 0) {
-          members.push(p);
+          mems.push(p);
         }
       }
-      return members;
+      return mems;
     }
   }
 })
