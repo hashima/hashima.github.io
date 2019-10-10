@@ -625,11 +625,9 @@ const topPage = Vue.component('top-page', {
          .then(console.log(this.toporder)
           );
     axios.get("./membertop.json")
-         .then(response => (this.member = response.data))
-         .then(console.log('created'),
-          console.log(this.member),
-          this.setOrder(),
-          );
+         .then(function(res) {
+            this.member = res.data;
+          });
   },
   methods: {
     buttonPChange: function() {
@@ -637,17 +635,30 @@ const topPage = Vue.component('top-page', {
     },
     setOrder: function() {
       console.log('setOrder');
+      order = [];
       for(let item in this.member)
       {
         console.log(item.name);
         if(item.order > 0)
         {
-          this.member[item.order] = item;
+          order[item.order] = item;
         }
       }
+      this.$set(this.member, member, order);
     }
   }, 
   computed: {
+    members: function() {
+      console.log('filter');
+      let members = [];
+      for (let i in this.member) {
+        let p = this.member[i];
+        if (p.order > 0) {
+          members.push(p);
+        }
+      }
+      return members;
+    }
   }
 })
 
