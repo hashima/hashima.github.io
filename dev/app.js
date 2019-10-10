@@ -622,12 +622,12 @@ const topPage = Vue.component('top-page', {
     console.log(this.member);
   },
   mounted: function () {
-    axios.get("./toporder.json").then(response => (this.toporder = response.data.order, this.reserve = response.data.reserve));
-    for(let v of this.reserve) {
-      console.log(v);
-    }
-    console.log('mounted');
-    console.log(this.toporder);
+    axios.get("./toporder.json")
+         .then(response => (this.toporder = response.data.order, this.reserve = response.data.reserve)
+         .then(
+    console.log('mounted'),
+    console.log(this.toporder)
+    ));
   },
   methods: {
     buttonPChange: function() {
