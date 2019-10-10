@@ -626,7 +626,7 @@ const topPage = Vue.component('top-page', {
           );
     axios.get("./membertop.json")
          .then(function(res) {
-            this.member = res.data;
+            this.member = res.data,
             this.setOrder();
           });
   },
