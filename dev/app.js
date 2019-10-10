@@ -616,9 +616,11 @@ const topPage = Vue.component('top-page', {
           selectedNumber: ['----','----','----','----','----','----','----','----','----','----']
         }
   },
+  created: function() {
+    axios.get("./membertop.json").then(response => (this.member = response.data.member));
+  },
   mounted: function () {
     axios.get("./toporder.json").then(response => (this.toporder = response.data.order, this.reserve = response.data.reserve));
-    axios.get("./membertop.json").then(response => (this.member = response.data.member));
     for(let v of this.reserve) {
       console.log(v);
     }
