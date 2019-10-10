@@ -304,7 +304,7 @@ body {
 }
 
 #order-page .order-row {
-  height: 40px;
+  height: 38px;
 }
 
 #order-page .order{
@@ -313,7 +313,7 @@ body {
   padding: 6px 4px 0 4px;
   margin: 0 0 0 2px;
   text-align: center;
-  height:30px;
+  height:28px;
   width:18px;
   background-color: #FFF;
   color:#003300;
