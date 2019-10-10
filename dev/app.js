@@ -629,7 +629,7 @@ const topPage = Vue.component('top-page', {
          .then(console.log('created'),
           console.log(this.member),
           this.member = [],
-          setOrder(),
+          this.setOrder(),
           );
   },
   methods: {
