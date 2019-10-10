@@ -628,28 +628,26 @@ const topPage = Vue.component('top-page', {
          .then(response => (this.member = response.data))
          .then(console.log('created'),
           console.log(this.member),
+          this.member = [],
+          setOrder(),
           );
   },
   methods: {
     buttonPChange: function() {
       this.dialogPlayerChange = true;
-    }
-  }, 
-  computed: {
-    getOrder: function()
-    {
-      console.log('getOrder')
-      order = [];
+    },
+    setOrder: function() {
       for(let item in this.member)
       {
         console.log(item.name)
         if(item.order > 0)
         {
-          order[item.order] = item;
+          this.member[item.order] = item;
         }
       }
-      return order;
     }
+  }, 
+  computed: {
   }
 })
 
