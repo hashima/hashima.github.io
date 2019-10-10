@@ -370,6 +370,17 @@ body {
   width: 100%;
 }
 
+#order-page .button--change-button{
+  margin: 0 0 0 auto;
+  font-size:12px;
+  padding:12px 0px 0 0px;
+  text-align: center;
+  height:61px;
+  width:38px;
+  background-color: #FFF;
+  color:#003300;
+}
+
 #text-page .loadstate {
   color: white;
 }
