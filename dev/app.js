@@ -617,7 +617,7 @@ const topPage = Vue.component('top-page', {
         }
   },
   created: function() {
-    axios.get("./membertop.json").then(response => (this.member = response.data.member));
+    axios.get("./membertop.json").then(response => (this.member = response.data));
     console.log('created');
     console.log(this.member);
   },
@@ -626,6 +626,8 @@ const topPage = Vue.component('top-page', {
     for(let v of this.reserve) {
       console.log(v);
     }
+    console.log('mounted');
+    console.log(this.toporder);
   },
   methods: {
     buttonPChange: function() {
