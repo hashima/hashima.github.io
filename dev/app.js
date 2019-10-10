@@ -619,11 +619,11 @@ const topPage = Vue.component('top-page', {
   created: function() {
   },
   mounted: function () {
-    axios.get("./toporder.json")
-         .then(response => (this.toporder = response.data.order, this.reserve = response.data.reserve))
-         .then(console.log('mounted'))
-         .then(console.log(this.toporder)
-          );
+ //   axios.get("./toporder.json")
+  //       .then(response => (this.toporder = response.data.order, this.reserve = response.data.reserve))
+ //        .then(console.log('mounted'))
+  //       .then(console.log(this.toporder)
+ //         );
     axios.get("./membertop.json")
          .then(response => (this.member = response.data.member))
          ;
@@ -635,6 +635,7 @@ const topPage = Vue.component('top-page', {
     setOrder: function() {
       console.log('setOrder');
       order = [];
+      this.reserve = [];
       for(let item in this.member)
       {
         console.log(item.name);
@@ -642,7 +643,8 @@ const topPage = Vue.component('top-page', {
         {
           order[item.order] = item;
           selectedPosition[item.order] = item.position;
-
+        } else {
+          this.reserve.push(item)
         }
       }
       this.$set('member', order);
@@ -658,6 +660,8 @@ const topPage = Vue.component('top-page', {
         if (p.order > 0) {
           mems[p.order-1] = p;
           this.selectedPosition[p.order-1] = p.position;
+        } else {
+          this.reserve.push(p);
         }
       }
       return mems;
