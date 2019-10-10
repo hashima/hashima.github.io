@@ -626,18 +626,20 @@ const topPage = Vue.component('top-page', {
           );
     axios.get("./membertop.json")
          .then(function(res) {
-          this.setOrder(res.data)
+            this.member = res.data.member
             
-          });
+          },
+          this.setOrder()
+          );
   },
   methods: {
     buttonPChange: function() {
       this.dialogPlayerChange = true;
     },
-    setOrder: function(members) {
+    setOrder: function() {
       console.log('setOrder');
       order = [];
-      for(let item in members)
+      for(let item in this.member)
       {
         console.log(item.name);
         if(item.order > 0)
