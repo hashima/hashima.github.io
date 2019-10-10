@@ -597,6 +597,7 @@ const topPage = Vue.component('top-page', {
         onChangeOrder: 0,
         toporder: [],
         reserve: [],
+        member: [],
         itemsPosition:[
             { text: '----', value: '----' },
             { text: 'P', value: 'P' },
@@ -617,11 +618,10 @@ const topPage = Vue.component('top-page', {
   },
   mounted: function () {
     axios.get("./toporder.json").then(response => (this.toporder = response.data.order, this.reserve = response.data.reserve));
-    this.reserve.unshift({"name":"----","number":0,"position":"P"});
+    axios.get("./membertop.json").then(response => (this.member = response.data.member));
     for(let v of this.reserve) {
       console.log(v);
     }
-    this.selectedName[0] = "ボビー";
   },
   methods: {
     buttonPChange: function() {
@@ -629,6 +629,18 @@ const topPage = Vue.component('top-page', {
     }
   }, 
   computed: {
+    getOrder: function()
+    {
+      order = [];
+      for(let item in this.member)
+      {
+        if(item.order > 0)
+        {
+          order[item.order] = item;
+        }
+      }
+      return order;
+    }
   }
 })
 
