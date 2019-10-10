@@ -641,6 +641,8 @@ const topPage = Vue.component('top-page', {
         if(item.order > 0)
         {
           order[item.order] = item;
+          selectedPosition[item.order] = item.position;
+
         }
       }
       this.$set('member', order);
@@ -655,6 +657,7 @@ const topPage = Vue.component('top-page', {
         let p = this.member[i];
         if (p.order > 0) {
           mems[p.order-1] = p;
+          selectedPosition[item.order] = item.position;
         }
       }
       return mems;
