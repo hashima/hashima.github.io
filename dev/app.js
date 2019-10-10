@@ -636,10 +636,10 @@ const topPage = Vue.component('top-page', {
       this.dialogPlayerChange = true;
     },
     setOrder: function() {
-      console.log('setOrder')
+      console.log('setOrder');
       for(let item in this.member)
       {
-        console.log(item.name)
+        console.log(item.name);
         if(item.order > 0)
         {
           this.member[item.order] = item;
