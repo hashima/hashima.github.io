@@ -638,6 +638,7 @@ const topPage = Vue.component('top-page', {
   computed: {
     getOrder: function()
     {
+      console.log('getOrder')
       order = [];
       for(let item in this.member)
       {
