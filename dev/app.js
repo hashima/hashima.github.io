@@ -628,7 +628,6 @@ const topPage = Vue.component('top-page', {
          .then(response => (this.member = response.data))
          .then(console.log('created'),
           console.log(this.member),
-          this.member = [],
           this.setOrder(),
           );
   },
@@ -637,6 +636,7 @@ const topPage = Vue.component('top-page', {
       this.dialogPlayerChange = true;
     },
     setOrder: function() {
+      console.log('setOrder')
       for(let item in this.member)
       {
         console.log(item.name)
