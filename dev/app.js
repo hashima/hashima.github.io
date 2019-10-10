@@ -656,7 +656,8 @@ const topPage = Vue.component('top-page', {
         let p = this.member[i];
         if (p.order > 0) {
           // mems.push(p);
-          mems[p.order] = p
+          mems[p.order] = p;
+          mems.push(p);
         }
       }
       return mems;
