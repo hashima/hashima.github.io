@@ -593,7 +593,7 @@ const topPage = Vue.component('top-page', {
   template: '#top',
   data:  ()=> {
       return {
-        dialogPhVisible: false,
+        dialogPlayerChange: false,
         toporder: [],
         reserve: [],
         itemsPosition:[
@@ -622,6 +622,11 @@ const topPage = Vue.component('top-page', {
     }
     this.selectedName[0] = "ボビー";
   },
+  methods: {
+    buttonPChange: function() {
+      this.dialogPlayerChange = true;
+    }
+  }, 
   computed: {
   }
 })
