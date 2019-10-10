@@ -305,6 +305,7 @@ body {
 
 #order-page .order-row {
   height: 44px;
+  padding: 2px;
 }
 
 #order-page .order{
@@ -313,7 +314,7 @@ body {
   padding: 6px 4px 0 4px;
   margin: 0 0 0 2px;
   text-align: center;
-  height:28px;
+  height:30px;
   width:18px;
   background-color: #FFF;
   color:#003300;
@@ -326,14 +327,14 @@ body {
 }
 
 .select--order{
-  font-size:20px;
+  font-size:18px;
   border :1px solid #fff;
   background-color: #003300;
   color:#FFF;
   margin:1px 0 0 1px;
 }
 .select-input--order{
-  font-size:20px;
+  font-size:18px;
   background-color: #003300;
   color:#FFF;
   width:180px;
@@ -359,7 +360,7 @@ body {
   font-size:12px;
   padding:0px 0px 0 0px;
   text-align: center;
-  height:26px;
+  height:36px;
   width:38px;
   background-color: #FFF;
   color:#003300;
