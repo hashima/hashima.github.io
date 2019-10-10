@@ -617,16 +617,18 @@ const topPage = Vue.component('top-page', {
         }
   },
   created: function() {
-    axios.get("./membertop.json")
-         .then(response => (this.member = response.data))
-         .then(console.log('created'))
-         .then(console.log(this.member));
   },
   mounted: function () {
     axios.get("./toporder.json")
-         .then(response => (this.toporder = response.data.order, this.reserve = response.data.reserve))
-         .then(console.log('mounted'))
-         .then(console.log(this.toporder));
+         .then(response => (this.toporder = response.data.order, this.reserve = response.data.reserve),
+          console.log('mounted'),
+          console.log(this.toporder),
+          );
+    axios.get("./membertop.json")
+         .then(response => (this.member = response.data),
+          console.log('created'),
+          console.log(this.member),
+          );
   },
   methods: {
     buttonPChange: function() {
