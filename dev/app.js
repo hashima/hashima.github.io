@@ -641,6 +641,7 @@ const topPage = Vue.component('top-page', {
       order = [];
       for(let item in this.member)
       {
+        console.log(item.name)
         if(item.order > 0)
         {
           order[item.order] = item;
