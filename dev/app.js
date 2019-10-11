@@ -613,7 +613,8 @@ const topPage = Vue.component('top-page', {
           itemsRunner:defaultSelectItem.itemsRunner,
           selectedPosition: ['----','----','----','----','----','----','----','----','----','----'],
           selectedName: '',
-          selectedNumber: ''
+          selectedNumber: '',
+          modalVisible: false
         }
   },
   created: function() {
