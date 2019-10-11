@@ -630,29 +630,17 @@ const topPage = Vue.component('top-page', {
   },
   methods: {
     buttonPCSubmit: function() {
+      this.showModal();
       this.member[0].order = 1;
       this.member = this.member;
       this.dialogPlayerChange = false;
       this.selectedName = null;
 
     },
-    setOrder: function() {
-      console.log('setOrder');
-      order = [];
-      this.reserve = [];
-      for(let item in this.member)
-      {
-        console.log(item.name);
-        if(item.order > 0)
-        {
-          order[item.order] = item;
-          selectedPosition[item.order] = item.position;
-        } else {
-          this.reserve.push(item)
-        }
-      }
-      this.$set('member', order);
-      return;
+    showModal() {
+      this.modalVisible = true;
+      clearTimeout(this.timeoutID);
+      this.timeoutID = setTimeout(() => this.modalVisible = false, 2000);
     }
   }, 
   computed: {

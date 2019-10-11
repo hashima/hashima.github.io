@@ -400,7 +400,14 @@
           </section>
         </v-ons-dialog>
 
-
+        <v-ons-modal :visible="modalVisible" @click="modalVisible = false">
+          <p style="text-align: center">
+            Loading <v-ons-icon icon="fa-spinner" spin></v-ons-icon>
+            <br><br>
+            Click or wait
+          </p>
+        </v-ons-modal>
+        
         </div>
       </v-ons-page>
     </template>
