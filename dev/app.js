@@ -643,6 +643,7 @@ const topPage = Vue.component('top-page', {
       this.modalVisible = true;
       axios.get("./memberbottom.json")
       .then(response => (this.member = response.data.member))
+      .then(sleep(2000))
       .then(this.modalVisible = false)
       ;
 
