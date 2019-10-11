@@ -631,7 +631,7 @@ const topPage = Vue.component('top-page', {
           selectedPosition: ['----','----','----','----','----','----','----','----','----','----'],
           selectedName: '',
           selectedNumber: '',
-          // modalVisible: false,
+          modalVisible: false,
           timeoutID: 0
         }
   },
@@ -654,11 +654,12 @@ const topPage = Vue.component('top-page', {
 
     },
     showModal() {
-      store.commit('setModalVisibleOn');
+      // store.commit('setModalVisibleOn');
+      this.modalVisible = true;
       axios.get("./memberbottom.json")
       .then(response => {this.member = response.data.member;
-                          // sleep(2000);
-                          store.commit('setModalVisibleOff');
+                          // store.commit('setModalVisibleOff');
+                          this.modalVisible = false;
                           this.dialogPlayerChange = false;
       });
 
@@ -681,9 +682,10 @@ const topPage = Vue.component('top-page', {
       }
       return mems;
     },
-    modalVisible: function() {
+    modalVisibleC: function() {
       console.log('modalVisible');
-      return store.state.modalVisible;
+      // return store.state.modalVisible;
+      return this.modalVisible;
     }
   }
 })
