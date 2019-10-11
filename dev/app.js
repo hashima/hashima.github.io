@@ -77,10 +77,12 @@ const store = new Vuex.Store({
   },
   mutations: {
     setModalVisibleOn(state) {
-      state.modalVisible = true
+      console.log('setModalVisibleOn');
+      state.modalVisible = true;
     },
     setModalVisibleOff(state) {
-      state.modalVisible = false
+      console.log('setModalVisibleOff');
+      state.modalVisible = false;
     },
   }
 });
