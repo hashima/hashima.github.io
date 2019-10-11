@@ -70,6 +70,18 @@ const defaultSelectItem = {
   ]
 }
 
+// ストアオブジェクトの作成
+const store = new Vuex.Store({
+  state: {
+      count: 0
+  },
+  mutations: {
+      increment(state) {
+          state.count++
+      }
+  }
+});
+
 const gamePage = Vue.component('game-page', {
   template: '#game',
   data:  ()=> {
