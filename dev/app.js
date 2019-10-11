@@ -657,7 +657,7 @@ const topPage = Vue.component('top-page', {
       store.commit('setModalVisibleOn');
       axios.get("./memberbottom.json")
       .then(response => {this.member = response.data.member;
-                          sleep(2000);
+                          // sleep(2000);
                           store.commit('setModalVisibleOff');
                           this.dialogPlayerChange = false;
       });
