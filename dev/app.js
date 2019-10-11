@@ -630,9 +630,11 @@ const topPage = Vue.component('top-page', {
   },
   methods: {
     buttonPCSubmit: function() {
+      this.member[0].order = 1
+
       this.dialogPlayerChange = false;
       this.selectedName = null;
-      
+
     },
     setOrder: function() {
       console.log('setOrder');
