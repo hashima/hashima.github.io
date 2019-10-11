@@ -682,6 +682,7 @@ const topPage = Vue.component('top-page', {
       return mems;
     },
     modalVisible: function() {
+      console.log('modalVisible');
       return store.state.modalVisible;
     }
   }
