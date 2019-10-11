@@ -641,8 +641,13 @@ const topPage = Vue.component('top-page', {
     },
     showModal() {
       this.modalVisible = true;
-      clearTimeout(this.timeoutID);
-      this.timeoutID = setTimeout(() => this.modalVisible = false, 2000);
+      axios.get("./membertop.json")
+      .then(response => (this.member = response.data.member))
+      .then(this.modalVisible = false)
+      ;
+
+      // clearTimeout(this.timeoutID);
+      // this.timeoutID = setTimeout(() => this.modalVisible = false, 2000);
     }
   }, 
   computed: {
