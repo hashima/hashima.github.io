@@ -640,11 +640,11 @@ const topPage = Vue.component('top-page', {
       this.modalVisible = true;
       sleep(2000);
       axios.get("./memberbottom.json")
-      .then(response => (this.member = response.data.member))
-      .then(sleep(2000))
-      .then(this.modalVisible = false)
-      .then(this.dialogPlayerChange = false)
-      ;
+      .then(response => {this.member = response.data.member;
+                          sleep(2000);
+                          this.modalVisible = false;
+                          this.dialogPlayerChange = false;
+      });
 
       // clearTimeout(this.timeoutID);
       // this.timeoutID = setTimeout(() => this.modalVisible = false, 2000);
