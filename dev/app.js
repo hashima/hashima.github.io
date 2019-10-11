@@ -612,8 +612,8 @@ const topPage = Vue.component('top-page', {
           ],      
           itemsRunner:defaultSelectItem.itemsRunner,
           selectedPosition: ['----','----','----','----','----','----','----','----','----','----'],
-          selectedName: ['----','----','----','----','----','----','----','----','----','----'],
-          selectedNumber: ['----','----','----','----','----','----','----','----','----','----']
+          selectedName: '',
+          selectedNumber: ''
         }
   },
   created: function() {
@@ -631,6 +631,7 @@ const topPage = Vue.component('top-page', {
   methods: {
     buttonPCSubmit: function() {
       this.dialogPlayerChange = false;
+      this.selectedName = '';
     },
     setOrder: function() {
       console.log('setOrder');
