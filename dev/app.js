@@ -614,7 +614,8 @@ const topPage = Vue.component('top-page', {
           selectedPosition: ['----','----','----','----','----','----','----','----','----','----'],
           selectedName: '',
           selectedNumber: '',
-          modalVisible: false
+          modalVisible: false,
+          timeoutID: 0
         }
   },
   created: function() {
