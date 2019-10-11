@@ -1,0 +1,127 @@
+{
+  "member":  [
+    {
+      "status": 1,
+      "order":1,
+      "name":"かける",
+      "number":0,
+      "position":"LF"
+    },
+    {
+      "status": 1,
+      "order":2,
+      "name":"のあ",
+      "number":1,
+      "position":"P"
+    },
+    {
+      "status": 0,
+      "name":"とら",
+      "number":2,
+      "position":"C"
+    },
+    {
+      "status": 1,
+      "order":6,
+      "name":"たいき",
+      "number":3,
+      "position":"1B"
+    },
+    {
+      "status": 1,
+      "order":7,
+      "name":"しえ",
+      "number":4,
+      "position":"2B"
+    },
+    {
+      "status": 1,
+      "order":4,
+      "name":"かいせい",
+      "number":5,
+      "position":"CF"
+    },
+    {
+      "status": 0,
+      "name":"あきと",
+      "number":6,
+      "position":"2B"
+    },
+    {
+      "status": 1,
+      "order":5,
+      "name":"ゆずき",
+      "number":7,
+      "position":"LF"
+    },
+    {
+      "status": 0,
+      "name":"そうた",
+      "number":8,
+      "position":"SS"
+    },
+    {
+      "status": 1,
+      "order":9,
+      "name":"ケビン",
+      "number":9,
+      "position":"RF"
+    },
+    {
+      "status": 1,
+      "order":3,
+      "name":"ボビー",
+      "number":10,
+      "position":"SS"
+    },
+    {
+      "status": 1,
+      "order":8,
+      "name":"はる",
+      "number":11,
+      "position":"3B"
+    },
+    {
+      "status": 0,
+      "name":"いっせい",
+      "number":12,
+      "position":"2B"
+    },
+    {
+      "status": 0,
+      "name":"ほたか",
+      "number":13,
+      "position":"CF"
+    },
+    {
+      "status": 0,
+      "name":"あい",
+      "number":14,
+      "position":"C"
+    },
+    {
+      "status": 0,
+      "name":"たいが",
+      "number":15,
+      "position":"2B"
+    },
+    {
+      "status": 0,
+      "name":"なほ",
+      "number":16,
+      "position":"RF"
+    },
+    {
+      "status": 0,
+      "name":"ひろと",
+      "number":23,
+      "position":"SS"
+    },
+    {
+      "status": 0,
+      "name":"みつき",
+      "number":27,
+      "position":"3B"
+    }
+  ]
+}
