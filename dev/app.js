@@ -633,9 +633,6 @@ const topPage = Vue.component('top-page', {
   methods: {
     buttonPCSubmit: function() {
       this.showModal();
-      this.member[0].order = 1;
-      this.member = this.member;
-      this.dialogPlayerChange = false;
       this.selectedName = null;
 
     },
@@ -646,6 +643,7 @@ const topPage = Vue.component('top-page', {
       .then(response => (this.member = response.data.member))
       .then(sleep(2000))
       .then(this.modalVisible = false)
+      .then(this.dialogPlayerChange = false)
       ;
 
       // clearTimeout(this.timeoutID);
