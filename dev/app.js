@@ -73,12 +73,15 @@ const defaultSelectItem = {
 // ストアオブジェクトの作成
 const store = new Vuex.Store({
   state: {
-      count: 0
+      modalVisible: false
   },
   mutations: {
-      increment(state) {
-          state.count++
-      }
+    setModalVisibleOn(state) {
+      state.modalVisible = true
+    },
+    setModalVisibleOff(state) {
+      state.modalVisible = false
+    },
   }
 });
 
@@ -626,7 +629,7 @@ const topPage = Vue.component('top-page', {
           selectedPosition: ['----','----','----','----','----','----','----','----','----','----'],
           selectedName: '',
           selectedNumber: '',
-          modalVisible: false,
+          // modalVisible: false,
           timeoutID: 0
         }
   },
@@ -649,11 +652,11 @@ const topPage = Vue.component('top-page', {
 
     },
     showModal() {
-      this.modalVisible = true;
+      store.commit('setModalVisibleOn');
       axios.get("./memberbottom.json")
       .then(response => {this.member = response.data.member;
                           sleep(2000);
-                          this.modalVisible = false;
+                          store.commit('setModalVisibleOff');
                           this.dialogPlayerChange = false;
       });
 
@@ -676,8 +679,8 @@ const topPage = Vue.component('top-page', {
       }
       return mems;
     },
-    modalVisibleC: function() {
-      return this.modalVisible;
+    modalVisible: function() {
+      return store.state.modalVisible;
     }
   }
 })
